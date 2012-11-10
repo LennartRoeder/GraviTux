@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GraviTux.iml" filepath="$PROJECT_DIR$/GraviTux.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Hartmann/Hartmann.iml" filepath="$PROJECT_DIR$/Hartmann/Hartmann.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tutorial_Files/Tutorial_Files.iml" filepath="$PROJECT_DIR$/Tutorial_Files/Tutorial_Files.iml" />
     </modules>
   </component>
