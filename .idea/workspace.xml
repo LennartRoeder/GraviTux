@@ -2,13 +2,112 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/src.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JFrameDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/resource/Game/Sounds/explode.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/resource/Game/Sounds/shoot.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/resource/Graphics/Sounds/gong.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Basics/InterfaceDemo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Game/Game.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Game/GameDemo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Game/GameEventHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Game/GameObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Game/PhysicalObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Game/Stage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/CanvasDemo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/DrawBitmap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/DrawRectangle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/KeyboardInteraction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/RandomRectangle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/SoundDemo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/StaticAnimation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/StaticAnimationDemo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/ScreenManager/Animations.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/ScreenManager/Core.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/ScreenManager/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/ScreenManager/ScreenManeger.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Tools/AssetLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Tools/GraphTools.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Tools/NumberGenerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Tools/TraceDemo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Tools/Traces.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Basics/ClassDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Basics/CollectionDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Basics/ErrorDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Basics/IConversation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Basics/InterfaceDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Basics/MethodDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Basics/StaticMethodDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/GUI/ActionListenerDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/GUI/ButtonDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/GUI/JFrameDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/GUI/MouseListenerDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Game/DynamicAnimationDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Game/GameObject.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Game/Images/ship_shield.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Game/Images/ship_thrust.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Game/PhysicalObject.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Game/Skin.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/AssetLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/CanvasDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/DrawBitmap.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/DrawRectangle.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/FullScreenDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/Images/castle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/Images/ship_shield.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/Images/ship_thrust.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/Images/toy.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/KeyboardInteraction.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/RandomRectangle.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/RectangleShape.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/ScreenManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/SoundDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/Sounds/gong.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/StaticAnimation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/StaticAnimationDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/Tools.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/CharCounterThread.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/Consumer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/IntegerCounterThread.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/MyThread1.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/MyThread2.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/Producer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/SynchronizationDemo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/ThreadDemo1.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/ThreadDemo2.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/ThreadDemo3.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/TimedJob.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/TimedJobDemo.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Basics/ClassDemo.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Basics/ClassDemo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Basics/CollectionDemo.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Basics/CollectionDemo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Basics/ErrorDemo.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Basics/ErrorDemo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Basics/IConversation.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Basics/IConversation.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Basics/MethodDemo.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Basics/MethodDemo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Basics/StaticMethodDemo.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Basics/StaticMethodDemo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/GUI/ActionListenerDemo.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/GUI/ActionListenerDemo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/GUI/ButtonDemo.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/GUI/ButtonDemo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/GUI/JFrameDemo.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/GUI/JFrameDemo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/GUI/MouseListenerDemo.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/GUI/MouseListenerDemo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Game/Images/ship_shield.png" afterPath="$PROJECT_DIR$/Java-Tutorial4/resource/Game/Images/ship_shield.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Game/Images/ship_thrust.png" afterPath="$PROJECT_DIR$/Java-Tutorial4/resource/Game/Images/ship_thrust.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Game/Skin.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Game/Skin.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/FullScreenDemo.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/FullScreenDemo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/Images/castle.png" afterPath="$PROJECT_DIR$/Java-Tutorial4/resource/Graphics/Images/castle.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/Images/ship_shield.png" afterPath="$PROJECT_DIR$/Java-Tutorial4/resource/Graphics/Images/ship_shield.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/Images/ship_thrust.png" afterPath="$PROJECT_DIR$/Java-Tutorial4/resource/Graphics/Images/ship_thrust.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/ScreenManager.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/ScreenManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Graphics/Sounds/gong.wav" afterPath="$PROJECT_DIR$/Java-Tutorial4/resource/Game/Sounds/gong.wav" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/CharCounterThread.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/CharCounterThread.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/Consumer.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/Consumer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/IntegerCounterThread.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/IntegerCounterThread.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/MyThread1.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/MyThread1.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/MyThread2.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/MyThread2.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/Producer.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/Producer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/SynchronizationDemo.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/SynchronizationDemo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/ThreadDemo1.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/ThreadDemo1.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/ThreadDemo2.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/ThreadDemo2.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/ThreadDemo3.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/ThreadDemo3.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/TimedJob.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/TimedJob.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tutorial Files/Threads/TimedJobDemo.java" afterPath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/TimedJobDemo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GraviTux.iml" afterPath="$PROJECT_DIR$/GraviTux.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test.java" afterPath="$PROJECT_DIR$/src/test.java" />
     </list>
     <ignored path="GraviTux.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,7 +170,7 @@
       <file leaf-file-name="JFrameDemo.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/JFrameDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="24" selection-start="2683" selection-end="2683" vertical-scroll-proportion="0.7823009">
+            <state line="88" column="24" selection-start="2683" selection-end="2683" vertical-scroll-proportion="1.0953609">
               <folding>
                 <element signature="docComment;class#JFrameDemo#0" expanded="false" />
                 <element signature="docComment;method#initCanvas#0;class#JFrameDemo#0" expanded="false" />
@@ -109,10 +208,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="147" />
-    <option name="width" value="1922" />
-    <option name="height" value="1054" />
+    <option name="y" value="211" />
+    <option name="width" value="960" />
+    <option name="height" value="580" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -140,6 +238,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -154,7 +262,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -208,21 +315,21 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/Tutorial Files" />
       <recent name="$PROJECT_DIR$/Tutorial_Files/src/Threads" />
       <recent name="$PROJECT_DIR$/Tutorial_Files/src/GUI" />
-      <recent name="$PROJECT_DIR$/Tutorial_Files/src/Game" />
     </key>
   </component>
   <component name="RunManager" selected="Application.JFrameDemo">
@@ -303,6 +410,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -328,24 +453,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -408,6 +515,11 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -456,7 +568,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="147" width="1922" height="1054" extended-state="6" />
+    <frame x="0" y="211" width="960" height="580" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -467,16 +579,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291506" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919614" sideWeight="0.67154104" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32845894" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42417583" sideWeight="0.67154104" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32841823" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -545,93 +657,24 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/Tutorial3/Basics/ClassDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Tutorial3/Basics/CollectionDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Tutorial3/Basics/ErrorDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Tutorial3/Basics/IConversation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Tutorial3/Basics/InterfaceDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="4" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Tutorial3/Basics/MethodDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="5" selection-start="141" selection-end="141" vertical-scroll-proportion="0.08751459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Tutorial3/Basics/StaticMethodDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tutorial Files/Basics/IConversation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="34" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tutorial Files/Basics/ClassDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="34" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="1" selection-start="213" selection-end="213" vertical-scroll-proportion="0.23174158">
-          <folding />
-        </state>
+        <state line="11" column="1" selection-start="213" selection-end="213" vertical-scroll-proportion="0.23174158" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/libraries/src.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JFrameDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="24" selection-start="2683" selection-end="2683" vertical-scroll-proportion="0.7823009">
+        <state line="88" column="24" selection-start="2683" selection-end="2683" vertical-scroll-proportion="1.0953609">
           <folding>
             <element signature="docComment;class#JFrameDemo#0" expanded="false" />
             <element signature="docComment;method#initCanvas#0;class#JFrameDemo#0" expanded="false" />
