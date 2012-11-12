@@ -2,8 +2,6 @@
   <library name="src">
     <CLASSES />
     <JAVADOC />
-    <SOURCES>
-      <root url="file://$PROJECT_DIR$/../libtiled-java/src" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>
