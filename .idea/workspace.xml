@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="">
+    <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="slick mit dem TnB Game Tutorial zum laufen gebracht.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jars/lwjgl.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jars/slick.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/linux/libjinput-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/linux/libjinput-linux64.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/linux/liblwjgl.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/linux/liblwjgl64.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/linux/libopenal.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/linux/libopenal64.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/macosx/libjinput-osx.jnilib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/macosx/liblwjgl.jnilib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/macosx/openal.dylib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/solaris/liblwjgl.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/solaris/liblwjgl64.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/solaris/libopenal.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/solaris/libopenal64.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/windows/OpenAL32.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/windows/OpenAL64.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/windows/jinput-dx8.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/windows/jinput-dx8_64.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/windows/jinput-raw.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/windows/jinput-raw_64.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/windows/lwjgl.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/natives/windows/lwjgl64.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/buckysBack.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/buckysFront.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/buckysLeft.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/buckysRight.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/exitGame.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/playNow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/world.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javagame/Menu.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javagame/Play.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GraviTux.iws" />
@@ -166,10 +198,6 @@
               <option name="myItemId" value="GraviTux" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -196,6 +224,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="javagame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -471,7 +513,11 @@
       <created>1352761831142</created>
       <updated>1352761831142</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="slick mit dem TnB Game Tutorial zum laufen gebracht.">
+      <created>1352761941421</created>
+      <updated>1352761941421</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -541,7 +587,7 @@
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
     <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
     <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
