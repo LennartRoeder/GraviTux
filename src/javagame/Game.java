@@ -1,22 +1,14 @@
 package javagame;
 
-/**
- * Created with IntelliJ IDEA.
- * User: lennart
- * Date: 11/12/12
- * Time: 7:39 PM
- * To change this template use File | Settings | File Templates.
- */
-
-
- //http://www.tnbforum.com/viewtopic.php?f=119&t=24196
-
-import org.newdawn.slick.*;
-import org.newdawn.slick.state.*;
+import org.newdawn.slick.AppGameContainer;
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.SlickException;
+import org.newdawn.slick.state.StateBasedGame;
 
 public class Game extends StateBasedGame
 {
-	public static final String gamename= "Ham Blaster!";
+
+	public static final String gamename = "Ham Blaster! 2.0";
 	public static final int menu = 0;
 	public static final int play = 1;
 
@@ -24,17 +16,28 @@ public class Game extends StateBasedGame
 	{
 		super(gamename);
 		this.addState(new Menu(menu));
-		this.addState(new Menu(play));
+		this.addState(new Play(play));
 	}
 
-	@Override
-	public void initStatesList(GameContainer gameContainer) throws SlickException
+	public void initStatesList(GameContainer gc) throws SlickException
 	{
-		//To change body of implemented methods use File | Settings | File Templates.
+		this.getState(menu).init(gc, this);
+		this.getState(play).init(gc, this);
+		this.enterState(menu);
 	}
 
 	public static void main(String[] args)
 	{
-		System.out.println("Hello World!");
+		AppGameContainer appgc;
+		try
+		{
+			appgc = new AppGameContainer(new Game(gamename));
+			appgc.setDisplayMode(640, 360, false);
+			appgc.start();
+		} catch (SlickException e)
+		{
+			e.printStackTrace();
+		}
 	}
+
 }

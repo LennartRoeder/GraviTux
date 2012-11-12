@@ -1,1 +1,6 @@
 Hier entsteht das Spiel GraviTux der Gruppe E aus der Veranstaltung Game Design der Fachhochschule Flensburg im Wintersemester 2012/13
+
+WICHTIGER HINWEIS:
+
+1. Open the 'Run/Debug Configurations' (Run > Edit Configurations)
+2. Under 'VM Parameters' add: "-Djava.library.path=lib/natives-win32" (or -linux, or -mac) without the quotes
