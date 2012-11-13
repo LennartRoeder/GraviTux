@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/buckysBack.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/buckysFront.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/buckysLeft.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/buckysRight.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/exitGame.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/playNow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/world.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Objekte.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Personen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Texturen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/level/level_1.tmx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Game.java" afterPath="$PROJECT_DIR$/src/GraviTux/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Menu.java" afterPath="$PROJECT_DIR$/src/GraviTux/Menu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Play.java" afterPath="$PROJECT_DIR$/src/GraviTux/Play.java" />
     </list>
     <ignored path="GraviTux.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,10 +68,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Game.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="13" selection-start="204" selection-end="204" vertical-scroll-proportion="0.13043478">
+            <state line="10" column="51" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -79,16 +80,16 @@
       <file leaf-file-name="Menu.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
+            <state line="9" column="2" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Play.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Play.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
+            <state line="27" column="43" selection-start="993" selection-end="993" vertical-scroll-proportion="0.7718121">
               <folding />
             </state>
           </provider>
@@ -111,7 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$PROJECT_DIR$/Tutorial_Files/src/Basics/ClassDemo.java" />
         <option value="$PROJECT_DIR$/Tutorial_Files/src/GUI/ActionListenerDemo.java" />
         <option value="$PROJECT_DIR$/Tutorial_Files/src/Threads/CharCounterThread.java" />
@@ -123,9 +123,11 @@
         <option value="$PROJECT_DIR$/src/javagame/Game.java" />
         <option value="$PROJECT_DIR$/src/javagame/Menu.java" />
         <option value="$PROJECT_DIR$/src/javagame/Play.java" />
-        <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/src/TnB_Game/Game.java" />
+        <option value="$PROJECT_DIR$/src/GraviTux/Game.java" />
         <option value="$PROJECT_DIR$/src/GraviTux/Menu.java" />
+        <option value="$PROJECT_DIR$/README" />
+        <option value="$PROJECT_DIR$/src/GraviTux/Play.java" />
       </list>
     </option>
   </component>
@@ -280,9 +282,11 @@
       <recent name="$PROJECT_DIR$/Tutorial Files" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res" />
+      <recent name="$PROJECT_DIR$/res/tiles" />
+      <recent name="$PROJECT_DIR$/res/level" />
       <recent name="$PROJECT_DIR$/src/TnB_Game/res" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Game">
@@ -525,7 +529,11 @@
       <created>1352797443639</created>
       <updated>1352797443639</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="res Fehler behoben">
+      <created>1352797862088</created>
+      <updated>1352797862088</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -560,7 +568,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259362" sideWeight="0.49806702" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -611,7 +619,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Projekt umsortiert" />
+    <option name="LAST_COMMIT_MESSAGE" value="res Fehler behoben" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -632,6 +640,7 @@
     <MESSAGE value="slick eingefügt" />
     <MESSAGE value="slick mit dem TnB Game Tutorial zum laufen gebracht." />
     <MESSAGE value="Projekt umsortiert" />
+    <MESSAGE value="res Fehler behoben" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -644,11 +653,6 @@
     <entry file="file://$PROJECT_DIR$/.idea/libraries/src.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="427" selection-end="427" vertical-scroll-proportion="0.3930131" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TnB_Game/Game.java">
@@ -666,19 +670,30 @@
         <state line="116" column="48" selection-start="3636" selection-end="3636" vertical-scroll-proportion="3.8255033" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
+    <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" />
+        <state line="16" column="85" selection-start="577" selection-end="577" vertical-scroll-proportion="0.5217391">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
+    <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" />
+        <state line="9" column="2" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="204" selection-end="204" vertical-scroll-proportion="0.13043478">
+        <state line="10" column="51" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="43" selection-start="993" selection-end="993" vertical-scroll-proportion="0.7718121">
           <folding />
         </state>
       </provider>

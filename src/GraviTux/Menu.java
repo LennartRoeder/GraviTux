@@ -26,7 +26,7 @@ public class Menu extends BasicGameState
 
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
 	{
-		g.drawString("Welcome to Bucky Land!", 100, 50);
+		g.drawString("Willkommen bei GraviTux", 100, 50);
 		playNow.draw(100, 100);
 		exitGame.draw(100, 200);
 	}

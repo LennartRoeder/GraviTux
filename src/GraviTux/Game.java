@@ -8,7 +8,7 @@ import org.newdawn.slick.state.StateBasedGame;
 public class Game extends StateBasedGame
 {
 
-	public static final String gamename = "Ham Blaster! 2.0";
+	public static final String gamename = "GraviTux";
 	public static final int menu = 0;
 	public static final int play = 1;
 

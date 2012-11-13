@@ -1,13 +1,16 @@
 package GraviTux;
 
+import com.sun.corba.se.spi.ior.ObjectKeyTemplate;
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
+import org.newdawn.slick.tiled.TiledMap;
 
 public class Play extends BasicGameState
 {
 	Animation bucky, movingUp, movingDown, movingLeft, movingRight; //4 animations, bucky will be set to one
-	Image worldMap;
+	//Image worldMap;
+    TiledMap worldMap = null;
 	boolean quit = false;
 	int[] duration = {200, 200}; //duration or length of the frame
 	float buckyPositionX = 0; //bucky will start at coordinates 0,0
@@ -21,7 +24,8 @@ public class Play extends BasicGameState
 
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
 	{
-		worldMap = new Image("res/world.png");
+		//worldMap = new Image("res/world.png");
+        worldMap = new TiledMap("res/level/level_1.tmx");
 		Image[] walkUp = {new Image("res/buckysBack.png"), new Image("res/buckysBack.png")}; //these are the images to be used in the "walkUp" animation
 		Image[] walkDown = {new Image("res/buckysFront.png"), new Image("res/buckysFront.png")};
 		Image[] walkLeft = {new Image("res/buckysLeft.png"), new Image("res/buckysLeft.png")};
@@ -36,7 +40,8 @@ public class Play extends BasicGameState
 
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
 	{
-		worldMap.draw(buckyPositionX, buckyPositionY); //draw the map at 0,0 to start
+		//worldMap.draw(buckyPositionX, buckyPositionY); //draw the map at 0,0 to start
+        worldMap.render((int) buckyPositionX, (int) buckyPositionY); //draw the map at 0,0 to start
 		bucky.draw(shiftX, shiftY); //draw bucky at 320, 160 (center of the screen)
 		g.drawString("Buckys X: " + buckyPositionX + "\nBuckys Y: " + buckyPositionY, 400, 20); //indicator to see where bucky is in his world
 
