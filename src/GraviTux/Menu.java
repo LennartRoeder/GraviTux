@@ -26,9 +26,9 @@ public class Menu extends BasicGameState
 
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
 	{
-		g.drawString("Willkommen bei GraviTux", 100, 50);
-		playNow.draw(100, 100);
-		exitGame.draw(100, 200);
+		g.drawString("Willkommen bei GraviTux", 294, 150);
+		playNow.draw(294, 200);
+		exitGame.draw(294, 300);
 	}
 
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException
@@ -36,7 +36,7 @@ public class Menu extends BasicGameState
 		int posX = Mouse.getX();
 		int posY = Mouse.getY();
 		//play now button
-		if ((posX > 100 && posX < 311) && (posY > 209 && posY < 260))
+		if ((posX > 294 && posX < 505) && (posY > 349 && posY < 400))
 		{
 			if (Mouse.isButtonDown(0))
 			{
@@ -44,7 +44,7 @@ public class Menu extends BasicGameState
 			}
 		}
 		//exit game
-		if ((posX > 100 && posX < 311) && (posY > 109 && posY < 160))
+		if ((posX > 294 && posX < 505) && (posY > 249 && posY < 300))
 		{
 			if (Mouse.isButtonDown(0))
 			{
