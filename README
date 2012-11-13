@@ -4,15 +4,16 @@ WICHTIGER HINWEIS:
 
 1. Open the 'Run/Debug Configurations' (Run > Edit Configurations)
 2. Under 'VM Parameters' add: "-Djava.library.path=lib/natives-win32" (or -linux, or -mac) without the quotes
+(also aus dem Wort "linux" einfach "windows" machen)
 
 ---
 
-Code vom Testspiel:
-http://www.tnbforum.com/viewtopic.php?f=119&t=24196
-
-Tutorials dazu:
+Slick 2D Tutorials:
 http://thenewboston.org/list.php?cat=54
 
-.tmx Files in Slick2d:
-http://gamedev.stackexchange.com/questions/28264/how-do-i-load-tmx-files-with-slick2d
+Slick Docu:
+http://slick.cokeandcode.com/javadoc/
+
+Sprites and Stuff:
+http://slick.cokeandcode.com/static.php?page=resources
 
