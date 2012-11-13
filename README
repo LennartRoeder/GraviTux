@@ -4,3 +4,12 @@ WICHTIGER HINWEIS:
 
 1. Open the 'Run/Debug Configurations' (Run > Edit Configurations)
 2. Under 'VM Parameters' add: "-Djava.library.path=lib/natives-win32" (or -linux, or -mac) without the quotes
+
+---
+
+Code vom Testspiel:
+http://www.tnbforum.com/viewtopic.php?f=119&t=24196
+
+Tutorials dazu:
+http://thenewboston.org/list.php?cat=54
+
