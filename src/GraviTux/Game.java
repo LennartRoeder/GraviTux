@@ -7,7 +7,6 @@ import org.newdawn.slick.state.StateBasedGame;
 
 public class Game extends StateBasedGame
 {
-
 	public static final String gamename = "GraviTux";
 	public static final int menu = 0;
 	public static final int play = 1;
@@ -26,18 +25,11 @@ public class Game extends StateBasedGame
 		this.enterState(menu);
 	}
 
-	public static void main(String[] args)
+	public static void main(String[] args) throws SlickException
 	{
 		AppGameContainer appgc;
-		try
-		{
-			appgc = new AppGameContainer(new Game(gamename));
-			appgc.setDisplayMode(800, 600, false);
-			appgc.start();
-		} catch (SlickException e)
-		{
-			e.printStackTrace();
-		}
+		appgc = new AppGameContainer(new Game(gamename));
+		appgc.setDisplayMode(800, 600, false);
+		appgc.start();
 	}
-
 }

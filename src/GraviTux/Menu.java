@@ -10,7 +10,6 @@ import org.newdawn.slick.state.StateBasedGame;
 
 public class Menu extends BasicGameState
 {
-
 	Image playNow;
 	Image exitGame;
 
@@ -28,7 +27,7 @@ public class Menu extends BasicGameState
 	{
 		g.drawString("Willkommen bei GraviTux", 294, 150);
 		playNow.draw(294, 200);
-		exitGame.draw(294, 300);
+		exitGame.draw(294, 275);
 	}
 
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException
@@ -44,7 +43,7 @@ public class Menu extends BasicGameState
 			}
 		}
 		//exit game
-		if ((posX > 294 && posX < 505) && (posY > 249 && posY < 300))
+		if ((posX > 294 && posX < 505) && (posY > 274 && posY < 325))
 		{
 			if (Mouse.isButtonDown(0))
 			{
