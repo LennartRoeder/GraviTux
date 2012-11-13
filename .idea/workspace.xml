@@ -1,80 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="slick mit dem TnB Game Tutorial zum laufen gebracht.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GraviTux/Game.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GraviTux/Menu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GraviTux/Play.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/Java-Tutorial4.iml" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/Java-Tutorial4.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/resource/Game/Images/ship_shield.png" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/resource/Game/Images/ship_shield.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/resource/Game/Images/ship_thrust.png" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/resource/Game/Images/ship_thrust.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/resource/Game/Sounds/explode.wav" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/resource/Game/Sounds/explode.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/resource/Game/Sounds/gong.wav" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/resource/Game/Sounds/gong.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/resource/Game/Sounds/shoot.wav" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/resource/Game/Sounds/shoot.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/resource/Graphics/Images/castle.png" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/resource/Graphics/Images/castle.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/resource/Graphics/Images/ship_shield.png" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/resource/Graphics/Images/ship_shield.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/resource/Graphics/Images/ship_thrust.png" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/resource/Graphics/Images/ship_thrust.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/resource/Graphics/Sounds/gong.wav" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/resource/Graphics/Sounds/gong.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Basics/ClassDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Basics/ClassDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Basics/CollectionDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Basics/CollectionDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Basics/ErrorDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Basics/ErrorDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Basics/IConversation.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Basics/IConversation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Basics/InterfaceDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Basics/InterfaceDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Basics/MethodDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Basics/MethodDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Basics/StaticMethodDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Basics/StaticMethodDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/GUI/ActionListenerDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/GUI/ActionListenerDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/GUI/ButtonDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/GUI/ButtonDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/GUI/JFrameDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/GUI/JFrameDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/GUI/MouseListenerDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/GUI/MouseListenerDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Game/Game.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Game/Game.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Game/GameDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Game/GameDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Game/GameEventHandler.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Game/GameEventHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Game/GameObject.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Game/GameObject.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Game/PhysicalObject.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Game/PhysicalObject.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Game/Skin.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Game/Skin.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Game/Stage.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Game/Stage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/CanvasDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Graphics/CanvasDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/DrawBitmap.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Graphics/DrawBitmap.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/DrawRectangle.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Graphics/DrawRectangle.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/FullScreenDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Graphics/FullScreenDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/KeyboardInteraction.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Graphics/KeyboardInteraction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/RandomRectangle.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Graphics/RandomRectangle.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/ScreenManager.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Graphics/ScreenManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/SoundDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Graphics/SoundDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/StaticAnimation.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Graphics/StaticAnimation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Graphics/StaticAnimationDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Graphics/StaticAnimationDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/ScreenManager/Animations.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/ScreenManager/Animations.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/ScreenManager/Core.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/ScreenManager/Core.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/ScreenManager/Main.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/ScreenManager/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/ScreenManager/ScreenManeger.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/ScreenManager/ScreenManeger.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/CharCounterThread.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Threads/CharCounterThread.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/Consumer.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Threads/Consumer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/IntegerCounterThread.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Threads/IntegerCounterThread.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/MyThread1.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Threads/MyThread1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/MyThread2.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Threads/MyThread2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/Producer.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Threads/Producer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/SynchronizationDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Threads/SynchronizationDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/ThreadDemo1.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Threads/ThreadDemo1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/ThreadDemo2.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Threads/ThreadDemo2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/ThreadDemo3.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Threads/ThreadDemo3.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/TimedJob.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Threads/TimedJob.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Threads/TimedJobDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Threads/TimedJobDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Tools/AssetLoader.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Tools/AssetLoader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Tools/GraphTools.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Tools/GraphTools.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Tools/NumberGenerator.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Tools/NumberGenerator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Tools/TraceDemo.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Tools/TraceDemo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Java-Tutorial4/src/Tools/Traces.java" afterPath="$PROJECT_DIR$/src/Java-Tutorial4/src/Tools/Traces.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/buckysBack.png" afterPath="$PROJECT_DIR$/src/TnB_Game/res/buckysBack.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/buckysFront.png" afterPath="$PROJECT_DIR$/src/TnB_Game/res/buckysFront.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/buckysLeft.png" afterPath="$PROJECT_DIR$/src/TnB_Game/res/buckysLeft.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/buckysRight.png" afterPath="$PROJECT_DIR$/src/TnB_Game/res/buckysRight.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/exitGame.png" afterPath="$PROJECT_DIR$/src/TnB_Game/res/exitGame.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/playNow.png" afterPath="$PROJECT_DIR$/src/TnB_Game/res/playNow.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/world.png" afterPath="$PROJECT_DIR$/src/TnB_Game/res/world.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javagame/Game.java" afterPath="$PROJECT_DIR$/src/TnB_Game/Game.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javagame/Menu.java" afterPath="$PROJECT_DIR$/src/TnB_Game/Menu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javagame/Play.java" afterPath="$PROJECT_DIR$/src/TnB_Game/Play.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GraviTux.iws" />
@@ -136,7 +63,7 @@
       <file leaf-file-name="Game.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="13" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
+            <state line="7" column="13" selection-start="204" selection-end="204" vertical-scroll-proportion="0.086330935">
               <folding />
             </state>
           </provider>
@@ -170,6 +97,9 @@
   <component name="Git.Settings">
     <option name="LINE_SEPARATORS_CONVERSION" value="CONVERT" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -224,12 +154,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -265,24 +195,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TnB_Game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GraviTux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GraviTux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -304,12 +216,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GraviTux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -330,13 +242,13 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -376,24 +288,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -419,6 +313,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -584,31 +496,55 @@
       <created>1352762058956</created>
       <updated>1352762058956</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Projekt umsortiert">
+      <created>1352796918956</created>
+      <updated>1352796918956</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1602" height="874" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3996139" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259362" sideWeight="0.49806702" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24742268" sideWeight="0.6740638" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3259362" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24742268" sideWeight="0.67128986" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259362" sideWeight="0.4974227" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995495" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -650,7 +586,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="slick mit dem TnB Game Tutorial zum laufen gebracht." />
+    <option name="LAST_COMMIT_MESSAGE" value="Projekt umsortiert" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -670,6 +606,7 @@
     <MESSAGE value="all" />
     <MESSAGE value="slick eingefügt" />
     <MESSAGE value="slick mit dem TnB Game Tutorial zum laufen gebracht." />
+    <MESSAGE value="Projekt umsortiert" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -686,49 +623,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="427" selection-end="427" vertical-scroll-proportion="0.3930131">
-          <folding />
-        </state>
+        <state line="12" column="27" selection-start="427" selection-end="427" vertical-scroll-proportion="0.3930131" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TnB_Game/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="1" selection-start="921" selection-end="921" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="42" column="1" selection-start="921" selection-end="921" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TnB_Game/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="1" selection-start="1267" selection-end="1267" vertical-scroll-proportion="1.7282609">
-          <folding />
-        </state>
+        <state line="59" column="1" selection-start="1267" selection-end="1267" vertical-scroll-proportion="1.7282609" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TnB_Game/Play.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="48" selection-start="3636" selection-end="3636" vertical-scroll-proportion="3.8255033">
-          <folding />
-        </state>
+        <state line="116" column="48" selection-start="3636" selection-end="3636" vertical-scroll-proportion="3.8255033" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="10" column="13" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="13" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
+        <state line="7" column="13" selection-start="204" selection-end="204" vertical-scroll-proportion="0.086330935">
           <folding />
         </state>
       </provider>
