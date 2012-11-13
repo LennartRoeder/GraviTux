@@ -1,4 +1,4 @@
-package javagame;
+package TnB_Game;
 
 import org.lwjgl.input.Mouse;
 import org.newdawn.slick.GameContainer;

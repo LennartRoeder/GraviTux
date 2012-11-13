@@ -1,4 +1,4 @@
-package javagame;
+package TnB_Game;
 
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.BasicGameState;
