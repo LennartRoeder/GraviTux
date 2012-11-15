@@ -3,7 +3,7 @@ Hier entsteht das Spiel GraviTux der Gruppe E aus der Veranstaltung Game Design 
 WICHTIGER HINWEIS:
 
 1. Open the 'Run/Debug Configurations' (Run > Edit Configurations)
-2. Under 'VM Parameters' add: "-Djava.library.path=lib/natives-win32" (or -linux, or -mac) without the quotes
+2. Under 'VM Parameters' add: "-Djava.library.path=lib/natives-win32" (or -linux, or -macosx) without the quotes
 (also aus dem Wort "linux" einfach "windows" machen)
 
 ---
