@@ -5,9 +5,10 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
       </element>
+      <element id="library" level="project" name="src" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/jars/lwjgl.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/jars/slick.jar" />
       <element id="module-output" name="GraviTux" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jars/lwjgl.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jars/slick.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
