@@ -8,7 +8,7 @@ import org.newdawn.slick.tiled.TiledMap;
 public class Play extends BasicGameState
 {
 	Animation tux, movingUp, movingDown, movingLeft, movingRight; //4 animations, tux will be set to one
-    TiledMap worldMap;
+	TiledMap worldMap;
 	boolean quit;
 	int[] duration;
 	float tuxPositionX;
@@ -25,7 +25,7 @@ public class Play extends BasicGameState
 
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
 	{
-        worldMap = new TiledMap("res/level/level_1.tmx");
+		worldMap = new TiledMap("res/level/level_1.tmx");
 		//Image[] walkUp = {new Image("res/buckysBack.png"), new Image("res/buckysBack.png")}; //these are the images to be used in the "walkUp" animation
 		//Image[] walkDown = {new Image("res/buckysFront.png"), new Image("res/buckysFront.png")};
 		Image[] walkLeft = {new Image("res/figuren/tux_left.png"), new Image("res/figuren/tux_left.png")};
@@ -40,7 +40,7 @@ public class Play extends BasicGameState
 
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
 	{
-        worldMap.render((int) tuxPositionX, (int) tuxPositionY); //draw the map at 0,0 to start
+		worldMap.render((int) tuxPositionX, (int) tuxPositionY); //draw the map at 0,0 to start
 		tux.draw(90, 520); //draws tux at 90, 520 (unten links)
 		g.drawString("Tuxs X: " + tuxPositionX + "\nTuxs Y: " + tuxPositionY, 650, 50); //indicator to see where tux is in his world
 
