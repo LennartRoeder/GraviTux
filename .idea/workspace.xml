@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/GraviTux_linux.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/GraviTux_macosx.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/GraviTux_windows.exe" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GraviTux.iws" />
@@ -608,7 +605,11 @@
       <created>1353694920671</created>
       <updated>1353694920671</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="binary added, now working ... hopefully">
+      <created>1353695345229</created>
+      <updated>1353695345229</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
