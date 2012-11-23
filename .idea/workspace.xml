@@ -5,25 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/MacOS_X/GraviTux.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/Windows/GraviTux.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/Linux/GraviTux.sh" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/GraviTux.jar" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bin/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/GraviTux/figuren/Tux_01.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_01.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/GraviTux/figuren/Tux_02.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_02.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/GraviTux/figuren/Tux_03.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_03.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/GraviTux/figuren/Tux_04.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_04.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/GraviTux/figuren/Tux_links01.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_links01.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/GraviTux/figuren/Tux_links02.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_links02.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/GraviTux/figuren/Tux_links03.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_links03.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/GraviTux/figuren/Tux_links04.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_links04.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/GraviTux/figuren/tux_left.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/tux_left.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/GraviTux/figuren/tux_right.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/tux_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/GraviTux_macosx.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/GraviTux_windows.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/GraviTux.sh" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Linux/GraviTux.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/MacOS_X/GraviTux.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Windows/GraviTux.exe" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/GraviTux_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/GraviTux_jar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_1.tmx" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_1.tmx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Play.java" afterPath="$PROJECT_DIR$/src/GraviTux/Play.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
     </list>
     <ignored path="GraviTux.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,7 +88,7 @@
       <file leaf-file-name="Menu.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="43" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0">
+            <state line="21" column="29" selection-start="504" selection-end="508" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,7 +97,7 @@
       <file leaf-file-name="Play.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="61" selection-start="1556" selection-end="1556" vertical-scroll-proportion="0.88550985">
+            <state line="22" column="65" selection-start="629" selection-end="629" vertical-scroll-proportion="0.5903399">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,9 +135,9 @@
         <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/src/GraviTux/Main.java" />
         <option value="$PROJECT_DIR$/src/GraviTux/Game.java" />
-        <option value="$PROJECT_DIR$/src/GraviTux/Menu.java" />
         <option value="$PROJECT_DIR$/res/GraviTux/level/level_1.tmx" />
         <option value="$PROJECT_DIR$/src/GraviTux/Play.java" />
+        <option value="$PROJECT_DIR$/src/GraviTux/Menu.java" />
       </list>
     </option>
   </component>
@@ -262,6 +252,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -599,7 +603,11 @@
       <created>1353014908178</created>
       <updated>1353014908178</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="binary added">
+      <created>1353688761935</created>
+      <updated>1353688761935</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -685,9 +693,9 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup, tux moves, level doesn't move, tux moves animated, stops animation too. can be executed locally now. (4h work)" />
+    <option name="LAST_COMMIT_MESSAGE" value="binary added" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -712,6 +720,7 @@
     <MESSAGE value="figuren" />
     <MESSAGE value="Sortierung" />
     <MESSAGE value="Cleanup, tux moves, level doesn't move, tux moves animated, stops animation too. can be executed locally now. (4h work)" />
+    <MESSAGE value="binary added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -740,14 +749,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="43" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0">
+        <state line="21" column="29" selection-start="504" selection-end="508" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="61" selection-start="1556" selection-end="1556" vertical-scroll-proportion="0.88550985">
+        <state line="22" column="65" selection-start="629" selection-end="629" vertical-scroll-proportion="0.5903399">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
