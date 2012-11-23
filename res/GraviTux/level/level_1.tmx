@@ -11,7 +11,7 @@
  </tileset>
  <layer name="Kachelebene 1" width="20" height="15">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA1NmYGCQpxJWAWI5BuoBhVHzRs0bNY/u5rEDMT+ZZnCjmacExLJUwopADACmxOSVsAQAAA==
+   H4sIAAAAAAAAA1NmYGCQpxJWAWI5BuoBhVHzRs0bNY/u5rFTYAY3mnlKQCxLJawIxAA9WOaJsAQAAA==
   </data>
  </layer>
  <objectgroup name="Objektebene 1" width="20" height="15"/>
