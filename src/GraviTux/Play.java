@@ -28,10 +28,10 @@ public class Play extends BasicGameState
 		worldMap = new TiledMap("res/GraviTux/level/level_1.tmx");
 		//Image[] walkUp = {new Image("res/buckysBack.png"), new Image("res/buckysBack.png")}; //these are the images to be used in the "walkUp" animation
 		//Image[] walkDown = {new Image("res/buckysFront.png"), new Image("res/buckysFront.png")};
-		Image[] walkLeft = {new Image("res/GraviTux/tux/Tux_links01.png"), new Image("res/GraviTux/tux/Tux_links02.png"), new Image("res/GraviTux/tux/Tux_links03.png"), new Image("res/GraviTux/tux/Tux_links04.png")};
-		Image[] walkRight = {new Image("res/GraviTux/tux/Tux_01.png"), new Image("res/GraviTux/tux/Tux_02.png"), new Image("res/GraviTux/tux/Tux_03.png"), new Image("res/GraviTux/tux/Tux_04.png")};
-        Image[] standLeft = {new Image("res/GraviTux/tux/tux_left.png")};
-        Image[] standRight = {new Image("res/GraviTux/tux/tux_right.png")};
+		Image[] walkLeft = {new Image("GraviTux/tux/Tux_links01.png"), new Image("GraviTux/tux/Tux_links02.png"), new Image("GraviTux/tux/Tux_links03.png"), new Image("GraviTux/tux/Tux_links04.png")};
+		Image[] walkRight = {new Image("GraviTux/tux/Tux_01.png"), new Image("GraviTux/tux/Tux_02.png"), new Image("GraviTux/tux/Tux_03.png"), new Image("GraviTux/tux/Tux_04.png")};
+        Image[] standLeft = {new Image("GraviTux/tux/tux_left.png")};
+        Image[] standRight = {new Image("GraviTux/tux/tux_right.png")};
 		//movingUp = new Animation(walkUp, duration, false); //each animation takes array of images, duration for each image, and autoUpdate (just set to false)
 		//movingDown = new Animation(walkDown, duration, false);
 		movingLeft = new Animation(walkLeft, duration, true);

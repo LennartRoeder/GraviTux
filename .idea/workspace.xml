@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/GraviTux_macosx.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/GraviTux_windows.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/GraviTux.sh" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Linux/GraviTux.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/MacOS_X/GraviTux.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Windows/GraviTux.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/GraviTux_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/GraviTux_jar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Menu.java" afterPath="$PROJECT_DIR$/src/GraviTux/Menu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Play.java" afterPath="$PROJECT_DIR$/src/GraviTux/Play.java" />
     </list>
     <ignored path="GraviTux.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,7 +84,7 @@
       <file leaf-file-name="Menu.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="29" selection-start="504" selection-end="508" vertical-scroll-proportion="0.0">
+            <state line="22" column="38" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -97,7 +93,7 @@
       <file leaf-file-name="Play.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="65" selection-start="629" selection-end="629" vertical-scroll-proportion="0.5903399">
+            <state line="27" column="33" selection-start="742" selection-end="742" vertical-scroll-proportion="0.70804197">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,16 +132,15 @@
         <option value="$PROJECT_DIR$/src/GraviTux/Main.java" />
         <option value="$PROJECT_DIR$/src/GraviTux/Game.java" />
         <option value="$PROJECT_DIR$/res/GraviTux/level/level_1.tmx" />
-        <option value="$PROJECT_DIR$/src/GraviTux/Play.java" />
         <option value="$PROJECT_DIR$/src/GraviTux/Menu.java" />
+        <option value="$PROJECT_DIR$/src/GraviTux/Play.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
     <option name="y" value="27" />
-    <option name="width" value="1922" />
-    <option name="height" value="1054" />
+    <option name="width" value="1914" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -173,20 +168,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GraviTux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GraviTux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -202,20 +183,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="GraviTux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GraviTux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GraviTux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -265,8 +232,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -286,15 +275,15 @@
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Tutorial3/Basics" />
+    <property name="recentsLimit" value="5" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Tutorial3/Basics" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="GraviTux" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -310,8 +299,8 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="Groovy.Shell.LastModule" value="GraviTux" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -379,6 +368,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -404,24 +411,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -607,7 +596,11 @@
       <created>1353688761935</created>
       <updated>1353688761935</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="binary added, now working">
+      <created>1353690073197</created>
+      <updated>1353690073197</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -631,7 +624,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
+    <frame x="0" y="27" width="1914" height="1053" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -647,8 +640,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39978564" sideWeight="0.6749156" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17470525" sideWeight="0.67941505" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32058492" sideWeight="0.4974227" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17438105" sideWeight="0.6801802" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3198198" sideWeight="0.4974227" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -693,7 +686,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="binary added" />
+    <option name="LAST_COMMIT_MESSAGE" value="binary added, now working" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -721,6 +714,7 @@
     <MESSAGE value="Sortierung" />
     <MESSAGE value="Cleanup, tux moves, level doesn't move, tux moves animated, stops animation too. can be executed locally now. (4h work)" />
     <MESSAGE value="binary added" />
+    <MESSAGE value="binary added, now working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -740,6 +734,13 @@
         <state line="16" column="85" selection-start="577" selection-end="577" vertical-scroll-proportion="0.5217391" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="38" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="28" selection-start="647" selection-end="647" vertical-scroll-proportion="0.0">
@@ -747,16 +748,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="29" selection-start="504" selection-end="508" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="65" selection-start="629" selection-end="629" vertical-scroll-proportion="0.5903399">
+        <state line="27" column="33" selection-start="742" selection-end="742" vertical-scroll-proportion="0.70804197">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

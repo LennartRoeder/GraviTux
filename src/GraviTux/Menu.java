@@ -19,8 +19,8 @@ public class Menu extends BasicGameState
 
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
 	{
-		playNow = new Image("res/GraviTux/playNow.png");
-		exitGame = new Image("res/GraviTux/exitGame.png");
+		playNow = new Image("GraviTux/playNow.png");
+		exitGame = new Image("GraviTux/exitGame.png");
 	}
 
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
