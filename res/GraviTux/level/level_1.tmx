@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="15" tilewidth="40" tileheight="40">
+ <tileset firstgid="1" name="Objekte" tilewidth="40" tileheight="40">
+  <image source="Objekte.png" width="160" height="120"/>
+ </tileset>
+ <tileset firstgid="13" name="Personen" tilewidth="40" tileheight="40">
+  <image source="Personen.png" width="160" height="160"/>
+ </tileset>
+ <tileset firstgid="29" name="Texturen" tilewidth="40" tileheight="40">
+  <image source="Texturen.png" width="160" height="160"/>
+ </tileset>
+ <layer name="Kachelebene 1" width="20" height="15">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA1NmYGCQpxJWAWI5BuoBhVHzRs0bNY/u5rEDMT+ZZnCjmacExLJUwopADACmxOSVsAQAAA==
+  </data>
+ </layer>
+ <objectgroup name="Objektebene 1" width="20" height="15"/>
+</map>

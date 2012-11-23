@@ -7,10 +7,10 @@ import org.newdawn.slick.tiled.TiledMap;
 
 public class Play extends BasicGameState
 {
-	Animation tux, movingUp, movingDown, movingLeft, movingRight; //4 animations, tux will be set to one
+	Animation tux, movingUp, movingDown, movingLeft, movingRight, standingRight, standingLeft, standing; //4 animations, tux will be set to one
 	TiledMap worldMap;
 	boolean quit;
-	int[] duration;
+    int duration;
 	float tuxPositionX;
 	float tuxPositionY;
 
@@ -18,30 +18,34 @@ public class Play extends BasicGameState
 	{
 		worldMap = null;
 		quit = false;
-		duration = new int[]{200, 200}; //duration or length of the frame
-		tuxPositionX = 0;               //tux will start at coordinates 0,0
-		tuxPositionY = 0;
+		duration = 200;
+        tuxPositionX = 90;   //tux will start at coordinates 0,0
+		tuxPositionY = 520;
 	}
 
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
 	{
-		worldMap = new TiledMap("res/level/level_1.tmx");
+		worldMap = new TiledMap("res/GraviTux/level/level_1.tmx");
 		//Image[] walkUp = {new Image("res/buckysBack.png"), new Image("res/buckysBack.png")}; //these are the images to be used in the "walkUp" animation
 		//Image[] walkDown = {new Image("res/buckysFront.png"), new Image("res/buckysFront.png")};
-		Image[] walkLeft = {new Image("res/figuren/tux_left.png"), new Image("res/figuren/tux_left.png")};
-		Image[] walkRight = {new Image("res/figuren/tux_right.png"), new Image("res/figuren/tux_right.png")};
-
+		Image[] walkLeft = {new Image("res/GraviTux/figuren/Tux_links01.png"), new Image("res/GraviTux/figuren/Tux_links02.png"), new Image("res/GraviTux/figuren/Tux_links03.png"), new Image("res/GraviTux/figuren/Tux_links04.png")};
+		Image[] walkRight = {new Image("res/GraviTux/figuren/Tux_01.png"), new Image("res/GraviTux/figuren/Tux_02.png"), new Image("res/GraviTux/figuren/Tux_03.png"), new Image("res/GraviTux/figuren/Tux_04.png")};
+        Image[] standLeft = {new Image("res/GraviTux/figuren/tux_left.png")};
+        Image[] standRight = {new Image("res/GraviTux/figuren/tux_right.png")};
 		//movingUp = new Animation(walkUp, duration, false); //each animation takes array of images, duration for each image, and autoUpdate (just set to false)
 		//movingDown = new Animation(walkDown, duration, false);
-		movingLeft = new Animation(walkLeft, duration, false);
-		movingRight = new Animation(walkRight, duration, false);
-		tux = movingRight; //by default as soon as game loads, tux will be facing right
+		movingLeft = new Animation(walkLeft, duration, true);
+		movingRight = new Animation(walkRight, duration, true);
+        standingLeft = new Animation(standLeft, duration, false);
+        standingRight = new Animation(standRight, duration, false);
+        standing = standingRight;
+        tux = standingRight;
 	}
 
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
 	{
-		worldMap.render((int) tuxPositionX, (int) tuxPositionY); //draw the map at 0,0 to start
-		tux.draw(90, 520); //draws tux at 90, 520 (unten links)
+        worldMap.render(0, 0); //draw the map at 0,0 to start
+		tux.draw(tuxPositionX, tuxPositionY); //draws tux at 90, 520 (unten links)
 		g.drawString("Tuxs X: " + tuxPositionX + "\nTuxs Y: " + tuxPositionY, 650, 50); //indicator to see where tux is in his world
 
 		//when they press escape
@@ -60,44 +64,51 @@ public class Play extends BasicGameState
 		//during the game if the user hits the up arrow. "*.25f" is the speed.
 		if (input.isKeyDown(Input.KEY_UP))
 		{
-			/*
+            /*
 			tux = movingUp; //change tux to up image
-			tuxPositionY += delta * .25f; //increase the Y coordinates of tux (move him up)
-			if (tuxPositionY > 162)
+			tuxPositionY -= delta * .25f; //increase the Y coordinates of tux (move him up)
+			if (tuxPositionY < 0)
 			{
-				tuxPositionY -= delta * .25f; //dont let him keep going up if he reaches the top
+				tuxPositionY += delta * .25f; //dont let him keep going up if he reaches the top
 			}
-			*/
+            */
 		}
 		if (input.isKeyDown(Input.KEY_DOWN))
 		{
-			/*
+            /*
 			tux = movingDown;
-			tuxPositionY -= delta * .25f;
-			if (tuxPositionY < -600)
+			tuxPositionY += delta * .25f;
+			if (tuxPositionY > 560)
 			{
-				tuxPositionY += delta * .25f;
+				tuxPositionY -= delta * .25f;
 			}
-			*/
+            */
 		}
 		if (input.isKeyDown(Input.KEY_LEFT))
 		{
 			tux = movingLeft;
-			tuxPositionX += delta * .25f;
-			if (tuxPositionX > 102) //Tux touches left
-			{
-				tuxPositionX -= delta * .25f;
-			}
-		}
-		if (input.isKeyDown(Input.KEY_RIGHT))
-		{
-			tux = movingRight;
+            standing = standingLeft;
 			tuxPositionX -= delta * .25f;
-			if (tuxPositionX < -683)    //Tux touches right
+			if (tuxPositionX < -10) //Tux touches left
 			{
 				tuxPositionX += delta * .25f;
 			}
 		}
+        else
+            tux = standing;
+
+		if (input.isKeyDown(Input.KEY_RIGHT))
+		{
+			tux = movingRight;
+            standing = standingRight;
+			tuxPositionX += delta * .25f;
+			if (tuxPositionX > 770)    //Tux touches right
+			{
+				tuxPositionX -= delta * .25f;
+			}
+		}
+        else
+            tux = standing;
 		//escape
 		if (input.isKeyDown(Input.KEY_ESCAPE))
 		{
