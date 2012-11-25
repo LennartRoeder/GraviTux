@@ -7,46 +7,63 @@ import org.newdawn.slick.tiled.TiledMap;
 
 public class Play extends BasicGameState
 {
-	Animation tux, movingUp, movingDown, movingLeft, movingRight, standingRight, standingLeft, standing; //4 animations, tux will be set to one
-	TiledMap worldMap;
-	boolean quit;
-    int duration;
-	float tuxPositionX;
-	float tuxPositionY;
+	private Animation tux, movingUp, movingDown, movingLeft, movingRight, standing; //animations, tux will be set to one
+	private TiledMap worldMap;  //Level in the background
+	private boolean quit = false;   //states if game is running
+	private boolean[][] blocked;    //2 dimensional array for collision detection
+	private static int duration = 150;   //length of the walk animation
+	private static final int size = 30; //tiled size
+	private float tuxX, tuxY;   //tux position
+	private float vSpeed = 0;
 
 	public Play(int state)
 	{
-		worldMap = null;
-		quit = false;
-		duration = 200;
-        tuxPositionX = 90;   //tux will start at coordinates 0,0
-		tuxPositionY = 520;
+		tuxX = 90f;   //tux will start at coordinates 0,0 (90 = default)
+		tuxY = 100f;  //520 is default
 	}
 
+	@Override
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
 	{
 		worldMap = new TiledMap("res/GraviTux/level/level_1.tmx");
+
 		//Image[] walkUp = {new Image("res/buckysBack.png"), new Image("res/buckysBack.png")}; //these are the images to be used in the "walkUp" animation
 		//Image[] walkDown = {new Image("res/buckysFront.png"), new Image("res/buckysFront.png")};
 		Image[] walkLeft = {new Image("GraviTux/tux/Tux_links01.png"), new Image("GraviTux/tux/Tux_links02.png"), new Image("GraviTux/tux/Tux_links03.png"), new Image("GraviTux/tux/Tux_links04.png")};
 		Image[] walkRight = {new Image("GraviTux/tux/Tux_01.png"), new Image("GraviTux/tux/Tux_02.png"), new Image("GraviTux/tux/Tux_03.png"), new Image("GraviTux/tux/Tux_04.png")};
-        Image[] standLeft = {new Image("GraviTux/tux/tux_left.png")};
-        Image[] standRight = {new Image("GraviTux/tux/tux_right.png")};
+		Image[] stand = {new Image("GraviTux/tux/tux_standing.png")};
+
 		//movingUp = new Animation(walkUp, duration, false); //each animation takes array of images, duration for each image, and autoUpdate (just set to false)
 		//movingDown = new Animation(walkDown, duration, false);
-		movingLeft = new Animation(walkLeft, duration, true);
-		movingRight = new Animation(walkRight, duration, true);
-        standingLeft = new Animation(standLeft, duration, false);
-        standingRight = new Animation(standRight, duration, false);
-        standing = standingRight;
-        tux = standingRight;
+		movingLeft = new Animation(walkLeft, duration, false);
+		movingRight = new Animation(walkRight, duration, false);
+		standing = new Animation(stand, duration, false);
+
+		tux = standing; //tux looks towards the player, when the game starts
+
+		// build a collision map based on tile properties in the TileD map
+		blocked = new boolean[worldMap.getWidth()][worldMap.getHeight()];
+
+		for (int xAxis = 0; xAxis < worldMap.getWidth(); xAxis++)
+		{
+			for (int yAxis = 0; yAxis < worldMap.getHeight(); yAxis++)
+			{
+				int tileID = worldMap.getTileId(xAxis, yAxis, 0);
+				String value = worldMap.getTileProperty(tileID, "blocked", "false");
+				if ("true".equals(value))
+				{
+					blocked[xAxis][yAxis] = true;
+				}
+			}
+		}
 	}
 
+	@Override
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
 	{
-        worldMap.render(0, 0); //draw the map at 0,0 to start
-		tux.draw(tuxPositionX, tuxPositionY); //draws tux at 90, 520 (unten links)
-		g.drawString("Tuxs X: " + tuxPositionX + "\nTuxs Y: " + tuxPositionY, 650, 50); //indicator to see where tux is in his world
+		worldMap.render(0, 0); //draw the map at 0,0 to start
+		tux.draw(tuxX, tuxY); //draws tux at 90, 520 (unten links)
+		g.drawString("Tuxs X: " + tuxX + "\nTuxs Y: " + tuxY, 650, 50); //indicator to see where tux is in his world
 
 		//when they press escape
 		if (quit)
@@ -57,58 +74,62 @@ public class Play extends BasicGameState
 		}
 	}
 
+	@Override
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException
 	{
 		Input input = gc.getInput();
+		float move_speed = delta * 0.25f;
 
-		//during the game if the user hits the up arrow. "*.25f" is the speed.
-		if (input.isKeyDown(Input.KEY_UP))
+		/*
+		if (input.isKeyDown(Input.KEY_UP) || input.isKeyDown(Input.KEY_W))
 		{
-            /*
-			tux = movingUp; //change tux to up image
-			tuxPositionY -= delta * .25f; //increase the Y coordinates of tux (move him up)
-			if (tuxPositionY < 0)
+			tux = movingUp;
+			if (!(isBlocked(tuxX, tuxY - move_speed) || isBlocked(tuxX + size - 1, tuxY - move_speed)))
 			{
-				tuxPositionY += delta * .25f; //dont let him keep going up if he reaches the top
+				tux.update(delta);
+				// The lower the delta the slowest the sprite will animate.
+				tuxY -= move_speed;
 			}
-            */
-		}
-		if (input.isKeyDown(Input.KEY_DOWN))
+		} else if (input.isKeyDown(Input.KEY_DOWN) || input.isKeyDown(Input.KEY_S))
 		{
-            /*
 			tux = movingDown;
-			tuxPositionY += delta * .25f;
-			if (tuxPositionY > 560)
+			if (!(isBlocked(tuxX, tuxY + size + move_speed) || isBlocked(tuxX + size - 1, tuxY + size + move_speed)))
 			{
-				tuxPositionY -= delta * .25f;
+				tux.update(delta);
+				tuxY += move_speed;
 			}
-            */
-		}
-		if (input.isKeyDown(Input.KEY_LEFT))
+		} else
+		*/
+		if (input.isKeyDown(Input.KEY_LEFT) || input.isKeyDown(Input.KEY_A))
 		{
 			tux = movingLeft;
-            standing = standingLeft;
-			tuxPositionX -= delta * .25f;
-			if (tuxPositionX < -10) //Tux touches left
+			if (!(isBlocked(tuxX - move_speed, tuxY) || isBlocked(tuxX - move_speed, tuxY + size - 1)))
 			{
-				tuxPositionX += delta * .25f;
+				tux.update(delta);
+				tuxX -= move_speed;
 			}
-		}
-        else
-            tux = standing;
-
-		if (input.isKeyDown(Input.KEY_RIGHT))
+		} else if (input.isKeyDown(Input.KEY_RIGHT) || input.isKeyDown(Input.KEY_D))
 		{
 			tux = movingRight;
-            standing = standingRight;
-			tuxPositionX += delta * .25f;
-			if (tuxPositionX > 770)    //Tux touches right
+			if (!(isBlocked(tuxX + size + move_speed, tuxY) || isBlocked(tuxX + size + move_speed, tuxY + size - 1)))
 			{
-				tuxPositionX -= delta * .25f;
+				tux.update(delta);
+				tuxX += move_speed;
 			}
+		} else if (input.isKeyDown(Input.KEY_SPACE) || input.isKeyDown(Input.KEY_X))
+		{
+			// still quite buged, but body demands sleep!
+			if (!isBlocked(tuxX, tuxY))
+			{
+				vSpeed -= .01f * delta;
+			} else
+			{
+				vSpeed = 0;
+			}
+		} else
+		{
+			tux = standing;
 		}
-        else
-            tux = standing;
 		//escape
 		if (input.isKeyDown(Input.KEY_ESCAPE))
 		{
@@ -138,8 +159,36 @@ public class Play extends BasicGameState
 				System.exit(0);
 			}
 		}
+
+		//Gravity
+		if (!isBlocked(tuxX, tuxY + 40))
+		{
+			vSpeed += .01f * delta;
+		} else
+		{
+			vSpeed = 0;
+		}
+		tuxY += vSpeed;
+		tux.update(delta);
 	}
 
+	private boolean isBlocked(float x, float y)
+	{
+		int xBlock = 0;
+		int yBlock = 0;
+
+		if (x > 0)
+		{
+			xBlock = (int) x / 40;
+		}
+		if (y > 0)
+		{
+			yBlock = (int) y / 40;
+		}
+		return blocked[xBlock][yBlock];
+	}
+
+	@Override
 	public int getID()
 	{
 		return 1;
