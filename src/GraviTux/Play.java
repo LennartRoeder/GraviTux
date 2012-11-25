@@ -12,9 +12,10 @@ public class Play extends BasicGameState
 	private boolean quit = false;   //states if game is running
 	private boolean[][] blocked;    //2 dimensional array for collision detection
 	private static int duration = 150;   //length of the walk animation
-	private static final int size = 30; //tiled size
+	private static final int size = 40; //tiled size
 	private float tuxX, tuxY;   //tux position
 	private float vSpeed = 0;
+
 
 	public Play(int state)
 	{
@@ -25,13 +26,18 @@ public class Play extends BasicGameState
 	@Override
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
 	{
-		worldMap = new TiledMap("res/GraviTux/level/level_1.tmx");
+		worldMap = new TiledMap("res/GraviTux/level/demo.tmx");
 
 		//Image[] walkUp = {new Image("res/buckysBack.png"), new Image("res/buckysBack.png")}; //these are the images to be used in the "walkUp" animation
 		//Image[] walkDown = {new Image("res/buckysFront.png"), new Image("res/buckysFront.png")};
-		Image[] walkLeft = {new Image("GraviTux/tux/Tux_links01.png"), new Image("GraviTux/tux/Tux_links02.png"), new Image("GraviTux/tux/Tux_links03.png"), new Image("GraviTux/tux/Tux_links04.png")};
-		Image[] walkRight = {new Image("GraviTux/tux/Tux_01.png"), new Image("GraviTux/tux/Tux_02.png"), new Image("GraviTux/tux/Tux_03.png"), new Image("GraviTux/tux/Tux_04.png")};
-		Image[] stand = {new Image("GraviTux/tux/tux_standing.png")};
+
+		//Image[] walkLeft = {new Image("GraviTux/tux/Tux_links01.png"), new Image("GraviTux/tux/Tux_links02.png"), new Image("GraviTux/tux/Tux_links03.png"), new Image("GraviTux/tux/Tux_links04.png")};
+		//Image[] walkRight = {new Image("GraviTux/tux/Tux_01.png"), new Image("GraviTux/tux/Tux_02.png"), new Image("GraviTux/tux/Tux_03.png"), new Image("GraviTux/tux/Tux_04.png")};
+		//Image[] stand = {new Image("GraviTux/tux/tux_standing.png")};
+
+		Image[] walkLeft = {new Image("GraviTux/block_v1_pureblue.png")};
+		Image[] walkRight = {new Image("GraviTux/block_v1_pureblue.png")};
+		Image[] stand = {new Image("GraviTux/block_v1_pureblue.png")};
 
 		//movingUp = new Animation(walkUp, duration, false); //each animation takes array of images, duration for each image, and autoUpdate (just set to false)
 		//movingDown = new Animation(walkDown, duration, false);
@@ -63,7 +69,7 @@ public class Play extends BasicGameState
 	{
 		worldMap.render(0, 0); //draw the map at 0,0 to start
 		tux.draw(tuxX, tuxY); //draws tux at 90, 520 (unten links)
-		g.drawString("Tuxs X: " + tuxX + "\nTuxs Y: " + tuxY, 650, 50); //indicator to see where tux is in his world
+		g.drawString("Tux X: " + (int) tuxX + "\nTux Y: " + (int) tuxY, 650, 50); //indicator to see where tux is in his world
 
 		//when they press escape
 		if (quit)
@@ -78,7 +84,7 @@ public class Play extends BasicGameState
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException
 	{
 		Input input = gc.getInput();
-		float move_speed = delta * 0.25f;
+		float move_speed = delta * 0.3f;
 
 		/*
 		if (input.isKeyDown(Input.KEY_UP) || input.isKeyDown(Input.KEY_W))
@@ -159,17 +165,22 @@ public class Play extends BasicGameState
 				System.exit(0);
 			}
 		}
-
 		//Gravity
-		if (!isBlocked(tuxX, tuxY + 40))
+		if (!(isBlocked(tuxX, tuxY + size + (vSpeed + .1f * delta)) || isBlocked(tuxX + size - 1, tuxY + size + (vSpeed + .1f * delta))))
 		{
-			vSpeed += .01f * delta;
+			//accelerate falling
+			vSpeed += .1f * delta;
+			//max falling speed
+			if (vSpeed > 7)
+			{
+				vSpeed = 7;
+			}
+			tux.update(delta);
+			tuxY += vSpeed;
 		} else
 		{
 			vSpeed = 0;
 		}
-		tuxY += vSpeed;
-		tux.update(delta);
 	}
 
 	private boolean isBlocked(float x, float y)

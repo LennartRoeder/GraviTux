@@ -30,6 +30,7 @@ public class Game extends StateBasedGame
 		AppGameContainer appgc;
 		appgc = new AppGameContainer(new Game(gamename));
 		appgc.setDisplayMode(800, 600, false);
+		appgc.setTargetFrameRate(60);
 		appgc.start();
 	}
 }
