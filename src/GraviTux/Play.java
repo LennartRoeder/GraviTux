@@ -11,16 +11,18 @@ public class Play extends BasicGameState
 	private TiledMap worldMap;  //Level in the background
 	private boolean quit = false;   //states if game is running
 	private boolean[][] blocked;    //2 dimensional array for collision detection
-	private static int duration = 150;   //length of the walk animation
+	private float tuxX, tuxY, vSpeed;   //tux position and falling speed
+	private static final int duration = 150;   //length of the walk animation
 	private static final int size = 40; //tiled size
-	private float tuxX, tuxY;   //tux position
-	private float vSpeed = 0;
-
+	private static final float gravity = 0.1f;  //tux acceleration speed when falling
+	private static final float vSpeedMax = 7f;  //tux maximum falling speed
+	private static final float moveSpeed = 1.3f;   //tux movement speed
 
 	public Play(int state)
 	{
-		tuxX = 90f;   //tux will start at coordinates 0,0 (90 = default)
+		tuxX = 90f;   //tux start coordinates (90 = default)
 		tuxY = 100f;  //520 is default
+		vSpeed = 0f;   //tux current falling speed
 	}
 
 	@Override
@@ -84,63 +86,67 @@ public class Play extends BasicGameState
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException
 	{
 		Input input = gc.getInput();
-		float move_speed = delta * 0.3f;
+		float speed = delta * moveSpeed;
 
 		/*
 		if (input.isKeyDown(Input.KEY_UP) || input.isKeyDown(Input.KEY_W))
 		{
 			tux = movingUp;
-			if (!(isBlocked(tuxX, tuxY - move_speed) || isBlocked(tuxX + size - 1, tuxY - move_speed)))
+			if (!(isBlocked(tuxX, tuxY - speed) || isBlocked(tuxX + size - 1, tuxY - speed)))
 			{
 				tux.update(delta);
 				// The lower the delta the slowest the sprite will animate.
-				tuxY -= move_speed;
+				tuxY -= speed;
 			}
 		} else if (input.isKeyDown(Input.KEY_DOWN) || input.isKeyDown(Input.KEY_S))
 		{
 			tux = movingDown;
-			if (!(isBlocked(tuxX, tuxY + size + move_speed) || isBlocked(tuxX + size - 1, tuxY + size + move_speed)))
+			if (!(isBlocked(tuxX, tuxY + size + speed) || isBlocked(tuxX + size - 1, tuxY + size + speed)))
 			{
 				tux.update(delta);
-				tuxY += move_speed;
+				tuxY += speed;
 			}
 		} else
 		*/
 		if (input.isKeyDown(Input.KEY_LEFT) || input.isKeyDown(Input.KEY_A))
 		{
 			tux = movingLeft;
-			if (!(isBlocked(tuxX - move_speed, tuxY) || isBlocked(tuxX - move_speed, tuxY + size - 1)))
+			if (!(isBlocked(tuxX - speed, tuxY) || isBlocked(tuxX - speed, tuxY + size - 1)))
 			{
 				tux.update(delta);
-				tuxX -= move_speed;
+				tuxX = tuxX - speed;
+			} else
+			{
+				tux.update(delta);
+				tuxX -= tuxX % size;
 			}
 		} else if (input.isKeyDown(Input.KEY_RIGHT) || input.isKeyDown(Input.KEY_D))
 		{
 			tux = movingRight;
-			if (!(isBlocked(tuxX + size + move_speed, tuxY) || isBlocked(tuxX + size + move_speed, tuxY + size - 1)))
+			if (!(isBlocked(tuxX + size + speed, tuxY) || isBlocked(tuxX + size + speed, tuxY + size - 1)))
 			{
 				tux.update(delta);
-				tuxX += move_speed;
+				tuxX = tuxX + speed;
+			} else
+			{
+				tux.update(delta);
+				tuxX = tuxX - (tuxX % size) + size - 1;
 			}
 		} else if (input.isKeyDown(Input.KEY_SPACE) || input.isKeyDown(Input.KEY_X))
 		{
 			// still quite buged, but body demands sleep!
-			if (!isBlocked(tuxX, tuxY))
-			{
-				vSpeed -= .01f * delta;
-			} else
-			{
-				vSpeed = 0;
-			}
+
 		} else
 		{
 			tux = standing;
 		}
+
 		//escape
 		if (input.isKeyDown(Input.KEY_ESCAPE))
 		{
 			quit = true;
 		}
+
 		//when they hit escape
 		if (quit)
 		{
@@ -165,15 +171,16 @@ public class Play extends BasicGameState
 				System.exit(0);
 			}
 		}
+
 		//Gravity
-		if (!(isBlocked(tuxX, tuxY + size + (vSpeed + .1f * delta)) || isBlocked(tuxX + size - 1, tuxY + size + (vSpeed + .1f * delta))))
+		if (!(isBlocked(tuxX, tuxY + size + (vSpeed + gravity * delta)) || isBlocked(tuxX + size - 1, tuxY + size + (vSpeed + gravity * delta))))
 		{
 			//accelerate falling
-			vSpeed += .1f * delta;
+			vSpeed += gravity * delta;
 			//max falling speed
-			if (vSpeed > 7)
+			if (vSpeed > vSpeedMax)
 			{
-				vSpeed = 7;
+				vSpeed = vSpeedMax;
 			}
 			tux.update(delta);
 			tuxY += vSpeed;
@@ -183,19 +190,11 @@ public class Play extends BasicGameState
 		}
 	}
 
-	private boolean isBlocked(float x, float y)
+	private boolean isBlocked(float x, float y) throws SlickException
 	{
-		int xBlock = 0;
-		int yBlock = 0;
+		int xBlock = (int) (x / size);
+		int yBlock = (int) (y / size);
 
-		if (x > 0)
-		{
-			xBlock = (int) x / 40;
-		}
-		if (y > 0)
-		{
-			yBlock = (int) y / 40;
-		}
 		return blocked[xBlock][yBlock];
 	}
 
