@@ -314,6 +314,7 @@
   <tile id="0">
    <properties>
     <property name="id" value="26"/>
+    <property name="rotate" value="true"/>
    </properties>
   </tile>
  </tileset>

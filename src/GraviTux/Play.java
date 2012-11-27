@@ -12,13 +12,14 @@ public class Play extends BasicGameState
 	private Image[] walkLeft, walkRight, walkUp, walkDown, stand;   //Image arrays used for animations
 	private TiledMap worldMap;  //Level in the background
 	private boolean menu, revGravi;   //states if menu is open and if gravity is reversed
-	private boolean[][] blocked, deadly, levelEnd;    //2 dimensional arrays for collision detection
+	private boolean[][] blocked, deadly, levelEnd, storm;    //2 dimensional arrays for collision detection
 	private float tuxX, tuxY, vSpeed;   //tux position and falling speed
 	private static final int duration = 150;   //length of the walk animation
 	private static final int size = 40; //tiled size in px
 	private static final float gravity = 0.1f;  //tux acceleration speed when falling
 	private static final float vSpeedMax = 7f;  //tux maximum falling speed
 	private static final float moveSpeed = 0.3f;   //tux movement speed
+	//private Sound background;
 
 	////constructor
 	public Play(int state)
@@ -35,6 +36,8 @@ public class Play extends BasicGameState
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
 	{
 		worldMap = new TiledMap("res/GraviTux/level/level_5.tmx");
+		//background = new Sound("res/GraviTux/sounds/");
+		//background.play();
 
 		////Filling Image arrays for animation
 		//walkUp = new Image[]{new Image("res/buckysBack.png"), new Image("res/buckysBack.png")}; //these are the images to be used in the "walkUp" animation
@@ -55,6 +58,7 @@ public class Play extends BasicGameState
 		blocked = new boolean[worldMap.getWidth()][worldMap.getHeight()];
 		deadly = new boolean[worldMap.getWidth()][worldMap.getHeight()];
 		levelEnd = new boolean[worldMap.getWidth()][worldMap.getHeight()];
+		storm = new boolean[worldMap.getWidth()][worldMap.getHeight()];
 
 		for (int xAxis = 0; xAxis < worldMap.getWidth(); xAxis++)
 		{
@@ -75,10 +79,16 @@ public class Play extends BasicGameState
 					deadly[xAxis][yAxis] = true;
 				}
 				////level finished array
-				String level = worldMap.getTileProperty(tileID, "level", "false");
+				String level = worldMap.getTileProperty(tileID, "fish", "false");
 				if ("true".equals(level))
 				{
 					levelEnd[xAxis][yAxis] = true;
+				}
+				////storm to rotate gravity
+				String rotate = worldMap.getTileProperty(tileID, "rotate", "false");
+				if ("true".equals(level))
+				{
+					storm[xAxis][yAxis] = true;
 				}
 			}
 		}
@@ -302,6 +312,15 @@ public class Play extends BasicGameState
 		int yBlock = (int) (y / size);
 
 		return levelEnd[xBlock][yBlock];
+	}
+
+	////Check if collision with storm happened
+	private boolean isStorm(float x, float y) throws SlickException
+	{
+		int xBlock = (int) (x / size);
+		int yBlock = (int) (y / size);
+
+		return storm[xBlock][yBlock];
 	}
 
 	////get state ID
