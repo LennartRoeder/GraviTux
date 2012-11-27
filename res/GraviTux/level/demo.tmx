@@ -79,7 +79,7 @@
   <image source="Personen.png" width="160" height="160"/>
  </tileset>
  <tileset firstgid="29" name="Texturen" tilewidth="40" tileheight="40">
-  <image source="Texturen.png" width="160" height="160"/>
+  <image source="Texturen.png" width="160" height="400"/>
   <tile id="0">
    <properties>
     <property name="blocked" value="true"/>

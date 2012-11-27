@@ -9,26 +9,28 @@ public class Play extends BasicGameState
 {
 	private Animation tux, movingUp, movingDown, movingLeft, movingRight, standing; //animations, tux will be set to one
 	private TiledMap worldMap;  //Level in the background
-	private boolean quit = false;   //states if game is running
+	private boolean quit, revGravi;   //states if game is running
 	private boolean[][] blocked;    //2 dimensional array for collision detection
 	private float tuxX, tuxY, vSpeed;   //tux position and falling speed
 	private static final int duration = 150;   //length of the walk animation
 	private static final int size = 40; //tiled size
 	private static final float gravity = 0.1f;  //tux acceleration speed when falling
 	private static final float vSpeedMax = 7f;  //tux maximum falling speed
-	private static final float moveSpeed = 1.3f;   //tux movement speed
+	private static final float moveSpeed = 0.3f;   //tux movement speed
 
 	public Play(int state)
 	{
-		tuxX = 90f;   //tux start coordinates (90 = default)
-		tuxY = 100f;  //520 is default
+		quit = false;   // Menu not open
+		revGravi = false;   // true, when tux walks upside down
+		tuxX = 79f;   //tux start coordinates (90 = default)
+		tuxY = 520f;  //520 is default
 		vSpeed = 0f;   //tux current falling speed
 	}
 
 	@Override
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
 	{
-		worldMap = new TiledMap("res/GraviTux/level/demo.tmx");
+		worldMap = new TiledMap("res/GraviTux/level/level_2.tmx");
 
 		//Image[] walkUp = {new Image("res/buckysBack.png"), new Image("res/buckysBack.png")}; //these are the images to be used in the "walkUp" animation
 		//Image[] walkDown = {new Image("res/buckysFront.png"), new Image("res/buckysFront.png")};
@@ -115,28 +117,40 @@ public class Play extends BasicGameState
 			{
 				tux.update(delta);
 				tuxX = tuxX - speed;
-			} else
+			}
+			else
 			{
 				tux.update(delta);
 				tuxX -= tuxX % size;
 			}
-		} else if (input.isKeyDown(Input.KEY_RIGHT) || input.isKeyDown(Input.KEY_D))
+		}
+		else if (input.isKeyDown(Input.KEY_RIGHT) || input.isKeyDown(Input.KEY_D))
 		{
 			tux = movingRight;
 			if (!(isBlocked(tuxX + size + speed, tuxY) || isBlocked(tuxX + size + speed, tuxY + size - 1)))
 			{
 				tux.update(delta);
 				tuxX = tuxX + speed;
-			} else
+			}
+			else
 			{
 				tux.update(delta);
 				tuxX = tuxX - (tuxX % size) + size - 1;
 			}
-		} else if (input.isKeyDown(Input.KEY_SPACE) || input.isKeyDown(Input.KEY_X))
+		}
+		//tux changes Gravity, but only when he touches the ground
+		else if ((input.isKeyDown(Input.KEY_SPACE) || input.isKeyDown(Input.KEY_X)) && vSpeed == 0)
 		{
-			// still quite buged, but body demands sleep!
-
-		} else
+			if (!revGravi)
+			{
+				revGravi = true;
+			}
+			else
+			{
+				revGravi = false;
+			}
+		}
+		else
 		{
 			tux = standing;
 		}
@@ -173,7 +187,7 @@ public class Play extends BasicGameState
 		}
 
 		//Gravity
-		if (!(isBlocked(tuxX, tuxY + size + (vSpeed + gravity * delta)) || isBlocked(tuxX + size - 1, tuxY + size + (vSpeed + gravity * delta))))
+		if ((!(isBlocked(tuxX, tuxY + size + (vSpeed + gravity * delta)) || isBlocked(tuxX + size - 1, tuxY + size + (vSpeed + gravity * delta)))) && (!revGravi))
 		{
 			//accelerate falling
 			vSpeed += gravity * delta;
@@ -184,7 +198,20 @@ public class Play extends BasicGameState
 			}
 			tux.update(delta);
 			tuxY += vSpeed;
-		} else
+		}
+		else if ((!(isBlocked(tuxX, tuxY - (vSpeed + gravity * delta)) || isBlocked(tuxX + size - 1, tuxY - (vSpeed + gravity * delta)))) && (revGravi))
+		{
+			//accelerate falling
+			vSpeed += gravity * delta;
+			//max falling speed
+			if (vSpeed > vSpeedMax)
+			{
+				vSpeed = vSpeedMax;
+			}
+			tux.update(delta);
+			tuxY -= vSpeed;
+		}
+		else
 		{
 			vSpeed = 0;
 		}
