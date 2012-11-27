@@ -35,13 +35,14 @@ public class Play extends BasicGameState
 		//Image[] walkUp = {new Image("res/buckysBack.png"), new Image("res/buckysBack.png")}; //these are the images to be used in the "walkUp" animation
 		//Image[] walkDown = {new Image("res/buckysFront.png"), new Image("res/buckysFront.png")};
 
-		//Image[] walkLeft = {new Image("GraviTux/tux/Tux_links01.png"), new Image("GraviTux/tux/Tux_links02.png"), new Image("GraviTux/tux/Tux_links03.png"), new Image("GraviTux/tux/Tux_links04.png")};
-		//Image[] walkRight = {new Image("GraviTux/tux/Tux_01.png"), new Image("GraviTux/tux/Tux_02.png"), new Image("GraviTux/tux/Tux_03.png"), new Image("GraviTux/tux/Tux_04.png")};
-		//Image[] stand = {new Image("GraviTux/tux/tux_standing.png")};
+		Image[] walkLeft = {new Image("GraviTux/tux/Tux_links01.png"), new Image("GraviTux/tux/Tux_links02.png"), new Image("GraviTux/tux/Tux_links03.png"), new Image("GraviTux/tux/Tux_links04.png")};
+		Image[] walkRight = {new Image("GraviTux/tux/Tux_01.png"), new Image("GraviTux/tux/Tux_02.png"), new Image("GraviTux/tux/Tux_03.png"), new Image("GraviTux/tux/Tux_04.png")};
+		Image[] stand = {new Image("GraviTux/tux/tux_standing.png")};
 
-		Image[] walkLeft = {new Image("GraviTux/block_v1_pureblue.png")};
-		Image[] walkRight = {new Image("GraviTux/block_v1_pureblue.png")};
-		Image[] stand = {new Image("GraviTux/block_v1_pureblue.png")};
+		//Tux as a 40x40 block to test collision
+		//Image[] walkLeft = {new Image("GraviTux/block_v1_pureblue.png")};
+		//Image[] walkRight = {new Image("GraviTux/block_v1_pureblue.png")};
+		//Image[] stand = {new Image("GraviTux/block_v1_pureblue.png")};
 
 		//movingUp = new Animation(walkUp, duration, false); //each animation takes array of images, duration for each image, and autoUpdate (just set to false)
 		//movingDown = new Animation(walkDown, duration, false);
@@ -75,7 +76,7 @@ public class Play extends BasicGameState
 		tux.draw(tuxX, tuxY); //draws tux at 90, 520 (unten links)
 		g.drawString("Tux X: " + (int) tuxX + "\nTux Y: " + (int) tuxY, 650, 50); //indicator to see where tux is in his world
 
-		//when they press escape
+		//when the player presses escape
 		if (quit)
 		{
 			g.drawString("Weiter spielen (S)", 324, 200);
@@ -124,7 +125,7 @@ public class Play extends BasicGameState
 				tuxX -= tuxX % size;
 			}
 		}
-		else if (input.isKeyDown(Input.KEY_RIGHT) || input.isKeyDown(Input.KEY_D))
+		if (input.isKeyDown(Input.KEY_RIGHT) || input.isKeyDown(Input.KEY_D))
 		{
 			tux = movingRight;
 			if (!(isBlocked(tuxX + size + speed, tuxY) || isBlocked(tuxX + size + speed, tuxY + size - 1)))
@@ -139,8 +140,9 @@ public class Play extends BasicGameState
 			}
 		}
 		//tux changes Gravity, but only when he touches the ground
-		else if ((input.isKeyDown(Input.KEY_SPACE) || input.isKeyDown(Input.KEY_X)) && vSpeed == 0)
+		if ((input.isKeyDown(Input.KEY_SPACE) || input.isKeyDown(Input.KEY_X)) && vSpeed == 0)
 		{
+			tux = standing;
 			if (!revGravi)
 			{
 				revGravi = true;
@@ -150,17 +152,11 @@ public class Play extends BasicGameState
 				revGravi = false;
 			}
 		}
-		else
-		{
-			tux = standing;
-		}
-
 		//escape
 		if (input.isKeyDown(Input.KEY_ESCAPE))
 		{
 			quit = true;
 		}
-
 		//when they hit escape
 		if (quit)
 		{
@@ -185,7 +181,6 @@ public class Play extends BasicGameState
 				System.exit(0);
 			}
 		}
-
 		//Gravity
 		if ((!(isBlocked(tuxX, tuxY + size + (vSpeed + gravity * delta)) || isBlocked(tuxX + size - 1, tuxY + size + (vSpeed + gravity * delta)))) && (!revGravi))
 		{
