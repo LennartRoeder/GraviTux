@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="">
+    <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="nex tu">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_07.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_08.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_stand.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/block_v1_pureblue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_links01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_links02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_links03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_links04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/tux/tux_standing.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_01.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_01.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_02.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_02.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_03.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_03.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_04.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_04.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Play.java" afterPath="$PROJECT_DIR$/src/GraviTux/Play.java" />
     </list>
     <ignored path="GraviTux.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,8 +55,8 @@
         <option name="CONDITION_ENABLED" value="false" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -53,12 +70,29 @@
         <option name="CONDITION_ENABLED" value="false" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
     </breakpoint_any>
     <breakpoint_rules />
-    <ui_properties />
+    <ui_properties>
+      <property name="line_breakpoints_groupByMethods" value="false" />
+      <property name="line_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_flattenPackages" value="true" />
+      <property name="method_breakpoints_flattenPackages" value="true" />
+      <property name="field_breakpoints_flattenPackages" value="true" />
+      <property name="exception_breakpoints_groupByMethods" value="false" />
+      <property name="line_breakpoints_groupByClasses" value="true" />
+      <property name="method_breakpoints_viewId" value="TABLE" />
+      <property name="field_breakpoints_groupByMethods" value="false" />
+      <property name="line_breakpoints_flattenPackages" value="true" />
+      <property name="field_breakpoints_groupByClasses" value="true" />
+      <property name="method_breakpoints_groupByClasses" value="true" />
+      <property name="exception_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="method_breakpoints_groupByMethods" value="false" />
+    </ui_properties>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="GraviTux" />
@@ -86,10 +120,8 @@
       <file leaf-file-name="Play.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="331" column="2" selection-start="10346" selection-end="10346" vertical-scroll-proportion="5.7934656">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="28" column="42" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.07001167">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -162,6 +194,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -216,6 +258,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane">
@@ -228,16 +292,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="GraviTux" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -625,7 +679,11 @@
       <created>1354054904438</created>
       <updated>1354054904438</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="storm event added">
+      <created>1354055193711</created>
+      <updated>1354055193711</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -768,18 +826,19 @@
         <state line="16" column="85" selection-start="577" selection-end="577" vertical-scroll-proportion="0.5217391" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraviTux/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="17" selection-start="891" selection-end="891" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/jars/slick.jar!/org/newdawn/slick/openal/WaveData.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.46875">
-          <folding />
-        </state>
+        <state line="27" column="0" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.46875" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/GraviTux/tux/Tux_01.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GraviTux/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="17" selection-start="891" selection-end="891" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
@@ -789,10 +848,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="331" column="2" selection-start="10346" selection-end="10346" vertical-scroll-proportion="5.7934656">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="28" column="42" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.07001167">
+          <folding />
         </state>
       </provider>
     </entry>
