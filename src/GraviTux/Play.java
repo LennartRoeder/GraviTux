@@ -18,7 +18,7 @@ public class Play extends BasicGameState
 	private TiledMap[] worldMap;  //Level in the background
 	private int levelCurrent, levelMax;      //number of current and total levels
 	private boolean menu;       //states if menu is open and if gravityAcc is reversed
-	private String gravity;
+	private char gravity;       //indicates direction of gravity
 	private boolean[][] blocked, deadly, levelEnd, storm;   //2 dimensional arrays for collision detection
 	private float tuxX, tuxY, vSpeed;           //tux position and falling speed
 	private static final int duration = 150;    //length of the walk animation
@@ -34,7 +34,7 @@ public class Play extends BasicGameState
 	public Play(int state)
 	{
 		menu = false;       //Menu not open
-		gravity = "bottom"; //default gravity direktion
+		gravity = 'b'; //default gravity direktion
 		tuxX = 79f;         //tux start coordinates (90 = default)
 		tuxY = 518f;        //518 is default
 		vSpeed = 0f;        //tux current falling speed
@@ -181,15 +181,15 @@ public class Play extends BasicGameState
 			////changes the animation, so tux faces left
 			switch (gravity)
 			{
-				case "bottom":
+				case 'b':
 					tux = bottomMovingLeft;
 					break;
-				case "top":
+				case 't':
 					tux = topMovingLeft;
 					break;
-				case "left":
+				case 'l':
 					break;
-				case "right":
+				case 'r':
 					break;
 			}
 			if (!(isBlocked(tuxX - speed, tuxY, blocked) || isBlocked(tuxX - speed, tuxY + tuxSizeY - 1, blocked)))
@@ -208,15 +208,15 @@ public class Play extends BasicGameState
 		{
 			switch (gravity)
 			{
-				case "bottom":
+				case 'b':
 					tux = bottomMovingRight;
 					break;
-				case "top":
+				case 't':
 					tux = topMovingRight;
 					break;
-				case "left":
+				case 'l':
 					break;
-				case "right":
+				case 'r':
 					break;
 			}
 			if (!(isBlocked(tuxX + tuxSizeX + speed, tuxY, blocked)
@@ -236,14 +236,14 @@ public class Play extends BasicGameState
 		{
 			switch (gravity)
 			{
-				case "bottom":
+				case 'b':
 					break;
-				case "top":
+				case 't':
 					break;
-				case "left":
+				case 'l':
 					tux = leftMovingUp;
 					break;
-				case "right":
+				case 'r':
 					tux = rightMovingUp;
 					break;
 			}
@@ -259,14 +259,14 @@ public class Play extends BasicGameState
 		{
 			switch (gravity)
 			{
-				case "bottom":
+				case 'b':
 					break;
-				case "top":
+				case 't':
 					break;
-				case "left":
+				case 'l':
 					tux = leftMovingDown;
 					break;
-				case "right":
+				case 'r':
 					tux = rightMovingDown;
 					break;
 			}
@@ -284,20 +284,20 @@ public class Play extends BasicGameState
 			///reverse gravity
 			switch (gravity)
 			{
-				case "bottom":
-					gravity = "top";
+				case 'b':
+					gravity = 't';
 					tux = topStanding;
 					break;
-				case "top":
-					gravity = "bottom";
+				case 't':
+					gravity = 'b';
 					tux = bottomStanding;
 					break;
-				case "left":
-					gravity = "right";
+				case 'l':
+					gravity = 'r';
 					tux = rightStanding;
 					break;
-				case "right":
-					gravity = "left";
+				case 'r':
+					gravity = 'l';
 					tux = leftStanding;
 					break;
 			}
@@ -305,7 +305,7 @@ public class Play extends BasicGameState
 
 		////Gravity
 		if ((!(isBlocked(tuxX, tuxY + tuxSizeY + (vSpeed + gravityAcc * delta), blocked)
-				|| isBlocked(tuxX + tuxSizeX - 1, tuxY + tuxSizeY + (vSpeed + gravityAcc * delta), blocked))) && (gravity.equals("bottom")))
+				|| isBlocked(tuxX + tuxSizeX - 1, tuxY + tuxSizeY + (vSpeed + gravityAcc * delta), blocked))) && (gravity == 'b'))
 		{
 			////accelerate falling
 			vSpeed += gravityAcc * delta;
@@ -319,7 +319,7 @@ public class Play extends BasicGameState
 		}
 		////negative gravity
 		else if ((!(isBlocked(tuxX, tuxY - (vSpeed + gravityAcc * delta), blocked)
-				|| isBlocked(tuxX + tuxSizeX - 1, tuxY - (vSpeed + gravityAcc * delta), blocked))) && (gravity.equals("top")))
+				|| isBlocked(tuxX + tuxSizeX - 1, tuxY - (vSpeed + gravityAcc * delta), blocked))) && (gravity == 't'))
 		{
 			vSpeed += gravityAcc * delta;
 			if (vSpeed > vSpeedMax)
@@ -331,7 +331,7 @@ public class Play extends BasicGameState
 		}
 		////gravity set left
 		else if (!(isBlocked(tuxX - (vSpeed + gravityAcc * delta), tuxY, blocked)
-				|| isBlocked(tuxX - (vSpeed + gravityAcc * delta), tuxY + tuxSizeY - 1, blocked)) && (gravity.equals("left")))
+				|| isBlocked(tuxX - (vSpeed + gravityAcc * delta), tuxY + tuxSizeY - 1, blocked)) && (gravity == 'l'))
 		{
 			vSpeed += gravityAcc * delta;
 			if (vSpeed > vSpeedMax)
@@ -343,7 +343,7 @@ public class Play extends BasicGameState
 		}
 		//gravity set right
 		else if (!(isBlocked(tuxX + tuxSizeX + (vSpeed + gravityAcc * delta), tuxY, blocked)
-				|| isBlocked(tuxX + tuxSizeX + (vSpeed + gravityAcc * delta), tuxY + tuxSizeY - 1, blocked)) && (gravity.equals("right")))
+				|| isBlocked(tuxX + tuxSizeX + (vSpeed + gravityAcc * delta), tuxY + tuxSizeY - 1, blocked)) && (gravity == 'r'))
 		{
 			vSpeed += gravityAcc * delta;
 			if (vSpeed > vSpeedMax)
@@ -363,20 +363,21 @@ public class Play extends BasicGameState
 		if (isBlocked(tuxX, tuxY, deadly) || isBlocked(tuxX + tuxSizeX, tuxY, deadly)
 				|| isBlocked(tuxX, tuxY + tuxSizeY, deadly) || isBlocked(tuxX + tuxSizeX, tuxY + tuxSizeY, deadly))
 		{
-			//System.out.println("YOU ARE DEAD DEAD DEAD! ... Ps. no I was not to lazy to implement a popper event jet. Stop asking questions, you are DEAD!");
+			tuxX = 79;          //puts tux to default position
+			tuxY = 518;
+			gravity = 'b';
 		}
 
 		////level done event
 		if (isBlocked(tuxX + 1, tuxY, levelEnd) || isBlocked(tuxX + tuxSizeX, tuxY, levelEnd)
 				|| isBlocked(tuxX + 1, tuxY + tuxSizeY, levelEnd) || isBlocked(tuxX + tuxSizeX, tuxY + tuxSizeY, levelEnd))
 		{
-			//System.out.println("YOU MADE IT, NOW OF TO THE NEXT LEVEL!");
-
 			if (levelCurrent < levelMax)
 			{
 				levelCurrent++;    //loads new level
 				tuxX = 79;          //puts tux to default position
 				tuxY = 518;
+				gravity = 'b';
 				gc.reinit();
 			}
 		}
@@ -388,20 +389,20 @@ public class Play extends BasicGameState
 			//BUGY, will fix it tomorrow
 			switch (gravity)
 			{
-				case "bottom":
-					gravity = "left";
+				case 'b':
+					gravity = 'l';
 					tux = leftStanding;
 					break;
-				case "top":
-					gravity = "right";
+				case 't':
+					gravity = 'r';
 					tux = rightStanding;
 					break;
-				case "left":
-					gravity = "top";
+				case 'l':
+					gravity = 't';
 					tux = topStanding;
 					break;
-				case "right":
-					gravity = "bottom";
+				case 'r':
+					gravity = 'b';
 					tux = bottomStanding;
 					break;
 			}
