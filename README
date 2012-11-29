@@ -1,18 +1,29 @@
-Hier entsteht das Spiel GraviTux der Gruppe E aus der Veranstaltung Game Design der Fachhochschule Flensburg im Wintersemester 2012/13
+This is the GitHup repository of the game GraviTux.
 
-WICHTIGER HINWEIS:
+GraviTux is a student project for our game design course at the university of applied science Flensburg in Germany.
+The name comes from "gravity" and the linux mascot Tux, who can flip gravity to avoid deadly objects and foes.
 
+The code is written by me and my team provides graphics, sounds, Levels, etc..
+The programming language is java and I deliver binaries for Linux, MacOSX and even Windows.
+Our game is made with slick2D which is based on the "light weight java game library" (lwjgl).
+
+Try it:
+Click "Downloads" on the right side. Be aware, that the game is still in an alpha status, so bugs will be present.
+Still, if you like to report issues or make recommendations or give feedback, I will be happy.
+
+Compile it yourself:
+If you like to compile it yourself for whatever reason, you need to import the librarys found in the lib folder.
+To make it work, you need to set the Java VM local parameters to match your OS.
+
+Setting Java VM parameters in InteliJ Idea (for others please search the web):
 1. Open the 'Run/Debug Configurations' (Run > Edit Configurations)
-2. Under 'VM Parameters' add: "-Djava.library.path=lib/natives-win32" (or -linux, or -macosx) without the quotes
+2. Under 'VM Parameters' add: "-Djava.library.path=lib/natives-linux" (-macosx OR -win32) without the quotes
 
----
 
-Slick 2D Tutorials:
-http://thenewboston.org/list.php?cat=54
+The repository can be found at: https://github.com/thinking-aloud/GraviTux
 
-Slick Docu:
-http://slick.cokeandcode.com/javadoc/
 
-Sprites and Stuff:
-http://slick.cokeandcode.com/static.php?page=resources
+I hope you like the game
+
+greetings Lennart
 

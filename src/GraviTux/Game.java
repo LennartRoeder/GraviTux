@@ -7,15 +7,15 @@ import org.newdawn.slick.state.StateBasedGame;
 
 public class Game extends StateBasedGame
 {
-	public static final String gamename = "GraviTux";
-	public static final int menu = 0;
-	public static final int play = 1;
+	private static final String gamename = "GraviTux";
+	private static final int menu = 0;
+	private static final int play = 1;
 
-	public Game(String gamename)
+	private Game(String gamename)
 	{
-		super(gamename);
+		super(Game.gamename);
 		this.addState(new Menu(menu));
-		this.addState(new Play(play));
+		this.addState(new Play());
 	}
 
 	public void initStatesList(GameContainer gc) throws SlickException

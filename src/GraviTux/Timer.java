@@ -1,14 +1,14 @@
 package GraviTux;
 
-public class Timer
+class Timer
 {
-	private int timeTotal;
+	private final int timeTotal;
 	private int currentTime;
 	private boolean timeElapsed;
 
-	public Timer(int timeInMillis)
+	public Timer()
 	{
-		timeTotal = timeInMillis;
+		timeTotal = 300;
 		timeElapsed = false;
 		currentTime = 0;
 	}
