@@ -2,6 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_1.tmx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_2.tmx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_3.tmx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_4.tmx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_5.tmx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_6.tmx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_7.tmx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_8.tmx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GraviTux/Timer.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_01.tmx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_02.tmx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_03.tmx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_04.tmx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_05.tmx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_10.tmx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_11.tmx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_12.tmx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Play.java" afterPath="$PROJECT_DIR$/src/GraviTux/Play.java" />
     </list>
@@ -95,7 +112,7 @@
       <file leaf-file-name="Menu.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="19" selection-start="1061" selection-end="1064" vertical-scroll-proportion="0.0">
+            <state line="41" column="34" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -104,7 +121,18 @@
       <file leaf-file-name="Play.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="371" column="33" selection-start="12247" selection-end="12247" vertical-scroll-proportion="6.4410734">
+            <state line="81" column="0" selection-start="3554" selection-end="3554" vertical-scroll-proportion="1.3652276">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Timer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GraviTux/Timer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="34" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,8 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Tutorial_Files/src/Threads/CharCounterThread.java" />
-        <option value="$PROJECT_DIR$/src/ButtonDemo.java" />
         <option value="$PROJECT_DIR$/src/JFrameDemo.java" />
         <option value="$PROJECT_DIR$/.idea/libraries/src.xml" />
         <option value="$PROJECT_DIR$/src/test.java" />
@@ -142,6 +168,8 @@
         <option value="$PROJECT_DIR$/res/GraviTux/level/level_1.tmx" />
         <option value="$PROJECT_DIR$/src/GraviTux/Menu.java" />
         <option value="$PROJECT_DIR$/src/GraviTux/Game.java" />
+        <option value="$PROJECT_DIR$/src/GraviTux/StopWatch.java" />
+        <option value="$PROJECT_DIR$/src/GraviTux/Timer.java" />
         <option value="$PROJECT_DIR$/src/GraviTux/Play.java" />
       </list>
     </option>
@@ -298,16 +326,19 @@
       <recent name="$PROJECT_DIR$/res" />
       <recent name="$PROJECT_DIR$/src/GraviTux" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="GraviTux" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="GraviTux" />
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/res/GraviTux" />
       <recent name="$PROJECT_DIR$/res/GraviTux/tux" />
       <recent name="$PROJECT_DIR$/res/GraviTux/level" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="GraviTux" />
-      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Game">
@@ -657,7 +688,11 @@
       <created>1354177267600</created>
       <updated>1354177267600</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="dirty little temp. death collision fix + fixed arrow flickering thx @tobbi for reporting">
+      <created>1354190961849</created>
+      <updated>1354190961849</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -743,7 +778,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed gravity variable from String to char to work with old Java 6 to make mac people happy" />
+    <option name="LAST_COMMIT_MESSAGE" value="dirty little temp. death collision fix + fixed arrow flickering thx @tobbi for reporting" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -756,7 +791,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="slick eingefügt" />
     <MESSAGE value="slick mit dem TnB Game Tutorial zum laufen gebracht." />
     <MESSAGE value="Projekt umsortiert" />
     <MESSAGE value="res Fehler behoben" />
@@ -781,6 +815,7 @@
     <MESSAGE value="Complete rework of the animation flow, images are now initiated once.&#10;new tux images implemented. Changed the gravity for it." />
     <MESSAGE value="Gravity 90% flipping kinda works (method is called too often, so he gooves around)&#10;next levels are loaded automatically. nex tux inserted" />
     <MESSAGE value="changed gravity variable from String to char to work with old Java 6 to make mac people happy" />
+    <MESSAGE value="dirty little temp. death collision fix + fixed arrow flickering thx @tobbi for reporting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -812,18 +847,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="38" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" />
+        <state line="17" column="38" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="19" selection-start="1061" selection-end="1064" vertical-scroll-proportion="0.0" />
+        <state line="41" column="34" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GraviTux/Timer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="34" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jars/slick.jar!/org/newdawn/slick/SpriteSheet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="2140" selection-end="2140" vertical-scroll-proportion="0.8112981">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="371" column="33" selection-start="12247" selection-end="12247" vertical-scroll-proportion="6.4410734">
-          <folding />
+        <state line="81" column="0" selection-start="3554" selection-end="3554" vertical-scroll-proportion="1.3652276">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -16,15 +16,14 @@ public class Play extends BasicGameState
 	private Animation tux, bottomStanding, bottomMovingLeft, bottomMovingRight, topStanding, topMovingLeft, topMovingRight,
 			leftStanding, leftMovingUp, leftMovingDown, rightStanding, rightMovingUp, rightMovingDown;
 	private TiledMap[] worldMap;  //Level in the background
-	private int levelCurrent, levelMax;      //number of current and total levels
-	private boolean menu;       //states if menu is open and if gravityAcc is reversed
+	private int levelCurrent, levelMax, tuxWidth, tuxHeight;      //number of current and total levels
 	private char gravity;       //indicates direction of gravity
+	private boolean menu;       //states if menu is open and if gravityAcc is reversed
+	private Timer timer;        //timer to prevent things from going too fast
 	private boolean[][] blocked, deadly, levelEnd, storm;   //2 dimensional arrays for collision detection
 	private float tuxX, tuxY, vSpeed;           //tux position and falling speed
 	private static final int duration = 150;    //length of the walk animation
 	private static final int size = 40;         //tiled size in px
-	private static final int tuxSizeX = 23;     //tux is illuminaticly wide
-	private static final int tuxSizeY = 42;     //tux size has the answer to the world, the universe and all the rest.
 	private static final float gravityAcc = 0.1f;  //tux acceleration speed when falling
 	private static final float vSpeedMax = 7f;  //tux maximum falling speed
 	private static final float moveSpeed = 0.3f;   //tux movement speed
@@ -35,12 +34,14 @@ public class Play extends BasicGameState
 	{
 		menu = false;       //Menu not open
 		gravity = 'b'; //default gravity direktion
+		tuxWidth = 23;       //tux is illuminaticly wide
+		tuxHeight = 42;       //tux size has the answer to the world, the universe and all the rest.
 		tuxX = 79f;         //tux start coordinates (90 = default)
 		tuxY = 518f;        //518 is default
 		vSpeed = 0f;        //tux current falling speed
-		worldMap = new TiledMap[5];
-		levelCurrent = 1;   //current level
-		levelMax = 5;       //max level
+		levelMax = 8;       //max level
+		levelCurrent = 4;   //current level                     DEFAULT IS 1
+		worldMap = new TiledMap[levelMax];
 		bottomStand = new Image[1]; //initialisation of arrays
 		bottomWalkLeft = new Image[8];
 		bottomWalkRight = new Image[8];
@@ -62,19 +63,22 @@ public class Play extends BasicGameState
 		////loads levels
 		for (int i = 0; i < levelMax; i++)
 		{
-			worldMap[i] = new TiledMap("res/GraviTux/level/level_0" + (i + 1) + ".tmx");
+			worldMap[i] = new TiledMap("res/GraviTux/level/level_" + (i + 1) + ".tmx");
 		}
 
 		//background = new Sound("res/GraviTux/sounds/");
 		//background.play();
 
+		//timer to prevent some things from happening too fast
+		timer = new Timer(200);
+
 		////Filling Image arrays for standing animation
 		bottomStand[0] = new Image("GraviTux/tux/Tux_stand.png");   //tux standing on ground
 		topStand[0] = bottomStand[0].getFlippedCopy(false, true);   //tux standing upside down
-		leftStand[0] = bottomStand[0];                            //tux standing left
-		leftStand[0].rotate(90);
-		rightStand[0] = bottomStand[0];                            //tux standing right
-		rightStand[0].rotate(-90);
+		leftStand[0] = new Image("GraviTux/tux/Tux_stand.png");                            //tux standing left
+		leftStand[0].rotate(90f);
+		rightStand[0] = new Image("GraviTux/tux/Tux_stand.png");                            //tux standing right
+		rightStand[0].rotate(-90f);
 
 		////Filling Image arrays for moving animation
 		for (int i = 0; i < 8; i++)
@@ -83,14 +87,14 @@ public class Play extends BasicGameState
 			bottomWalkRight[i] = bottomWalkLeft[i].getFlippedCopy(true, false);     //walk right
 			topWalkLeft[i] = bottomWalkLeft[i].getFlippedCopy(false, true);         //walk left upside down
 			topWalkRight[i] = bottomWalkRight[i].getFlippedCopy(false, true);       //walk right upside down
-			leftWalkUp[i] = bottomWalkLeft[i];      //walk up on the left side
-			leftWalkUp[i].rotate(90);
-			leftWalkDown[i] = bottomWalkRight[i];   //walk down on the left side
-			leftWalkDown[i].rotate(90);
-			rightWalkUp[i] = bottomWalkRight[i];    //walk up on the right side
-			rightWalkUp[i].rotate(-90);
-			rightWalkDown[i] = bottomWalkLeft[i];    //walk down on the right side
-			rightWalkDown[i].rotate(-90);
+			leftWalkUp[i] = new Image("GraviTux/tux/Tux_0" + (i + 1) + ".png");      //walk up on the left side
+			leftWalkUp[i].rotate(90f);
+			leftWalkDown[i] = new Image("GraviTux/tux/Tux_0" + (i + 1) + ".png").getFlippedCopy(true, false);   //walk down on the left side
+			leftWalkDown[i].rotate(90f);
+			rightWalkUp[i] = new Image("GraviTux/tux/Tux_0" + (i + 1) + ".png").getFlippedCopy(true, false);    //walk up on the right side
+			rightWalkUp[i].rotate(-90f);
+			rightWalkDown[i] = new Image("GraviTux/tux/Tux_0" + (i + 1) + ".png");    //walk down on the right side
+			rightWalkDown[i].rotate(-90f);
 		}
 
 		////filling animation variables
@@ -109,7 +113,7 @@ public class Play extends BasicGameState
 		rightMovingUp = new Animation(rightWalkUp, duration, false);
 		rightMovingDown = new Animation(rightWalkDown, duration, false);
 
-		tux = bottomStanding; //tux looks towards the player, when the game starts
+		tux = bottomStanding; //tux looks towards the player, when the game starts//
 
 		//// build collision maps based on tile properties in the Tiled map
 		blocked = new boolean[worldMap[levelCurrent].getWidth()][worldMap[levelCurrent].getHeight()];
@@ -157,7 +161,7 @@ public class Play extends BasicGameState
 	{
 		worldMap[levelCurrent].render(0, 0); //draw the map at 0,0 to start
 		tux.draw(tuxX, tuxY); //draws tux at 90, 520 (bottom left)
-		//g.drawString("Tux X: " + (int) tuxX + "\nTux Y: " + (int) tuxY, 650, 50); //tux position indicator
+		g.drawString("Tux X: " + (int) tuxX + "\nTux Y: " + (int) tuxY, 650, 50); //tux position indicator
 
 		////when the player presses escape
 		if (menu)
@@ -172,11 +176,12 @@ public class Play extends BasicGameState
 	@Override
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException
 	{
-		Input input = gc.getInput();
-		float speed = delta * moveSpeed;
+		Input input = gc.getInput();    //gets keyboard input
+		float speed = delta * moveSpeed;    //makes speed dependent on refresh rate
+		timer.addTime(delta);   //starts timer
 
 		////move left
-		if ((input.isKeyDown(Input.KEY_LEFT) || input.isKeyDown(Input.KEY_A)) && ((gravity == 'b') || (gravity == 't')))
+		if ((input.isKeyDown(Input.KEY_LEFT) || input.isKeyDown(Input.KEY_A)) && (gravity == 'b' || gravity == 't'))
 		{
 			////changes the animation, so tux faces left
 			switch (gravity)
@@ -192,7 +197,7 @@ public class Play extends BasicGameState
 				case 'r':
 					break;
 			}
-			if (!(isBlocked(tuxX - speed, tuxY, blocked) || isBlocked(tuxX - speed, tuxY + tuxSizeY - 1, blocked)))
+			if (!(isBlocked(tuxX - speed, tuxY, blocked) || isBlocked(tuxX - speed, tuxY + tuxHeight - 1, blocked)))
 			{
 				tux.update(delta);
 				tuxX = tuxX - speed;
@@ -204,7 +209,7 @@ public class Play extends BasicGameState
 			}
 		}
 		////move right
-		if ((input.isKeyDown(Input.KEY_RIGHT) || input.isKeyDown(Input.KEY_D)) && ((gravity == 'b') || (gravity == 't')))
+		if ((input.isKeyDown(Input.KEY_RIGHT) || input.isKeyDown(Input.KEY_D)) && (gravity == 'b' || gravity == 't'))
 		{
 			switch (gravity)
 			{
@@ -219,8 +224,8 @@ public class Play extends BasicGameState
 				case 'r':
 					break;
 			}
-			if (!(isBlocked(tuxX + tuxSizeX + speed, tuxY, blocked)
-					|| isBlocked(tuxX + tuxSizeX + speed, tuxY + tuxSizeY - 1, blocked)))
+			if (!(isBlocked(tuxX + tuxWidth + speed, tuxY, blocked)
+					|| isBlocked(tuxX + tuxWidth + speed, tuxY + tuxHeight - 1, blocked)))
 			{
 				tux.update(delta);
 				tuxX = tuxX + speed;
@@ -228,11 +233,11 @@ public class Play extends BasicGameState
 			else
 			{
 				tux.update(delta);
-				tuxX = tuxX - ((tuxX + tuxSizeX) % size) + size - 1;
+				tuxX = tuxX - ((tuxX + tuxWidth) % size) + size - 1;
 			}
 		}
 		////move up, when gravity is rotated by +/- 90%
-		if ((input.isKeyDown(Input.KEY_UP) || input.isKeyDown(Input.KEY_W)) && ((gravity == 'l') || (gravity == 'r')))
+		if ((input.isKeyDown(Input.KEY_UP) || input.isKeyDown(Input.KEY_W)) && (gravity == 'l' || gravity == 'r'))
 		{
 			switch (gravity)
 			{
@@ -247,15 +252,20 @@ public class Play extends BasicGameState
 					tux = rightMovingUp;
 					break;
 			}
-			if (!(isBlocked(tuxX, tuxY - speed, blocked) || isBlocked(tuxX + tuxSizeX - 1, tuxY - speed, blocked)))
+			if (!(isBlocked(tuxX, tuxY - speed, blocked) || isBlocked(tuxX + tuxWidth - 1, tuxY - speed, blocked)))
 			{
 				tux.update(delta);
 				// The lower the delta the slowest the sprite will animate.
 				tuxY -= speed;
 			}
+			else
+			{
+				tux.update(delta);
+				tuxY -= tuxY % size;
+			}
 		}
 		////move down, when gravity is rotated by +/- 90%
-		if ((input.isKeyDown(Input.KEY_DOWN) || input.isKeyDown(Input.KEY_S)) && ((gravity == 'l') || (gravity == 'r')))
+		if ((input.isKeyDown(Input.KEY_DOWN) || input.isKeyDown(Input.KEY_S)) && (gravity == 'l' || gravity == 'r'))
 		{
 			switch (gravity)
 			{
@@ -270,16 +280,21 @@ public class Play extends BasicGameState
 					tux = rightMovingDown;
 					break;
 			}
-			if (!(isBlocked(tuxX, tuxY + tuxSizeY + speed, blocked)
-					|| isBlocked(tuxX + tuxSizeX - 1, tuxY + tuxSizeY + speed, blocked)))
+			if (!(isBlocked(tuxX, tuxY + tuxHeight + speed, blocked)
+					|| isBlocked(tuxX + tuxWidth - 1, tuxY + tuxHeight + speed, blocked)))
 			{
 				tux.update(delta);
 				tuxY += speed;
 			}
+			else
+			{
+				tux.update(delta);
+				tuxY = tuxY - ((tuxY + tuxHeight) % size) + size - 1;
+			}
 		}
 
 		////flip gravity, but only when touching the ground
-		if ((input.isKeyDown(Input.KEY_SPACE) || input.isKeyDown(Input.KEY_X)) && vSpeed == 0)
+		if ((input.isKeyDown(Input.KEY_SPACE) || input.isKeyDown(Input.KEY_X)) && vSpeed == 0 && timer.isTimeElapsed())
 		{
 			///reverse gravity
 			switch (gravity)
@@ -301,11 +316,12 @@ public class Play extends BasicGameState
 					tux = leftStanding;
 					break;
 			}
+			timer.reset();
 		}
 
 		////Gravity
-		if ((!(isBlocked(tuxX, tuxY + tuxSizeY + (vSpeed + gravityAcc * delta), blocked)
-				|| isBlocked(tuxX + tuxSizeX - 1, tuxY + tuxSizeY + (vSpeed + gravityAcc * delta), blocked))) && (gravity == 'b'))
+		if ((!(isBlocked(tuxX, tuxY + tuxHeight + (vSpeed + gravityAcc * delta), blocked)
+				|| isBlocked(tuxX + tuxWidth - 1, tuxY + tuxHeight + (vSpeed + gravityAcc * delta), blocked))) && gravity == 'b')
 		{
 			////accelerate falling
 			vSpeed += gravityAcc * delta;
@@ -319,7 +335,7 @@ public class Play extends BasicGameState
 		}
 		////negative gravity
 		else if ((!(isBlocked(tuxX, tuxY - (vSpeed + gravityAcc * delta), blocked)
-				|| isBlocked(tuxX + tuxSizeX - 1, tuxY - (vSpeed + gravityAcc * delta), blocked))) && (gravity == 't'))
+				|| isBlocked(tuxX + tuxWidth - 1, tuxY - (vSpeed + gravityAcc * delta), blocked))) && gravity == 't')
 		{
 			vSpeed += gravityAcc * delta;
 			if (vSpeed > vSpeedMax)
@@ -331,7 +347,7 @@ public class Play extends BasicGameState
 		}
 		////gravity set left
 		else if (!(isBlocked(tuxX - (vSpeed + gravityAcc * delta), tuxY, blocked)
-				|| isBlocked(tuxX - (vSpeed + gravityAcc * delta), tuxY + tuxSizeY - 1, blocked)) && (gravity == 'l'))
+				|| isBlocked(tuxX - (vSpeed + gravityAcc * delta), tuxY + tuxHeight - 1, blocked)) && gravity == 'l')
 		{
 			vSpeed += gravityAcc * delta;
 			if (vSpeed > vSpeedMax)
@@ -342,8 +358,8 @@ public class Play extends BasicGameState
 			tuxX -= vSpeed;
 		}
 		//gravity set right
-		else if (!(isBlocked(tuxX + tuxSizeX + (vSpeed + gravityAcc * delta), tuxY, blocked)
-				|| isBlocked(tuxX + tuxSizeX + (vSpeed + gravityAcc * delta), tuxY + tuxSizeY - 1, blocked)) && (gravity == 'r'))
+		else if (!(isBlocked(tuxX + tuxWidth + (vSpeed + gravityAcc * delta), tuxY, blocked)
+				|| isBlocked(tuxX + tuxWidth + (vSpeed + gravityAcc * delta), tuxY + tuxHeight - 1, blocked)) && gravity == 'r')
 		{
 			vSpeed += gravityAcc * delta;
 			if (vSpeed > vSpeedMax)
@@ -363,18 +379,24 @@ public class Play extends BasicGameState
 		////    THE +/- 2 IS ONLY A QUICK AND DIRTY THING
 		int collX = 11;
 		int collY = 21;
-		if (isBlocked(tuxX + collX, tuxY + collY, deadly) || isBlocked(tuxX + tuxSizeX - collX, tuxY + collY, deadly)
-				|| isBlocked(tuxX + collX, tuxY + tuxSizeY - collY, deadly) || isBlocked(tuxX + tuxSizeX - collX, tuxY + tuxSizeY - collY, deadly))
+		if (isBlocked(tuxX + collX, tuxY + collY, deadly) || isBlocked(tuxX + tuxWidth - collX, tuxY + collY, deadly)
+				|| isBlocked(tuxX + collX, tuxY + tuxHeight - collY, deadly)
+				|| isBlocked(tuxX + tuxWidth - collX, tuxY + tuxHeight - collY, deadly) && timer.isTimeElapsed())
 		{
 			tuxX = 79;          //puts tux to default position
 			tuxY = 518;
 			gravity = 'b';
 			tux = bottomStanding;
+			tuxWidth = tux.getWidth();
+			tuxHeight = tux.getHeight();
+
+			timer.reset();
 		}
 
 		////level done event
-		if (isBlocked(tuxX + 1, tuxY, levelEnd) || isBlocked(tuxX + tuxSizeX, tuxY, levelEnd)
-				|| isBlocked(tuxX + 1, tuxY + tuxSizeY, levelEnd) || isBlocked(tuxX + tuxSizeX, tuxY + tuxSizeY, levelEnd))
+		if (isBlocked(tuxX + 1, tuxY, levelEnd) || isBlocked(tuxX + tuxWidth, tuxY, levelEnd)
+				|| isBlocked(tuxX + 1, tuxY + tuxHeight, levelEnd)
+				|| isBlocked(tuxX + tuxWidth, tuxY + tuxHeight, levelEnd) && timer.isTimeElapsed())
 		{
 			if (levelCurrent < levelMax)
 			{
@@ -383,34 +405,44 @@ public class Play extends BasicGameState
 				tuxY = 518;
 				gravity = 'b';
 				tux = bottomStanding;
+				tuxWidth = tux.getWidth();
+				tuxHeight = tux.getHeight();
 				gc.reinit();
 			}
+			timer.reset();
 		}
 
 		////Storm rotation event
-		if (isBlocked(tuxX + tuxSizeX / 2, tuxY + tuxSizeY / 2, storm))
-		//if (isBlocked(tuxX + 1, tuxY, storm) || isBlocked(tuxX + tuxSizeX, tuxY, storm) || isBlocked(tuxX + 1, tuxY + tuxSizeY, storm) || isBlocked(tuxX + tuxSizeX, tuxY + tuxSizeY, storm))
+		if (isBlocked(tuxX + tuxWidth / 2, tuxY + tuxHeight / 2, storm) && timer.isTimeElapsed())
 		{
-			//BUGY, will fix it tomorrow
 			switch (gravity)
 			{
 				case 'b':
 					gravity = 'l';
 					tux = leftStanding;
+					tuxWidth = tux.getHeight(); //rotates the image when gravi is rotated
+					tuxHeight = tux.getWidth();
 					break;
 				case 't':
 					gravity = 'r';
 					tux = rightStanding;
+					tuxWidth = tux.getHeight();
+					tuxHeight = tux.getWidth();
 					break;
 				case 'l':
 					gravity = 't';
 					tux = topStanding;
+					tuxWidth = tux.getHeight();
+					tuxHeight = tux.getWidth();
 					break;
 				case 'r':
 					gravity = 'b';
-					tux = bottomStanding;
+					tux = topStanding;
+					tuxWidth = tux.getHeight();
+					tuxHeight = tux.getWidth();
 					break;
 			}
+			timer.reset();
 		}
 
 		////escape key hit for in game menu
