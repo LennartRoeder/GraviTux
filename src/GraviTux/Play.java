@@ -176,7 +176,7 @@ public class Play extends BasicGameState
 		float speed = delta * moveSpeed;
 
 		////move left
-		if (input.isKeyDown(Input.KEY_LEFT) || input.isKeyDown(Input.KEY_A))
+		if ((input.isKeyDown(Input.KEY_LEFT) || input.isKeyDown(Input.KEY_A)) && ((gravity == 'b') || (gravity == 't')))
 		{
 			////changes the animation, so tux faces left
 			switch (gravity)
@@ -204,7 +204,7 @@ public class Play extends BasicGameState
 			}
 		}
 		////move right
-		if (input.isKeyDown(Input.KEY_RIGHT) || input.isKeyDown(Input.KEY_D))
+		if ((input.isKeyDown(Input.KEY_RIGHT) || input.isKeyDown(Input.KEY_D)) && ((gravity == 'b') || (gravity == 't')))
 		{
 			switch (gravity)
 			{
@@ -232,7 +232,7 @@ public class Play extends BasicGameState
 			}
 		}
 		////move up, when gravity is rotated by +/- 90%
-		if (input.isKeyDown(Input.KEY_UP) || input.isKeyDown(Input.KEY_W))
+		if ((input.isKeyDown(Input.KEY_UP) || input.isKeyDown(Input.KEY_W)) && ((gravity == 'l') || (gravity == 'r')))
 		{
 			switch (gravity)
 			{
@@ -255,7 +255,7 @@ public class Play extends BasicGameState
 			}
 		}
 		////move down, when gravity is rotated by +/- 90%
-		if (input.isKeyDown(Input.KEY_DOWN) || input.isKeyDown(Input.KEY_S))
+		if ((input.isKeyDown(Input.KEY_DOWN) || input.isKeyDown(Input.KEY_S)) && ((gravity == 'l') || (gravity == 'r')))
 		{
 			switch (gravity)
 			{
@@ -360,12 +360,16 @@ public class Play extends BasicGameState
 		}
 
 		////Death event
-		if (isBlocked(tuxX, tuxY, deadly) || isBlocked(tuxX + tuxSizeX, tuxY, deadly)
-				|| isBlocked(tuxX, tuxY + tuxSizeY, deadly) || isBlocked(tuxX + tuxSizeX, tuxY + tuxSizeY, deadly))
+		////    THE +/- 2 IS ONLY A QUICK AND DIRTY THING
+		int collX = 11;
+		int collY = 21;
+		if (isBlocked(tuxX + collX, tuxY + collY, deadly) || isBlocked(tuxX + tuxSizeX - collX, tuxY + collY, deadly)
+				|| isBlocked(tuxX + collX, tuxY + tuxSizeY - collY, deadly) || isBlocked(tuxX + tuxSizeX - collX, tuxY + tuxSizeY - collY, deadly))
 		{
 			tuxX = 79;          //puts tux to default position
 			tuxY = 518;
 			gravity = 'b';
+			tux = bottomStanding;
 		}
 
 		////level done event
@@ -378,6 +382,7 @@ public class Play extends BasicGameState
 				tuxX = 79;          //puts tux to default position
 				tuxY = 518;
 				gravity = 'b';
+				tux = bottomStanding;
 				gc.reinit();
 			}
 		}
