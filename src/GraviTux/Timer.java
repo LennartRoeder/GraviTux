@@ -1,6 +1,6 @@
 package GraviTux;
 
-class Timer
+class Timer extends Play
 {
 	private final int timeTotal;
 	private int currentTime;
