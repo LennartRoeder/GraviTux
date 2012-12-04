@@ -17,7 +17,7 @@ To make it work, you need to set the Java VM local parameters to match your OS.
 
 Setting Java VM parameters in InteliJ Idea (for others please search the web):
 1. Open the 'Run/Debug Configurations' (Run > Edit Configurations)
-2. Under 'VM Parameters' add: "-Djava.library.path=lib/natives-linux" (-macosx OR -win32) without the quotes
+2. Under 'VM Parameters' add: "-Djava.library.path=lib/natives/" without the quotes
 
 
 The repository can be found at: https://github.com/thinking-aloud/GraviTux

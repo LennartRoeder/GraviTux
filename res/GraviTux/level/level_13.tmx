@@ -356,6 +356,12 @@
     <property name="id" value="59"/>
    </properties>
   </tile>
+  <tile id="46">
+   <properties>
+    <property name="blocked" value="true"/>
+    <property name="id" value="60"/>
+   </properties>
+  </tile>
  </tileset>
  <tileset firstgid="77" name="Eissturm" tilewidth="40" tileheight="40">
   <image source="Eissturm.png" width="40" height="40"/>
@@ -371,7 +377,7 @@
    <property name="id" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC6WRywrCQAxFUyu48Busj3ahCx+bOr5wKbUw//87ZqCBEDNpxMCBGe7M6W1bA8DS4MjWDVJnzqVsh1RgT0CKgS3yZPtCZM3giyNOmgnSG9kKOSBvwe1H35z5KqW71YFnV9HjBPr3C2zdGr5eZNTPGnknKFnM+FKXUpB7d0+/O3z/m87pA8WnzUv4z3/60p2pM9N8rTjDO1xE14fDR8+MbO8d8s0Un9aPpjR8G2TB2I/sLdbIB07Zx7GwBAAA
+   H4sIAAAAAAAAC62R2wrCMAyGs04QfIfNw3ahAw83c57wfkLf/3XMoIEYm7SIgQ8a0n79uzUAsDQ4snWLNMq+abZDarBrQIrAFnmyvhCzNvh8wknlkJcyWyAr5ICMgtsPPhd8dSQ7P9MbvqvIcYL49xvYmp93iRnls0p7H595xTe9rRTk+LR8d/j+N53oz0Z26dMyzDLy/cvHZzFfL/bwDBf4fPsjw0d3etbnFvnmEV8sH1Vp+DZIxdgneos18gbYdKVHsAQAAA==
   </data>
  </layer>
  <objectgroup name="Objektebene 1" width="20" height="15">

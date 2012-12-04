@@ -356,6 +356,12 @@
     <property name="id" value="59"/>
    </properties>
   </tile>
+  <tile id="46">
+   <properties>
+    <property name="blocked" value="true"/>
+    <property name="id" value="60"/>
+   </properties>
+  </tile>
  </tileset>
  <tileset firstgid="77" name="Eissturm" tilewidth="40" tileheight="40">
   <image source="Eissturm.png" width="40" height="40"/>

@@ -6,10 +6,10 @@ class Timer extends Play
 	private int currentTime;
 	private boolean timeElapsed;
 
-	public Timer()
+	public Timer(int time)
 	{
 		currentTime = 0;
-		timeTotal = 300;
+		timeTotal = time;
 		timeElapsed = false;
 	}
 

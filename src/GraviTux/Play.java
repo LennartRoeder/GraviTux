@@ -11,17 +11,17 @@ class Play extends BasicGameState
 
 	//Animations for tux movement
 	private Animation tux, bottomStanding, bottomMovingLeft, bottomMovingRight, topStanding, topMovingLeft,
-			topMovingRight, leftStanding, leftMovingUp, leftMovingDown, rightStanding, rightMovingUp, rightMovingDown;
+			topMovingRight, leftStanding, leftMovingUp, leftMovingDown, rightStanding, rightMovingUp, rightMovingDown, snowStorm;
 	private final TiledMap[] worldMap;  //Level in the background
 	private boolean menu;       //states if menu is open and if gravityAcc is reversed
 	private boolean[][] blocked, deadly, levelEnd, storm;   //2 dimensional arrays for collision detection
 	private char gravity;       //indicates direction of gravity
 	private int tuxWidth, tuxHeight, levelCurrent;  //tux image size and number of current level
-	private Timer inputDelay, levelTime;        //timer to prevent things from going too fast
+	private Timer inputDelay, levelTime, gravityTimer;        //timer to prevent things from going too fast
 	private float tuxX, tuxY, gravitySpeed;     //tux position and falling speed
-	private static final int duration = 150;    //length of the walk animation
+	private static final int duration = 300;    //length of the walk animation
 	private static final int size = 40;         //tiled size in px
-	private static final int levelMax = 15;       //max level
+	private static final int levelMax = 16;       //max level
 	private static final float moveSpeed = 0.25f;   //tux movement speed
 	private static final float gravityAcc = 0.02f;  //tux acceleration speed when falling
 	private static final float gravitySpeedMax = 7f;  //tux maximum falling speed
@@ -30,12 +30,6 @@ class Play extends BasicGameState
 	public Play()
 	{
 		menu = false;       //Menu not open
-		gravity = 'b'; //default gravity direktion
-		tuxWidth = 23;       //tux is illuminati wide
-		tuxHeight = 42;       //tux size has the answer to the world, the universe and all the rest.
-		tuxX = 79f;         //tux start coordinates (79 = start)
-		tuxY = 518f;        //518 is default
-		gravitySpeed = 0f;        //tux current falling speed
 		levelCurrent = 0;   //current level (starting at 0)
 		worldMap = new TiledMap[levelMax];  //array for levels
 	}
@@ -44,23 +38,10 @@ class Play extends BasicGameState
 	@Override
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
 	{
-		if (levelCurrent == 4)
-		{
-			levelCurrent++;
-		}
-		if (levelCurrent == 6)
-		{
-			levelCurrent++;
-		}
-
-
 		for (int i = 0; i < levelMax; i++)  //loads levels
 		{
 			worldMap[i] = new TiledMap("res/GraviTux/level/level_" + (i + 1) + ".tmx");
 		}
-
-		inputDelay = new Timer();    //timer to prevent some things from happening too fast
-		levelTime = new Timer();    //timer to see how long you took for the level
 
 		////Filling Image arrays for standing animation
 		Image[] bottomStand = {new Image("GraviTux/tux/Tux_stand.png")};   //tux standing on ground
@@ -96,6 +77,10 @@ class Play extends BasicGameState
 			rightWalkDown[i].rotate(-90f);
 		}
 
+		Image[] snowImages = new Image[]{new Image("GraviTux/snowstorm/eissturm_04.png"), new Image("GraviTux/snowstorm/eissturm_03.png"),
+				new Image("GraviTux/snowstorm/eissturm_02.png"), new Image("GraviTux/snowstorm/eissturm_01.png")};
+		snowStorm = new Animation(snowImages, 150, true);
+
 		//filling animation variables with the image arrays
 		bottomStanding = new Animation(bottomStand, duration, false);
 		topStanding = new Animation(topStand, duration, false);
@@ -110,17 +95,15 @@ class Play extends BasicGameState
 		rightMovingUp = new Animation(rightWalkUp, duration, false);
 		rightMovingDown = new Animation(rightWalkDown, duration, false);
 
-		tux = bottomStanding; //tux looks towards the player, when the game starts
-
 		//build collision maps based on tile properties in the Tiled map
 		blocked = new boolean[worldMap[levelCurrent].getWidth()][worldMap[levelCurrent].getHeight()];
 		deadly = new boolean[worldMap[levelCurrent].getWidth()][worldMap[levelCurrent].getHeight()];
 		levelEnd = new boolean[worldMap[levelCurrent].getWidth()][worldMap[levelCurrent].getHeight()];
 		storm = new boolean[worldMap[levelCurrent].getWidth()][worldMap[levelCurrent].getHeight()];
 
-		for (int xAxis = 0; xAxis < worldMap[levelCurrent].getWidth(); xAxis++)
+		for (int xAxis = 0; xAxis < 20; xAxis++)
 		{
-			for (int yAxis = 0; yAxis < worldMap[levelCurrent].getHeight(); yAxis++)
+			for (int yAxis = 0; yAxis < 15; yAxis++)
 			{
 				int tileID = worldMap[levelCurrent].getTileId(xAxis, yAxis, 0);
 
@@ -139,9 +122,23 @@ class Play extends BasicGameState
 				if ("true".equals(worldMap[levelCurrent].getTileProperty(tileID, "rotate", "false")))
 				{
 					storm[xAxis][yAxis] = true; //storm to rotate gravity
+					//worldMap[levelCurrent].
 				}
 			}
 		}
+
+		//sets gravity, animation and tux position to default
+		tuxWidth = 23;       //tux is illuminati wide
+		tuxHeight = 42;       //tux size has the answer to the world, the universe and all the rest.
+		tuxX = 79;     //tux start coordinates (79 = start)
+		tuxY = 518;    //518 is default
+		tux = bottomStanding; //tux looks towards the player, when the game starts
+		gravity = 'b';  //default gravity direktion
+		gravitySpeed = 0f;  //tux current falling speed
+
+		inputDelay = new Timer(300);    //timer to prevent some things from happening too fast
+		levelTime = new Timer(1);    //timer to see how long you took for the level
+		gravityTimer = new Timer(500); //for proper gravity rotation
 	}
 
 	////RENDER METHOD
@@ -149,9 +146,22 @@ class Play extends BasicGameState
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
 	{
 		worldMap[levelCurrent].render(0, 0); //draw the map at 0,0
-		tux.draw(tuxX, tuxY);   //draws tux at 79, 518 (bottom left)
-		g.drawString("Tux X: " + (int) tuxX + "\nTux Y: " + (int) tuxY, 650, 50);   //tux position indicator
+
+		for (int xAxis = 0; xAxis < 20; xAxis++)    //draws animated snowstorms
+		{
+			for (int yAxis = 0; yAxis < 15; yAxis++)
+			{
+				if (storm[xAxis][yAxis])
+				{
+					snowStorm.draw(xAxis * size, yAxis * size);
+				}
+			}
+		}
+
+		tux.draw((int) tuxX, (int) tuxY);   //draws tux at 79, 518 (bottom left)
+		//g.drawString("Tux X: " + (int) tuxX + "\nTux Y: " + (int) tuxY, 650, 50);   //tux position indicator
 		g.drawString("Time: " + levelTime.getTime(), 360, 10);  //game timer
+		g.drawString("Level: " + (levelCurrent + 1), 40, 10);   //current level indicator
 
 		if (menu)   //when the player presses escape
 		{
@@ -168,6 +178,8 @@ class Play extends BasicGameState
 		Input input = gc.getInput();    //gets keyboard input
 		inputDelay.addTime(delta);   //updates timer
 		levelTime.addTime(delta);
+		gravityTimer.addTime(delta);
+
 		float movingSpeed = moveSpeed * delta;    //makes movement speed dependent on refresh rate
 		float fallingSpeed = gravitySpeed + gravityAcc * delta; //same for falling, but with acceleration
 
@@ -175,25 +187,25 @@ class Play extends BasicGameState
 		if ((input.isKeyDown(Input.KEY_LEFT) || input.isKeyDown(Input.KEY_A)) && (gravity == 'b' || gravity == 't'))
 		{
 			setAnimation(input);        //changes the animation, so tux faces left
-			moveTux(-movingSpeed, 0);   //moves tux
+			moveTux(-movingSpeed, 0, delta);   //moves tux
 		}
 		////move right, when gravity is bottom or top
 		if ((input.isKeyDown(Input.KEY_RIGHT) || input.isKeyDown(Input.KEY_D)) && (gravity == 'b' || gravity == 't'))
 		{
 			setAnimation(input);
-			moveTux(movingSpeed, 0);
+			moveTux(movingSpeed, 0, delta);
 		}
 		////move up, when gravity is rotated by +/- 90%
 		if ((input.isKeyDown(Input.KEY_UP) || input.isKeyDown(Input.KEY_W)) && (gravity == 'l' || gravity == 'r'))
 		{
 			setAnimation(input);
-			moveTux(0, -movingSpeed);
+			moveTux(0, -movingSpeed, delta);
 		}
 		////move down, when gravity is rotated by +/- 90%
 		if ((input.isKeyDown(Input.KEY_DOWN) || input.isKeyDown(Input.KEY_S)) && (gravity == 'l' || gravity == 'r'))
 		{
 			setAnimation(input);
-			moveTux(0, movingSpeed);
+			moveTux(0, movingSpeed, delta);
 		}
 
 		////flip gravity, but only when touching the ground
@@ -232,35 +244,32 @@ class Play extends BasicGameState
 		}
 
 		////Death event
-		int collX = 11; //THE +/- 2 IS ONLY A QUICK AND DIRTY THING
+		int collX = 11; //A QUICK AND DIRTY COLLISION FIX
 		int collY = 21;
-		if (inputDelay.isTimeElapsed() && (collision(tuxX + collX, tuxY + collY, deadly) || collision(tuxX + tuxWidth - collX, tuxY + collY, deadly)
+		if (inputDelay.isTimeElapsed() && (collision(tuxX + collX, tuxY + collY, deadly)
+				|| collision(tuxX + tuxWidth - collX, tuxY + collY, deadly)
 				|| collision(tuxX + collX, tuxY + tuxHeight - collY, deadly)
 				|| collision(tuxX + tuxWidth - collX, tuxY + tuxHeight - collY, deadly)))
 		{
-			tuxX = 79f;  //puts tux to default position
-			tuxY = 518f;
+			tuxX = 79;  //puts tux to default position
+			tuxY = 518;
 			gravity = 'b';
 			tux = bottomStanding;
-			tuxWidth = tux.getWidth();
-			tuxHeight = tux.getHeight();
+			tuxWidth = 23;
+			tuxHeight = 42;
 
 			inputDelay.reset();
 		}
 
 		////level done event
-		if (inputDelay.isTimeElapsed() && (collision(tuxX + 1, tuxY + 1, levelEnd) || collision(tuxX + tuxWidth - 1, tuxY + 1, levelEnd)
-				|| collision(tuxX + 1, tuxY + tuxHeight - 1, levelEnd) || collision(tuxX + tuxWidth - 1, tuxY + tuxHeight - 1, levelEnd)))
+		if (inputDelay.isTimeElapsed() && (collision(tuxX + 1, tuxY + 1, levelEnd)
+				|| collision(tuxX + tuxWidth - 1, tuxY + 1, levelEnd)
+				|| collision(tuxX + 1, tuxY + tuxHeight - 1, levelEnd)
+				|| collision(tuxX + tuxWidth - 1, tuxY + tuxHeight - 1, levelEnd)))
 		{
 			if (levelCurrent + 1 < levelMax)
 			{
 				levelCurrent++;    //loads new level
-				tuxX = 79f;          //puts tux to default position
-				tuxY = 518f;
-				gravity = 'b';
-				tux = bottomStanding;
-				tuxWidth = tux.getWidth();
-				tuxHeight = tux.getHeight();
 				gc.reinit();
 			}
 			else
@@ -271,7 +280,7 @@ class Play extends BasicGameState
 		}
 
 		////Storm rotation event
-		if (collision(tuxX + tuxWidth / 2, tuxY + tuxHeight / 2, storm) && inputDelay.isTimeElapsed())
+		if (gravityTimer.isTimeElapsed() && collision(tuxX + tuxWidth / 2, tuxY + tuxHeight / 2, storm))
 		{
 			rotateGravity();
 		}
@@ -385,7 +394,7 @@ class Play extends BasicGameState
 	}
 
 	////moves tux
-	private void moveTux(float x, float y)
+	private void moveTux(float x, float y, int delta)
 	{
 		int offsetX = 0;    //offset for moving right (usually 23)
 		int offsetY = 0;    //offset for moving down (usually 42)
@@ -393,28 +402,31 @@ class Play extends BasicGameState
 
 		if (x > 0)  //enables offset for moving right
 		{
-			offsetX = tux.getWidth();
+			offsetX = tuxWidth;
 			offsetSize = 39;
 		}
 
 		if (y > 0)  //enables offset for moving down
 		{
-			offsetY = tux.getHeight();
+			offsetY = tuxHeight;
 		}
 
 		//tux moves left or right
-		if (!(collision(tuxX + offsetX + x, tuxY, blocked) || collision(tuxX + offsetX + x, tuxY + offsetY, blocked)))
+		if (!(collision(tuxX + offsetX + x, tuxY, blocked) || collision(tuxX + offsetX + x, tuxY + tuxHeight - 1, blocked)))
 		{
+			tux.update(delta);
 			tuxX += x;
 		}
 		else
 		{
+			tux.update(delta);
 			tuxX = tuxX - ((tuxX + offsetX) % size) + offsetSize;
 		}
 
 		//tux moves up or down
-		if (!(collision(tuxX, tuxY + offsetY + y, blocked) || collision(tuxX + offsetX - 1, tuxY + offsetY + y, blocked)))
+		if (!(collision(tuxX, tuxY + offsetY + y, blocked) || collision(tuxX + tuxWidth - 1, tuxY + offsetY + y, blocked)))
 		{
+			tux.update(delta);
 			tuxY += y;
 		}
 	}
@@ -447,34 +459,40 @@ class Play extends BasicGameState
 	////rotates gravity by 90 degree
 	private void rotateGravity()
 	{
+		int tmpSize = tuxWidth;
+
 		switch (gravity)
 		{
 			case 'b':
+				tuxY += 20;
 				gravity = 'l';
 				tux = leftStanding;
-				tuxWidth = tux.getHeight(); //rotates the image when gravity is rotated
-				tuxHeight = tux.getWidth();
+				tuxWidth = tuxHeight; //rotates the image dimensions when gravity is rotated
+				tuxHeight = tmpSize;
 				break;
 			case 't':
+				tuxY -= 20;
 				gravity = 'r';
 				tux = rightStanding;
-				tuxWidth = tux.getHeight();
-				tuxHeight = tux.getWidth();
+				tuxWidth = tuxHeight;
+				tuxHeight = tmpSize;
 				break;
 			case 'l':
+				tuxX -= 20;
 				gravity = 't';
 				tux = topStanding;
-				tuxWidth = tux.getHeight();
-				tuxHeight = tux.getWidth();
+				tuxWidth = tuxHeight;
+				tuxHeight = tmpSize;
 				break;
 			case 'r':
+				tuxX += 20;
 				gravity = 'b';
 				tux = topStanding;
-				tuxWidth = tux.getHeight();
-				tuxHeight = tux.getWidth();
+				tuxWidth = tuxHeight;
+				tuxHeight = tmpSize;
 				break;
 		}
-		inputDelay.reset();
+		gravityTimer.reset();
 	}
 
 	////handles falling
@@ -489,20 +507,22 @@ class Play extends BasicGameState
 			gravitySpeed = gravitySpeedMax;
 		}
 
-		tux.update(delta);
-
 		switch (gravity)
 		{
 			case 'b':
+				tux.update(delta);
 				tuxY += gravitySpeed;
 				break;
 			case 't':
+				tux.update(delta);
 				tuxY -= gravitySpeed;
 				break;
 			case 'l':
+				tux.update(delta);
 				tuxX -= gravitySpeed;
 				break;
 			case 'r':
+				tux.update(delta);
 				tuxX += gravitySpeed;
 				break;
 		}

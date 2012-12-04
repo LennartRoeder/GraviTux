@@ -23,7 +23,8 @@ class Game extends StateBasedGame
 	{
 		getState(menu).init(gc, this);
 		getState(play).init(gc, this);
-		//enterState(menu);   //set to menu when done!
+		getContainer().setShowFPS(false);
+		//enterState(play);   //set to menu when done!
 	}
 
 	public static void main(String[] args) throws SlickException
