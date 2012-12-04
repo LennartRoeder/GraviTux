@@ -1,9 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="ok, guess not then">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GraviTux/Gravity.java" />
+    <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/menu/BG_v1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/menu/BG_v4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/menu/continue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/menu/continue_m.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/menu/credits.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/menu/credits_m.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/menu/exit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/menu/exit_m.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/menu/highscore.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/menu/highscore_m.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/menu/new game_m.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/menu/new_game.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/menu/welcome_menu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_10.tmx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_11.tmx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_12.tmx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_13.tmx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_14.tmx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_15.tmx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_9.tmx" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/exitGame.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/demo.tmx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/playNow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/GraviTux/Gravity.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/Eissturm.png" afterPath="$PROJECT_DIR$/res/GraviTux/level/Eissturm.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/Gegner.png" afterPath="$PROJECT_DIR$/res/GraviTux/level/Gegner.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/Objekte.png" afterPath="$PROJECT_DIR$/res/GraviTux/level/Objekte.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/Personen.png" afterPath="$PROJECT_DIR$/res/GraviTux/level/Personen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/Texturen.png" afterPath="$PROJECT_DIR$/res/GraviTux/level/Texturen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_01.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_01.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_02.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_02.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_03.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_03.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_04.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_04.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_05.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_05.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_06.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_06.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_07.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_07.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_08.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_08.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/tux/Tux_stand.png" afterPath="$PROJECT_DIR$/res/GraviTux/tux/Tux_stand.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_1.tmx" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_1.tmx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_2.tmx" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_2.tmx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_3.tmx" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_3.tmx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_4.tmx" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_4.tmx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_5.tmx" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_5.tmx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_6.tmx" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_6.tmx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_7.tmx" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_7.tmx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_8.tmx" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_8.tmx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Game.java" afterPath="$PROJECT_DIR$/src/GraviTux/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Menu.java" afterPath="$PROJECT_DIR$/src/GraviTux/Menu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Play.java" afterPath="$PROJECT_DIR$/src/GraviTux/Play.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Timer.java" afterPath="$PROJECT_DIR$/src/GraviTux/Timer.java" />
     </list>
@@ -88,7 +135,7 @@
       <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0">
+            <state line="22" column="41" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -97,30 +144,24 @@
       <file leaf-file-name="Menu.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="17" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0">
+            <state line="21" column="43" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Play.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Play.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="41" selection-start="516" selection-end="553" vertical-scroll-proportion="0.0">
+            <state line="38" column="24" selection-start="1949" selection-end="1949" vertical-scroll-proportion="0.2975496">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#render#0;class#Play#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gravity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GraviTux/Gravity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="38" selection-start="459" selection-end="459" vertical-scroll-proportion="0.5075846">
-              <folding>
-                <element signature="method#rotateGravity#0;class#Gravity#0" expanded="false" />
+                <element signature="method#collision#0;class#Play#0" expanded="false" />
+                <element signature="method#setAnimation#0;class#Play#0" expanded="false" />
+                <element signature="method#moveTux#0;class#Play#0" expanded="false" />
+                <element signature="method#flipGravity#0;class#Play#0" expanded="false" />
+                <element signature="method#rotateGravity#0;class#Play#0" expanded="false" />
+                <element signature="method#fall#0;class#Play#0" expanded="false" />
+                <element signature="method#getID#0;class#Play#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -129,7 +170,7 @@
       <file leaf-file-name="Timer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Timer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="35" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+            <state line="26" column="33" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -161,13 +202,13 @@
         <option value="$PROJECT_DIR$/src/GraviTux/Main.java" />
         <option value="$PROJECT_DIR$/res/GraviTux/level/level_1.tmx" />
         <option value="$PROJECT_DIR$/src/GraviTux/StopWatch.java" />
-        <option value="$PROJECT_DIR$/src/GraviTux/Menu.java" />
-        <option value="$PROJECT_DIR$/src/GraviTux/Game.java" />
         <option value="$PROJECT_DIR$/README" />
-        <option value="$PROJECT_DIR$/src/GraviTux/Timer.java" />
         <option value="$PROJECT_DIR$/src/GraviTux/GravityImpl.java" />
-        <option value="$PROJECT_DIR$/src/GraviTux/Play.java" />
         <option value="$PROJECT_DIR$/src/GraviTux/Gravity.java" />
+        <option value="$PROJECT_DIR$/src/GraviTux/Timer.java" />
+        <option value="$PROJECT_DIR$/src/GraviTux/Game.java" />
+        <option value="$PROJECT_DIR$/src/GraviTux/Menu.java" />
+        <option value="$PROJECT_DIR$/src/GraviTux/Play.java" />
       </list>
     </option>
   </component>
@@ -287,7 +328,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -326,16 +367,16 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="GraviTux" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res/GraviTux/level" />
+      <recent name="$PROJECT_DIR$/res/GraviTux" />
+      <recent name="$PROJECT_DIR$/res/GraviTux/menu" />
+      <recent name="$PROJECT_DIR$/res/GraviTux/tux" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="GraviTux" />
       <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/res/GraviTux" />
-      <recent name="$PROJECT_DIR$/res/GraviTux/tux" />
-      <recent name="$PROJECT_DIR$/res/GraviTux/level" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Game">
@@ -701,7 +742,11 @@
       <created>1354229187031</created>
       <updated>1354229187031</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="not working">
+      <created>1354544016840</created>
+      <updated>1354544016840</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -731,6 +776,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845894" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32508436" sideWeight="0.49806702" order="10" side_tool="true" content_ui="tabs" />
@@ -742,12 +788,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39978564" sideWeight="0.6749156" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16720258" sideWeight="0.6805399" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932507" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31946006" sideWeight="0.4974227" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932507" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -787,7 +832,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok, guess not then" />
+    <option name="LAST_COMMIT_MESSAGE" value="not working" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -800,7 +845,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="changed Resolution in Game and Menu to 800x600. Play is still to be done" />
     <MESSAGE value="Resolution is done, Tux doesn't leave level anymore." />
     <MESSAGE value="figuren" />
     <MESSAGE value="Sortierung" />
@@ -825,6 +869,7 @@
     <MESSAGE value="timer added and made image rotation work on rotate. Image size doesn't rotate, so it looks strange." />
     <MESSAGE value="done some project cleanup and rewrote the readme" />
     <MESSAGE value="ok, guess not then" />
+    <MESSAGE value="not working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -859,38 +904,59 @@
         <state line="27" column="17" selection-start="1358" selection-end="1358" vertical-scroll-proportion="0.47257876" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraviTux/Game.java">
+    <entry file="jar://$PROJECT_DIR$/lib/jars/lwjgl.jar!/org/lwjgl/opengl/LinuxDisplay.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0" />
+        <state line="322" column="16" selection-start="14003" selection-end="14061" vertical-scroll-proportion="0.60560346">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
+    <entry file="file://$USER_HOME$/Downloads/Jim_the_Platformer/com/dazkins/minild/tile/SpikeTile.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="17" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jars/slick.jar!/org/newdawn/slick/opengl/PNGImageData.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="0" selection-start="4683" selection-end="4683" vertical-scroll-proportion="0.8918269">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Timer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="35" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+        <state line="26" column="33" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="43" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GraviTux/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="41" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="41" selection-start="516" selection-end="553" vertical-scroll-proportion="0.0">
+        <state line="38" column="24" selection-start="1949" selection-end="1949" vertical-scroll-proportion="0.2975496">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#render#0;class#Play#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraviTux/Gravity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="38" selection-start="459" selection-end="459" vertical-scroll-proportion="0.5075846">
-          <folding>
-            <element signature="method#rotateGravity#0;class#Gravity#0" expanded="false" />
+            <element signature="method#collision#0;class#Play#0" expanded="false" />
+            <element signature="method#setAnimation#0;class#Play#0" expanded="false" />
+            <element signature="method#moveTux#0;class#Play#0" expanded="false" />
+            <element signature="method#flipGravity#0;class#Play#0" expanded="false" />
+            <element signature="method#rotateGravity#0;class#Play#0" expanded="false" />
+            <element signature="method#fall#0;class#Play#0" expanded="false" />
+            <element signature="method#getID#0;class#Play#0" expanded="false" />
           </folding>
         </state>
       </provider>

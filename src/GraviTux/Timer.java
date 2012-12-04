@@ -8,9 +8,9 @@ class Timer extends Play
 
 	public Timer()
 	{
+		currentTime = 0;
 		timeTotal = 300;
 		timeElapsed = false;
-		currentTime = 0;
 	}
 
 	public void addTime(int time)
@@ -22,6 +22,11 @@ class Timer extends Play
 		}
 	}
 
+	public String getTime()
+	{
+		return String.format("%.1f", currentTime / 1000f);
+	}
+
 	public boolean isTimeElapsed()
 	{
 		return timeElapsed;
@@ -29,7 +34,7 @@ class Timer extends Play
 
 	public void reset()
 	{
-		timeElapsed = false;
 		currentTime = 0;
+		timeElapsed = false;
 	}
 }
