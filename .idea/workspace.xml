@@ -1,30 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="dunno if something even changed, files maybee">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/Texturen.png" afterPath="$PROJECT_DIR$/res/GraviTux/level/Texturen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_01.png" afterPath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_01.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_02.png" afterPath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_02.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_03.png" afterPath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_03.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_04.png" afterPath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_04.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Game.java" afterPath="$PROJECT_DIR$/src/GraviTux/Game.java" />
+    <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Play.java" afterPath="$PROJECT_DIR$/src/GraviTux/Play.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_12.tmx" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_12.tmx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_13.tmx" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_13.tmx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_14.tmx" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_14.tmx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_9.tmx" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_9.tmx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GraviTux.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1355773137139" ignored="false" />
+    <file path="/Dummy.txt" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1355774787100" ignored="false" />
     <file path="/fragment.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1354812733304" ignored="false" />
     <file path="/Game.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1355773437598" ignored="false" />
     <file path="$PROJECT_DIR$/../Algorithmen_Hausarbeit_2012/src/Hausarbeit/Main.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1355432245028" ignored="false" />
     <file path="$PROJECT_DIR$/../Algorithmen_Hausarbeit_2012/src/Hausarbeit/DrawPanel.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1355430357896" ignored="false" />
     <file path="/Main.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1355431495938" ignored="false" />
     <file path="$PROJECT_DIR$/../Algorithmen_Hausarbeit_2012/src/Hausarbeit/BrushStroke.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1355430908405" ignored="false" />
+    <file path="$PROJECT_DIR$/../Algorithmen_Hausarbeit_2012/.idea/workspace.xml" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1355774801293" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +34,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -79,7 +69,7 @@
         <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -89,10 +79,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Game.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="23" selection-start="683" selection-end="683" vertical-scroll-proportion="0.6122449">
+            <state line="27" column="23" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Play.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Play.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="396" column="58" selection-start="14041" selection-end="14041" vertical-scroll-proportion="0.0">
+            <state line="397" column="53" selection-start="14045" selection-end="14045" vertical-scroll-proportion="-0.085518815">
               <folding />
             </state>
           </provider>
@@ -194,6 +184,20 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -260,34 +264,20 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GraviTux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GraviTux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="recentsLimit" value="5" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="GraviTux" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -303,8 +293,8 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="Groovy.Shell.LastModule" value="GraviTux" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -366,6 +356,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -391,19 +394,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -680,7 +670,11 @@
       <created>1354662389208</created>
       <updated>1354662389208</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="some file changes">
+      <created>1355774278206</created>
+      <updated>1355774278206</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -715,16 +709,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32508436" sideWeight="0.49806702" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845894" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32620922" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845894" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.39978564" sideWeight="0.6749156" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16666667" sideWeight="0.681465" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31853497" sideWeight="0.4974227" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31853497" sideWeight="0.4974227" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32620922" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932507" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -767,7 +761,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="snowstorm animation added, compiled to show teacher tomorrow" />
+    <option name="LAST_COMMIT_MESSAGE" value="some file changes" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -780,7 +774,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Sortierung" />
     <MESSAGE value="Cleanup, tux moves, level doesn't move, tux moves animated, stops animation too. can be executed locally now. (4h work)" />
     <MESSAGE value="binary added" />
     <MESSAGE value="binary added, now working" />
@@ -805,6 +798,7 @@
     <MESSAGE value="not working" />
     <MESSAGE value="reorganizing done, added lots of new material." />
     <MESSAGE value="snowstorm animation added, compiled to show teacher tomorrow" />
+    <MESSAGE value="some file changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -888,16 +882,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
+    <entry file="file://$PROJECT_DIR$/src/GraviTux/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="396" column="58" selection-start="14041" selection-end="14041" vertical-scroll-proportion="0.0">
+        <state line="27" column="23" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraviTux/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="23" selection-start="683" selection-end="683" vertical-scroll-proportion="0.6122449">
+        <state line="397" column="53" selection-start="14045" selection-end="14045" vertical-scroll-proportion="-0.085518815">
           <folding />
         </state>
       </provider>

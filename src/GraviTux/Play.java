@@ -237,7 +237,8 @@ class Play extends BasicGameState
 				|| collision(tuxX + tuxWidth + fallingSpeed, tuxY + tuxHeight - 2, blocked)))
 		{
 			fall(delta);
-		} else    //when not falling
+		}
+		else    //when not falling
 		{
 			gravitySpeed = 0;
 		}
@@ -270,7 +271,8 @@ class Play extends BasicGameState
 			{
 				levelCurrent++;    //loads new level
 				gc.reinit();
-			} else
+			}
+			else
 			{
 				System.out.println("You finished the game Congratulations!");
 			}
@@ -303,7 +305,8 @@ class Play extends BasicGameState
 				try
 				{
 					Thread.sleep(250);
-				} catch (InterruptedException e)
+				}
+				catch (InterruptedException e)
 				{
 					e.printStackTrace();
 				}
@@ -414,7 +417,8 @@ class Play extends BasicGameState
 		{
 			tux.update(delta);
 			tuxX += x;
-		} else
+		}
+		else
 		{
 			tux.update(delta);
 			tuxX = tuxX - ((tuxX + offsetX) % size) + offsetSize;
