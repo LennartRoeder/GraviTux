@@ -21,7 +21,7 @@ class Play extends BasicGameState
 	private float tuxX, tuxY, gravitySpeed;     //tux position and falling speed
 	private static final int duration = 300;    //length of the walk animation
 	private static final int size = 40;         //tiled size in px
-	private static final int levelMax = 16;       //max level
+	private static final int levelMax = 13;       //max level
 	private static final float moveSpeed = 0.25f;   //tux movement speed
 	private static final float gravityAcc = 0.02f;  //tux acceleration speed when falling
 	private static final float gravitySpeedMax = 7f;  //tux maximum falling speed
@@ -79,7 +79,7 @@ class Play extends BasicGameState
 
 		Image[] snowImages = new Image[]{new Image("GraviTux/snowstorm/eissturm_04.png"), new Image("GraviTux/snowstorm/eissturm_03.png"),
 				new Image("GraviTux/snowstorm/eissturm_02.png"), new Image("GraviTux/snowstorm/eissturm_01.png")};
-		snowStorm = new Animation(snowImages, 150, true);
+		snowStorm = new Animation(snowImages, 200, true);
 
 		//filling animation variables with the image arrays
 		bottomStanding = new Animation(bottomStand, duration, false);
@@ -237,8 +237,7 @@ class Play extends BasicGameState
 				|| collision(tuxX + tuxWidth + fallingSpeed, tuxY + tuxHeight - 2, blocked)))
 		{
 			fall(delta);
-		}
-		else    //when not falling
+		} else    //when not falling
 		{
 			gravitySpeed = 0;
 		}
@@ -271,8 +270,7 @@ class Play extends BasicGameState
 			{
 				levelCurrent++;    //loads new level
 				gc.reinit();
-			}
-			else
+			} else
 			{
 				System.out.println("You finished the game Congratulations!");
 			}
@@ -416,8 +414,7 @@ class Play extends BasicGameState
 		{
 			tux.update(delta);
 			tuxX += x;
-		}
-		else
+		} else
 		{
 			tux.update(delta);
 			tuxX = tuxX - ((tuxX + offsetX) % size) + offsetSize;
