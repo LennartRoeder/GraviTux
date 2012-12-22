@@ -1,5 +1,6 @@
 package GraviTux;
 
+@SuppressWarnings("ALL")
 class Timer extends Play
 {
 	private final int timeTotal;

@@ -377,7 +377,7 @@
    <property name="id" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA6WSywrCMBBFp1Zw4y9ofRRqF+LKt1sFA/3/3/EGEjJcJqHFgUM7neQ0k6QXkT1oiBb0mVqu3oa8AxVxAKdMLdYbqm/AGszBICn8+ww4mRbax+F91z993nE2xt3BV/EAtaLks3rkb09yl3x6bOSV6Y//H306qsxcf0a8F2N8PF7v3Ts8L+SL/Vm+mnJnrDnmY9bHPZXu4BjfR1I/7LtJ+awsH6+Hc+u8hkD0LWj+UtJddWqOFfpee98OrBRHyqewBT82cw/KsAQAAA==
+   H4sIAAAAAAAAC6WTywrCMBBFp1Zw4y/4FrQLl75dqmCg//873kCHDJdpTHHg0E4nOc00aSMiG7Bw2P6oNVTX8TtQETGePbXIvnPY+hLMwRi0kkLvgwwL6/Pi/KdvBI7OuCv4GG6gNuR8Xo/87E7unM+OVR49/fH71WejEj/iHvG3KPFx2G/36q4n8ml/nq+mPDhr1rxkfdxT7gyW+N6S+mHfRfJ75fl4PZx7+6X/k/omNH8q6awGmsNhz3X0rcHMcKB8CCvwBYVPT8awBAAA
   </data>
  </layer>
  <objectgroup name="Objektebene 1" width="20" height="15">
