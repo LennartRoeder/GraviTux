@@ -33,6 +33,12 @@ class Highscores extends BasicGameState
 		back.draw(310, 530);
 		highscoresof.draw(205, 15);
 		GraviTux.draw(130, 50);
+
+		//output highscore
+		for (int i = 0; i < Play.getLevelMax(); i++)
+		{
+			g.drawString("Highscore Level " + (i + 1) + ": " + Play.getHighscore(i) + " Sekunden", 150, (180 + 20 * i));  //game timer
+		}
 	}
 
 	@Override
@@ -40,6 +46,7 @@ class Highscores extends BasicGameState
 	{
 		int posX = Mouse.getX();
 		int posY = Mouse.getY();
+
 		//back button
 		if ((posX > 310 && posX < 490) && (posY > (600 - 592) && posY < (600 - 530)))
 		{

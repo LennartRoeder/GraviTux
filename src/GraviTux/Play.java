@@ -30,6 +30,7 @@ class Play extends BasicGameState
 	private static final float moveSpeed = 0.25f;   //tux movement speed
 	private static final float gravityAcc = 0.02f;  //tux acceleration speed when falling
 	private static final float gravitySpeedMax = 7f;  //tux maximum falling speed
+	private static final String[] highscore = new String[levelMax];
 
 	////constructor
 	public Play()
@@ -369,6 +370,7 @@ class Play extends BasicGameState
 				|| collision(tuxX + 1, tuxY + tuxHeight - 1, levelEnd)
 				|| collision(tuxX + tuxWidth - 1, tuxY + tuxHeight - 1, levelEnd)))
 		{
+			highscore[levelCurrent] = levelTime.getTime();
 			if (levelCurrent + 1 < levelMax)
 			{
 				levelCurrent++;    //loads new level
@@ -639,10 +641,23 @@ class Play extends BasicGameState
 		gravityTimer = new Timer(300); //for proper gravity rotation
 	}
 
+	//for new level button in menu
 	public static void newLevel()
 	{
 		levelCurrent = 0;
 		tuxReset();
+	}
+
+	//for highscore page
+	public static String getHighscore(int level)
+	{
+		return highscore[level];
+	}
+
+	//for highscore page
+	public static int getLevelMax()
+	{
+		return levelMax;
 	}
 
 	////get state ID
