@@ -1,16 +1,16 @@
 package GraviTux;
 
 import org.lwjgl.input.Mouse;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.SlickException;
+import org.newdawn.slick.*;
+import org.newdawn.slick.font.effects.ColorEffect;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
+@SuppressWarnings("ALL")
 class Menu extends BasicGameState
 {
-	private Image welcome, GraviTux, newGame, resume, highscore, credits, exit, bg;
+	private Image bg;
+	public static UnicodeFont header, menu, body;
 
 	public Menu()
 	{
@@ -19,27 +19,43 @@ class Menu extends BasicGameState
 	@Override
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
 	{
+		//Header Font (used for the word GraviTux in menu)
+		header = new UnicodeFont("res/GraviTux/fonts/BRLNSDB.TTF", 135, false, false);
+		header.addAsciiGlyphs();
+		header.getEffects().add(new ColorEffect());  // Create a default white color effect
+		header.loadGlyphs();
+
+		//Menu Font (used for menu points)
+		menu = new UnicodeFont("res/GraviTux/fonts/BRLNSR.TTF", 55, false, false);  //destination, bold, italic
+		menu.addAsciiGlyphs();
+		menu.getEffects().add(new ColorEffect());  // Create a default white color effect
+		menu.loadGlyphs();
+
+		//Body Font (used for credits and ingame text)
+		body = new UnicodeFont("res/GraviTux/fonts/BRLNSR.TTF", 30, false, false);  //destination, bold, italic
+		body.addAsciiGlyphs();
+		body.getEffects().add(new ColorEffect());  // Create a default white color effect
+		body.loadGlyphs();
+
 		bg = new Image("GraviTux/menu/BG_v4.png");
-		welcome = new Image("GraviTux/menu/welcome.png");
-		GraviTux = new Image("GraviTux/menu/GraviTux.png");
-		newGame = new Image("GraviTux/menu/new_game.png");
-		resume = new Image("GraviTux/menu/continue.png");
-		highscore = new Image("GraviTux/menu/highscore.png");
-		credits = new Image("GraviTux/menu/credits.png");
-		exit = new Image("GraviTux/menu/exit.png");
 	}
 
 	@Override
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
 	{
-		bg.draw(0, 0);
-		welcome.draw(205, 15);
-		GraviTux.draw(130, 50);
-		newGame.draw(210, 190);
-		resume.draw(210, 250);
-		highscore.draw(210, 310);
-		credits.draw(210, 370);
-		exit.draw(210, 430);
+		//Color for the top 20px background.
+		g.setColor(new Color(126, 178, 222));
+		g.fillRect(0, 0, 800, 21);
+		g.setColor(Color.white);
+
+		bg.draw(0, 20);
+
+		header.drawString(130, 70, "GraviTux");
+		menu.drawString(210, 210, "new game");
+		menu.drawString(210, 270, "continue");
+		menu.drawString(210, 330, "highscore");
+		menu.drawString(210, 390, "credits");
+		menu.drawString(210, 450, "exit");
 	}
 
 	@Override
@@ -47,46 +63,36 @@ class Menu extends BasicGameState
 	{
 		int posX = Mouse.getX();
 		int posY = Mouse.getY();
+
 		//new game button
-		if ((posX > 210 && posX < 490) && (posY > (600 - 252) && posY < (600 - 190)))
+		if (Mouse.isButtonDown(0) && (posX > 210 && posX < 490) && (posY > 328 && posY < 430))
 		{
-			if (Mouse.isButtonDown(0))
-			{
-				Play.newLevel();
-				sbg.enterState(1);
-			}
+			Play.newGame();
+			sbg.enterState(1);
 		}
+
 		//continue
-		if ((posX > 210 && posX < 490) && (posY > (600 - 312) && posY < (600 - 250)))
+		if (Mouse.isButtonDown(0) && (posX > 210 && posX < 490) && (posY > 308 && posY < 370))
 		{
-			if (Mouse.isButtonDown(0))
-			{
-				sbg.enterState(1);
-			}
+			sbg.enterState(1);
 		}
-		//credits
-		if ((posX > 210 && posX < 490) && (posY > (600 - 432) && posY < (600 - 370)))
-		{
-			if (Mouse.isButtonDown(0))
-			{
-				sbg.enterState(2);
-			}
-		}
+
 		//highscores
-		if ((posX > 210 && posX < 490) && (posY > (600 - 372) && posY < (600 - 310)))
+		if (Mouse.isButtonDown(0) && (posX > 210 && posX < 490) && (posY > 148 && posY < 310))
 		{
-			if (Mouse.isButtonDown(0))
-			{
-				sbg.enterState(3);
-			}
+			sbg.enterState(3);
 		}
-		//exit game
-		if ((posX > 210 && posX < 490) && (posY > (600 - 492) && posY < (600 - 430)))
+
+		//credits
+		if (Mouse.isButtonDown(0) && (posX > 210 && posX < 490) && (posY > 188 && posY < 250))
 		{
-			if (Mouse.isButtonDown(0))
-			{
-				System.exit(0);
-			}
+			sbg.enterState(2);
+		}
+
+		//exit game
+		if (Mouse.isButtonDown(0) && (posX > 210 && posX < 490) && (posY > 128 && posY < 190))
+		{
+			System.exit(0);
 		}
 	}
 

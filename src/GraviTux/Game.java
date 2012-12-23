@@ -30,15 +30,16 @@ public class Game extends StateBasedGame
 		getState(credits).init(gc, this);
 		getState(highscores).init(gc, this);
 		getContainer().setShowFPS(false);
-		//enterState(play);   //set to menu when done!
+//		enterState(highscores);   //set to menu when done!
 	}
 
 	public static void main(String[] args) throws SlickException
 	{
 		AppGameContainer appGc;
 		appGc = new AppGameContainer(new Game());
-		appGc.setDisplayMode(800, 600, false);
+		appGc.setDisplayMode(800, 620, false);
 		appGc.setTargetFrameRate(60);
+		appGc.setVSync(true);
 		appGc.start();
 	}
 }
