@@ -5,22 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/menu/BG_v4_temp.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/Eissturm.png" afterPath="$PROJECT_DIR$/res/GraviTux/level/Eissturm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_01.png" afterPath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_01.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_02.png" afterPath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_02.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_03.png" afterPath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_03.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_04.png" afterPath="$PROJECT_DIR$/res/GraviTux/snowstorm/eissturm_04.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Credits.java" afterPath="$PROJECT_DIR$/src/GraviTux/Credits.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Game.java" afterPath="$PROJECT_DIR$/src/GraviTux/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Highscores.java" afterPath="$PROJECT_DIR$/src/GraviTux/Highscores.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Menu.java" afterPath="$PROJECT_DIR$/src/GraviTux/Menu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Play.java" afterPath="$PROJECT_DIR$/src/GraviTux/Play.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GraviTux.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1356290440912" ignored="false" />
+    <file path="/Dummy.txt" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1356290500973" ignored="false" />
     <file path="/fragment.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1354812733304" ignored="false" />
     <file path="/Game.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1356262058702" ignored="false" />
     <file path="$PROJECT_DIR$/../Algorithmen_Hausarbeit_2012/src/Hausarbeit/Main.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1355432245028" ignored="false" />
@@ -28,8 +18,8 @@
     <file path="/Main.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1355431495938" ignored="false" />
     <file path="$PROJECT_DIR$/../Algorithmen_Hausarbeit_2012/src/Hausarbeit/BrushStroke.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1355430908405" ignored="false" />
     <file path="$PROJECT_DIR$/../Algorithmen_Hausarbeit_2012/.idea/workspace.xml" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1355774809836" ignored="false" />
-    <file path="/Menu.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1356268329059" ignored="false" />
-    <file path="/Play.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1356270419646" ignored="false" />
+    <file path="/Menu.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1356293318900" ignored="false" />
+    <file path="/Play.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1356293870962" ignored="false" />
     <file path="/Highscores.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1356261458433" ignored="false" />
     <file path="/Credits.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1356268313129" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -108,7 +98,7 @@
       <file leaf-file-name="Menu.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="50" selection-start="1534" selection-end="1534" vertical-scroll-proportion="0.0">
+            <state line="90" column="27" selection-start="3205" selection-end="3205" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -117,15 +107,12 @@
       <file leaf-file-name="Play.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="251" column="40" selection-start="10303" selection-end="10303" vertical-scroll-proportion="0.017103763">
+            <state line="148" column="118" selection-start="7391" selection-end="7391" vertical-scroll-proportion="0.4342857">
               <folding>
-                <element signature="e#2683#2751#0" expanded="false" />
+                <element signature="e#2722#2790#0" expanded="false" />
                 <element signature="method#setAnimation#0;class#Play#0" expanded="false" />
                 <element signature="method#moveTux#0;class#Play#0" expanded="false" />
-                <element signature="method#flipGravity#0;class#Play#0" expanded="false" />
                 <element signature="method#rotateGravity#0;class#Play#0" expanded="false" />
-                <element signature="method#tuxReset#0;class#Play#0" expanded="false" />
-                <element signature="method#newGame#0;class#Play#0" expanded="false" />
                 <element signature="method#getHighscore#0;class#Play#0" expanded="false" />
                 <element signature="method#getLevelMax#0;class#Play#0" expanded="false" />
                 <element signature="method#getID#0;class#Play#0" expanded="false" />
@@ -296,6 +283,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraviTux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sounds" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -741,7 +750,11 @@
       <created>1356225136968</created>
       <updated>1356225136968</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="replaced images with now working fonts. Has to be made pretty by someone.">
+      <created>1356290521304</created>
+      <updated>1356290521304</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -766,7 +779,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="27" width="1910" height="1053" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32815966" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -776,16 +789,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3203991" sideWeight="0.5176094" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845894" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3207547" sideWeight="0.47865528" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845894" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.39978564" sideWeight="0.6749156" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16541353" sideWeight="0.6796009" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16541353" sideWeight="0.6796009" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3163152" sideWeight="0.4974227" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32815966" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3207547" sideWeight="0.47865528" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39800444" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -938,6 +951,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GraviTux/Credits.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="50" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="0" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.0">
@@ -945,9 +965,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraviTux/Credits.java">
+    <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="50" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0">
+        <state line="90" column="27" selection-start="3205" selection-end="3205" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -959,24 +979,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraviTux/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="50" selection-start="1534" selection-end="1534" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="40" selection-start="10303" selection-end="10303" vertical-scroll-proportion="0.017103763">
+        <state line="148" column="118" selection-start="7391" selection-end="7391" vertical-scroll-proportion="0.4342857">
           <folding>
-            <element signature="e#2683#2751#0" expanded="false" />
+            <element signature="e#2722#2790#0" expanded="false" />
             <element signature="method#setAnimation#0;class#Play#0" expanded="false" />
             <element signature="method#moveTux#0;class#Play#0" expanded="false" />
-            <element signature="method#flipGravity#0;class#Play#0" expanded="false" />
             <element signature="method#rotateGravity#0;class#Play#0" expanded="false" />
-            <element signature="method#tuxReset#0;class#Play#0" expanded="false" />
-            <element signature="method#newGame#0;class#Play#0" expanded="false" />
             <element signature="method#getHighscore#0;class#Play#0" expanded="false" />
             <element signature="method#getLevelMax#0;class#Play#0" expanded="false" />
             <element signature="method#getID#0;class#Play#0" expanded="false" />

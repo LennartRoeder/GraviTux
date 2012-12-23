@@ -18,7 +18,7 @@ class Play extends BasicGameState
 	private static Sound storms, win, gravitation, die;
 	private static boolean[][] blocked, deadly, levelEnd, storm;   //2 dimensional arrays for collision detection
 	private static char gravity;       //indicates direction of gravity
-	private static int tuxWidth, tuxHeight, levelCurrent = 14;  //tux image size and number of current level
+	private static int tuxWidth, tuxHeight, levelCurrent = 0;  //tux image size and number of current level
 	private static Timer inputDelay, levelTime, gravityTimer;        //timer to prevent things from going too fast
 	private static float tuxX, tuxY, gravitySpeed;     //tux position and falling speed
 	private static final int duration = 300;    //length of the walk animation
@@ -31,6 +31,7 @@ class Play extends BasicGameState
 	private static final TiledMap[] worldMap = new TiledMap[levelMax];  //Level in the background
 	private static Color color = Color.red;
 	private static boolean dead = false;
+	private static boolean reInit = false;
 
 	////constructor
 	public Play()
@@ -102,7 +103,7 @@ class Play extends BasicGameState
 		rightMovingUp = new Animation(rightWalkUp, duration, false);
 		rightMovingDown = new Animation(rightWalkDown, duration, false);
 
-		//build collision maps based on tile properties in the Tiled map
+		//build collision maps based on tile properties in the Tiled map                                                                  <
 		blocked = new boolean[worldMap[levelCurrent].getWidth()][worldMap[levelCurrent].getHeight()];
 		deadly = new boolean[worldMap[levelCurrent].getWidth()][worldMap[levelCurrent].getHeight()];
 		levelEnd = new boolean[worldMap[levelCurrent].getWidth()][worldMap[levelCurrent].getHeight()];
@@ -142,6 +143,12 @@ class Play extends BasicGameState
 	@Override
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
 	{
+		if (reInit)
+		{
+			reInit = false;
+			gc.reinit();    //makes sound not work in first level after clicking new game, once you played to level 2+
+		}
+
 		g.setBackground(new Color(126, 178, 222));
 
 		bg.draw(0, 20);  //draw background
@@ -586,6 +593,10 @@ class Play extends BasicGameState
 	//for new level button in menu
 	public static void newGame()
 	{
+		if (levelCurrent > 0)
+		{
+			reInit = true;
+		}
 		levelCurrent = 0;
 		tuxReset();
 	}
