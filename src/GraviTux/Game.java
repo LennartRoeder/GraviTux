@@ -30,7 +30,7 @@ public class Game extends StateBasedGame
 		getState(credits).init(gc, this);
 		getState(highscores).init(gc, this);
 		getContainer().setShowFPS(false);
-//		enterState(highscores);   //set to menu when done!
+//		enterState(play);   //set to menu when done!
 	}
 
 	public static void main(String[] args) throws SlickException

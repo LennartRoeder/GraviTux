@@ -24,9 +24,7 @@ class Credits extends BasicGameState
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
 	{
 		//Color for the top 20px background.
-		g.setColor(new Color(126, 178, 222));
-		g.fillRect(0, 0, 800, 21);
-		g.setColor(Color.white);
+		g.setBackground(new Color(142, 150, 217));
 
 		bg.draw(0, 20);
 
@@ -34,8 +32,14 @@ class Credits extends BasicGameState
 		Menu.header.drawString(130, 70, "GraviTux");
 		Menu.menu.drawString(150, 220, "Lennart Karsten,\nJoana Löpthien,\nStefan Grimm,\nChristian Kraft");
 		Menu.menu.drawString(310, 550, "back");
-
 		logofh.draw(640, 470);
+
+		//FOR TEXT PLACEMENT ONLY!!!
+/*		g.drawString("Textmasse als Hilfe zum Platzieren von Text", 10, 10);
+
+		g.drawString("back breite: " + Menu.menu.getWidth("back"), 10, 30);
+		g.drawString("back hoehe: " + Menu.menu.getHeight("back"), 250, 30);
+		g.drawRect(310, 550+7, Menu.menu.getWidth("back"), Menu.menu.getHeight("back"));*/
 	}
 
 	@Override
@@ -45,7 +49,7 @@ class Credits extends BasicGameState
 		int posY = Mouse.getY();
 
 		//back button
-		if (Mouse.isButtonDown(0) && (posX > 310 && posX < 490) && (posY > 28 && posY < 90))
+		if (Mouse.isButtonDown(0) && (posX > 309 && posX < 423) && (posY > 11 && posY < 64))
 		{
 			sbg.enterState(0);
 			try

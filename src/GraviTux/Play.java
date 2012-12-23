@@ -18,7 +18,7 @@ class Play extends BasicGameState
 	private static Sound storms, win, gravitation, die;
 	private static boolean[][] blocked, deadly, levelEnd, storm;   //2 dimensional arrays for collision detection
 	private static char gravity;       //indicates direction of gravity
-	private static int tuxWidth, tuxHeight, levelCurrent = 0;  //tux image size and number of current level
+	private static int tuxWidth, tuxHeight, levelCurrent = 14;  //tux image size and number of current level
 	private static Timer inputDelay, levelTime, gravityTimer;        //timer to prevent things from going too fast
 	private static float tuxX, tuxY, gravitySpeed;     //tux position and falling speed
 	private static final int duration = 300;    //length of the walk animation
@@ -29,6 +29,8 @@ class Play extends BasicGameState
 	private static final float gravitySpeedMax = 7f;  //tux maximum falling speed
 	private static final String[] highscore = new String[levelMax];
 	private static final TiledMap[] worldMap = new TiledMap[levelMax];  //Level in the background
+	private static Color color = Color.red;
+	private static boolean dead = false;
 
 	////constructor
 	public Play()
@@ -82,8 +84,8 @@ class Play extends BasicGameState
 			rightWalkDown[i].rotate(-90f);
 		}
 
-		Image[] snowImages = new Image[]{new Image("GraviTux/snowstorm/eissturm_04.png"), new Image("GraviTux/snowstorm/eissturm_03.png"),
-				new Image("GraviTux/snowstorm/eissturm_02.png"), new Image("GraviTux/snowstorm/eissturm_01.png")};
+		Image[] snowImages = new Image[]{new Image("GraviTux/snowstorm/eissturm_01.png"), new Image("GraviTux/snowstorm/eissturm_02.png"),
+				new Image("GraviTux/snowstorm/eissturm_03.png"), new Image("GraviTux/snowstorm/eissturm_04.png")};
 		snowStorm = new Animation(snowImages, 50, true);
 
 		//filling animation variables with the image arrays
@@ -127,7 +129,6 @@ class Play extends BasicGameState
 				if ("true".equals(worldMap[levelCurrent].getTileProperty(tileID, "rotate", "false")))
 				{
 					storm[xAxis][yAxis] = true; //storm to rotate gravity
-					//worldMap[levelCurrent].
 				}
 			}
 		}
@@ -141,10 +142,7 @@ class Play extends BasicGameState
 	@Override
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
 	{
-		//Color for the top 20px background.
-		g.setColor(new Color(126, 178, 222));
-		g.fillRect(0, 0, 800, 21);
-		g.setColor(Color.white);
+		g.setBackground(new Color(126, 178, 222));
 
 		bg.draw(0, 20);  //draw background
 
@@ -153,6 +151,14 @@ class Play extends BasicGameState
 		Menu.body.drawString(35, 10, "level " + (levelCurrent + 1));  //Level indicator
 		Menu.body.drawString(350, 10, "Time: " + levelTime.getTime());  //game timer
 		Menu.body.drawString(695, 10, "Menu"); //Menu Button
+
+		//FOR TEXT PLACEMENT ONLY!!!
+/*		g.drawString("Textmasse als Hilfe zum Platzieren von Text", 40, 70);
+
+		g.drawString("Menu breite: " + Menu.body.getWidth("Menu"), 40, 90);
+		g.drawString("Menu hoehe: " + Menu.body.getHeight("Menu"), 250, 90);
+		g.drawRect(695, 10+2, Menu.body.getWidth("Menu"), Menu.body.getHeight("Menu"));*/
+
 		//g.drawString("Tux X: " + (int) tuxX + "\nTux Y: " + (int) tuxY, 650, 50);   //tux position indicator
 
 		tux.draw((int) tuxX, (int) tuxY + 20);   //draws tux at 79, 518 (bottom left)
@@ -163,29 +169,9 @@ class Play extends BasicGameState
 			{
 				if (storm[xAxis][yAxis])
 				{
-					snowStorm.draw(xAxis * size, yAxis * size);
+					snowStorm.draw(xAxis * size, yAxis * size + 20);
 				}
 			}
-		}
-
-		////Death event
-		int collX = 11; //A QUICK AND DIRTY COLLISION FIX
-		int collY = 21;
-		if (inputDelay.isTimeElapsed() && (collision(tuxX + collX, tuxY + collY, deadly)
-				|| collision(tuxX + tuxWidth - collX, tuxY + collY, deadly)
-				|| collision(tuxX + collX, tuxY + tuxHeight - collY, deadly)
-				|| collision(tuxX + tuxWidth - collX, tuxY + tuxHeight - collY, deadly)))
-		{
-			die.play(); //sounds sterben, sleep
-			try
-			{
-				Thread.sleep(400);
-			}
-			catch (InterruptedException e)
-			{
-				e.printStackTrace();
-			}
-			tuxReset(); //resets tux
 		}
 
 		////level done event
@@ -219,6 +205,33 @@ class Play extends BasicGameState
 			rotateGravity();
 			storms.play();
 		}
+
+		////Death event
+		int collX = 11; //A QUICK AND DIRTY COLLISION FIX
+		int collY = 21;
+		if (inputDelay.isTimeElapsed() && (collision(tuxX + collX, tuxY + collY, deadly)
+				|| collision(tuxX + tuxWidth - collX, tuxY + collY, deadly)
+				|| collision(tuxX + collX, tuxY + tuxHeight - collY, deadly)
+				|| collision(tuxX + tuxWidth - collX, tuxY + tuxHeight - collY, deadly)))
+		{
+			dead = true;
+//			die.play(); //sounds sterben, sleep
+//			try
+//			{
+//				Thread.sleep(500);
+//			}
+//			catch (InterruptedException e)
+//			{
+//				e.printStackTrace();
+//			}
+		}
+		//death fade
+		if (dead)
+		{
+			g.setColor(color);
+			g.fillRect(0, 0, 800, 620);
+			g.setColor(Color.white);
+		}
 	}
 
 	////UPDATE METHOD
@@ -233,6 +246,19 @@ class Play extends BasicGameState
 		gravityTimer.addTime(delta);
 
 		float fallingSpeed = gravitySpeed + gravityAcc * delta; //same for falling, but with acceleration
+
+		if (dead) // death fade
+		{
+			color.a -= delta * (1.0f / 2000);
+
+			tuxReset(); //resets tux
+
+			if (color.a < 0)
+			{
+				color.a = 1;
+				dead = false;
+			}
+		}
 
 		if (input != null)
 		{
@@ -276,7 +302,7 @@ class Play extends BasicGameState
 				tuxReset(); //resets tux
 			}
 			////escape key hit for game menu
-			else if (input.isKeyDown(Input.KEY_ESCAPE) || (((posX > 710 && posX < 800) && (posY > 558 && posY < 585)) && Mouse.isButtonDown(0)))
+			else if (input.isKeyDown(Input.KEY_ESCAPE) || (((posX > 695 && posX < 764) && (posY > 579 && posY < 609)) && Mouse.isButtonDown(0)))
 			{
 				sbg.enterState(0);
 				try
@@ -506,7 +532,14 @@ class Play extends BasicGameState
 	private void fall(int delta)
 	{
 		////accelerate falling
-		gravitySpeed += gravityAcc * delta;
+		if (!dead)
+		{
+			gravitySpeed += gravityAcc * delta;
+		}
+		else
+		{
+			gravitySpeed = 0;
+		}
 
 		////limit falling speed
 		if (gravitySpeed > gravitySpeedMax)

@@ -44,9 +44,7 @@ class Menu extends BasicGameState
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
 	{
 		//Color for the top 20px background.
-		g.setColor(new Color(126, 178, 222));
-		g.fillRect(0, 0, 800, 21);
-		g.setColor(Color.white);
+		g.setBackground(new Color(142, 150, 217));
 
 		bg.draw(0, 20);
 
@@ -56,6 +54,29 @@ class Menu extends BasicGameState
 		menu.drawString(210, 330, "highscore");
 		menu.drawString(210, 390, "credits");
 		menu.drawString(210, 450, "exit");
+
+		//FOR TEXT PLACEMENT ONLY!!!
+/*		g.drawString("Textmasse als Hilfe zum Platzieren von Text", 10, 10);
+
+		g.drawString("new Game breite: " + menu.getWidth("new game"), 10, 30);
+		g.drawString("new Game hoehe: " + menu.getHeight("new game"), 250, 30);
+		g.drawRect(210, 210+7, menu.getWidth("new game"), 51);
+
+		g.drawString("continue breite: " + menu.getWidth("continue"), 10, 45);
+		g.drawString("continue hoehe: " + menu.getHeight("continue"), 250, 45);
+		g.drawRect(210, 270+7, menu.getWidth("continue"), 51);
+
+		g.drawString("highscore breite: " + menu.getWidth("highscore"), 10, 60);
+		g.drawString("highscore hoehe: " + menu.getHeight("highscore"), 250, 60);
+		g.drawRect(210, 330+7, menu.getWidth("highscore"), 51);
+
+		g.drawString("credits breite: " + menu.getWidth("credits"), 10, 75);
+		g.drawString("credits hoehe: " + menu.getHeight("credits"), 250, 75);
+		g.drawRect(210, 390+7, menu.getWidth("credits"), 51);
+
+		g.drawString("exit breite: " + menu.getWidth("exit"), 10, 90);
+		g.drawString("exit hoehe: " + menu.getHeight("exit"), 250, 90);
+		g.drawRect(210, 450+7, menu.getWidth("exit"), 51);*/
 	}
 
 	@Override
@@ -65,32 +86,32 @@ class Menu extends BasicGameState
 		int posY = Mouse.getY();
 
 		//new game button
-		if (Mouse.isButtonDown(0) && (posX > 210 && posX < 490) && (posY > 328 && posY < 430))
+		if (Mouse.isButtonDown(0) && (posX > 209 && posX < 451) && (posY > 351 && posY < 404))
 		{
 			Play.newGame();
 			sbg.enterState(1);
 		}
 
 		//continue
-		if (Mouse.isButtonDown(0) && (posX > 210 && posX < 490) && (posY > 308 && posY < 370))
+		if (Mouse.isButtonDown(0) && (posX > 209 && posX < 406) && (posY > 291 && posY < 344))
 		{
 			sbg.enterState(1);
 		}
 
 		//highscores
-		if (Mouse.isButtonDown(0) && (posX > 210 && posX < 490) && (posY > 148 && posY < 310))
+		if (Mouse.isButtonDown(0) && (posX > 209 && posX < 419) && (posY > 231 && posY < 284))
 		{
 			sbg.enterState(3);
 		}
 
 		//credits
-		if (Mouse.isButtonDown(0) && (posX > 210 && posX < 490) && (posY > 188 && posY < 250))
+		if (Mouse.isButtonDown(0) && (posX > 209 && posX < 355) && (posY > 171 && posY < 224))
 		{
 			sbg.enterState(2);
 		}
 
 		//exit game
-		if (Mouse.isButtonDown(0) && (posX > 210 && posX < 490) && (posY > 128 && posY < 190))
+		if (Mouse.isButtonDown(0) && (posX > 209 && posX < 291) && (posY > 111 && posY < 164))
 		{
 			System.exit(0);
 		}
