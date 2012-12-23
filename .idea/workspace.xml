@@ -5,45 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beb391ee-a87e-4102-be3d-87790eec17f3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/fonts/BRLNSB.TTF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/fonts/BRLNSDB.TTF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/GraviTux/fonts/BRLNSR.TTF" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/Eislandschaft1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/level.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/menu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/numbers/number0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/numbers/number1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/numbers/number2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/numbers/number3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/numbers/number4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/numbers/number5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/numbers/number6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/numbers/number7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/numbers/number8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/level/numbers/number9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/menu/GraviTux.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/menu/back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/menu/continue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/menu/credit_name.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/menu/credits.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/menu/credits_of.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/menu/exit.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/menu/highscore.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/menu/highscores_of.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/menu/new_game.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/GraviTux/menu/welcome.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/BG_v4.png" afterPath="$PROJECT_DIR$/res/GraviTux/level/BG_v4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Credits.java" afterPath="$PROJECT_DIR$/src/GraviTux/Credits.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Game.java" afterPath="$PROJECT_DIR$/src/GraviTux/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Highscores.java" afterPath="$PROJECT_DIR$/src/GraviTux/Highscores.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Menu.java" afterPath="$PROJECT_DIR$/src/GraviTux/Menu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraviTux/Play.java" afterPath="$PROJECT_DIR$/src/GraviTux/Play.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/GraviTux/level/level_15.tmx" afterPath="$PROJECT_DIR$/res/GraviTux/level/level_15.tmx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GraviTux.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1356218489414" ignored="false" />
+    <file path="/Dummy.txt" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1356225087007" ignored="false" />
     <file path="/fragment.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1354812733304" ignored="false" />
     <file path="/Game.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1356221645082" ignored="false" />
     <file path="$PROJECT_DIR$/../Algorithmen_Hausarbeit_2012/src/Hausarbeit/Main.java" changelist="beb391ee-a87e-4102-be3d-87790eec17f3" time="1355432245028" ignored="false" />
@@ -142,7 +108,7 @@
       <file leaf-file-name="Play.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="237" column="4" selection-start="9846" selection-end="9846" vertical-scroll-proportion="4.058219">
+            <state line="237" column="4" selection-start="9846" selection-end="9846" vertical-scroll-proportion="1.4511149">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -751,7 +717,11 @@
       <created>1356139911082</created>
       <updated>1356139911082</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="replaced images with now working fonts. Has to be made pretty by someone.">
+      <created>1356225098707</created>
+      <updated>1356225098707</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -776,7 +746,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32815966" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -784,7 +754,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32815966" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32508436" sideWeight="0.49806702" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3248337" sideWeight="0.49806702" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845894" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3203991" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -792,7 +762,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.39978564" sideWeight="0.6749156" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16595517" sideWeight="0.6796009" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16595517" sideWeight="0.6751663" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39800444" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.31596452" sideWeight="0.4974227" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -838,7 +808,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Highscore eingebaut" />
+    <option name="LAST_COMMIT_MESSAGE" value="replaced images with now working fonts. Has to be made pretty by someone." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -851,7 +821,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="binary added, now working ... hopefully" />
     <MESSAGE value="grr" />
     <MESSAGE value="why do my files stop working after they have been in the IDE for god sake!?" />
     <MESSAGE value="and now to something completly different" />
@@ -876,6 +845,7 @@
     <MESSAGE value="code formating" />
     <MESSAGE value="added fixes from Christian, added reset level (key r) and fixed new game button." />
     <MESSAGE value="Highscore eingebaut" />
+    <MESSAGE value="replaced images with now working fonts. Has to be made pretty by someone." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -966,7 +936,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraviTux/Play.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="237" column="4" selection-start="9846" selection-end="9846" vertical-scroll-proportion="4.058219">
+        <state line="237" column="4" selection-start="9846" selection-end="9846" vertical-scroll-proportion="1.4511149">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
