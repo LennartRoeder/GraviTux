@@ -160,7 +160,7 @@ class Play extends BasicGameState
 		Menu.body.drawString(695, 10, "Menu"); //Menu Button
 
 		//FOR TEXT PLACEMENT ONLY!!!
-/*		g.drawString("Textmasse als Hilfe zum Platzieren von Text", 40, 70);
+		/*g.drawString("Textmasse als Hilfe zum Platzieren von Text", 40, 70);
 
 		g.drawString("Menu breite: " + Menu.body.getWidth("Menu"), 40, 90);
 		g.drawString("Menu hoehe: " + Menu.body.getHeight("Menu"), 250, 90);
@@ -182,10 +182,10 @@ class Play extends BasicGameState
 		}
 
 		////level done event
-		if (inputDelay.isTimeElapsed() && (collision(tuxX + 1, tuxY + 1, levelEnd)
-				|| collision(tuxX + tuxWidth - 1, tuxY + 1, levelEnd)
-				|| collision(tuxX + 1, tuxY + tuxHeight - 1, levelEnd)
-				|| collision(tuxX + tuxWidth - 1, tuxY + tuxHeight - 1, levelEnd)))
+		if (inputDelay.isTimeElapsed() && (collision(tuxX + 10, tuxY + 10, levelEnd)
+				|| collision(tuxX + tuxWidth - 10, tuxY + 10, levelEnd)
+				|| collision(tuxX + 10, tuxY + tuxHeight - 10, levelEnd)
+				|| collision(tuxX + tuxWidth - 10, tuxY + tuxHeight - 10, levelEnd)))
 		{
 			highscore[levelCurrent] = levelTime.getTime();
 			if (levelCurrent + 1 < levelMax)
@@ -222,15 +222,15 @@ class Play extends BasicGameState
 				|| collision(tuxX + tuxWidth - collX, tuxY + tuxHeight - collY, deadly)))
 		{
 			dead = true;
-//			die.play(); //sounds sterben, sleep
-//			try
-//			{
-//				Thread.sleep(500);
-//			}
-//			catch (InterruptedException e)
-//			{
-//				e.printStackTrace();
-//			}
+			die.play(); //sounds sterben, sleep
+			try
+			{
+				Thread.sleep(500);
+			}
+			catch (InterruptedException e)
+			{
+				e.printStackTrace();
+			}
 		}
 		//death fade
 		if (dead)
