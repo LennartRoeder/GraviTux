@@ -9,7 +9,7 @@ import org.newdawn.slick.state.StateBasedGame;
 @SuppressWarnings("ALL")
 class Menu extends BasicGameState
 {
-	private Image bg;
+	private Image bg, tux;
 	public static UnicodeFont header, menu, body;
 
 	public Menu()
@@ -38,11 +38,15 @@ class Menu extends BasicGameState
 		body.loadGlyphs();
 
 		bg = new Image("GraviTux/menu/BG_v4.png");
+		tux = new Image("GraviTux/menu/tuxMenu_40x40.png");
 	}
 
 	@Override
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
 	{
+		int posX = Mouse.getX();
+		int posY = Mouse.getY();
+
 		//Color for the top 20px background.
 		g.setBackground(new Color(142, 150, 217));
 
@@ -54,6 +58,58 @@ class Menu extends BasicGameState
 		menu.drawString(210, 330, "highscore");
 		menu.drawString(210, 390, "credits");
 		menu.drawString(210, 450, "exit");
+
+		//new game button
+		if ((posX > 209 && posX < 451) && (posY > 351 && posY < 404))
+		{
+			tux.draw(160, 225);
+
+			if (Mouse.isButtonDown(0))
+			{
+				Play.newGame();
+				sbg.enterState(1);
+			}
+		}
+		//continue
+		if ((posX > 209 && posX < 406) && (posY > 291 && posY < 344))
+		{
+			tux.draw(160, 285);
+
+			if (Mouse.isButtonDown(0))
+			{
+				sbg.enterState(1);
+			}
+		}
+		//highscores
+		if ((posX > 209 && posX < 419) && (posY > 231 && posY < 284))
+		{
+			tux.draw(160, 345);
+
+			if (Mouse.isButtonDown(0))
+			{
+				sbg.enterState(3);
+			}
+		}
+		//credits
+		if ((posX > 209 && posX < 355) && (posY > 171 && posY < 224))
+		{
+			tux.draw(160, 405);
+
+			if (Mouse.isButtonDown(0))
+			{
+				sbg.enterState(2);
+			}
+		}
+		//exit game
+		if ((posX > 209 && posX < 291) && (posY > 111 && posY < 164))
+		{
+			tux.draw(160, 465);
+
+			if (Mouse.isButtonDown(0))
+			{
+				System.exit(0);
+			}
+		}
 
 		//FOR TEXT PLACEMENT ONLY!!!
 /*		g.drawString("Textmasse als Hilfe zum Platzieren von Text", 10, 10);
@@ -82,39 +138,6 @@ class Menu extends BasicGameState
 	@Override
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException
 	{
-		int posX = Mouse.getX();
-		int posY = Mouse.getY();
-
-		//new game button
-		if (Mouse.isButtonDown(0) && (posX > 209 && posX < 451) && (posY > 351 && posY < 404))
-		{
-			Play.newGame();
-			sbg.enterState(1);
-		}
-
-		//continue
-		if (Mouse.isButtonDown(0) && (posX > 209 && posX < 406) && (posY > 291 && posY < 344))
-		{
-			sbg.enterState(1);
-		}
-
-		//highscores
-		if (Mouse.isButtonDown(0) && (posX > 209 && posX < 419) && (posY > 231 && posY < 284))
-		{
-			sbg.enterState(3);
-		}
-
-		//credits
-		if (Mouse.isButtonDown(0) && (posX > 209 && posX < 355) && (posY > 171 && posY < 224))
-		{
-			sbg.enterState(2);
-		}
-
-		//exit game
-		if (Mouse.isButtonDown(0) && (posX > 209 && posX < 291) && (posY > 111 && posY < 164))
-		{
-			System.exit(0);
-		}
 	}
 
 	@Override
