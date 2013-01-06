@@ -13,9 +13,9 @@ class Play extends BasicGameState
 	private static final Image[] bottomWalkLeft = new Image[8], bottomWalkRight = new Image[8],
 			topWalkLeft = new Image[8], topWalkRight = new Image[8], leftWalkUp = new Image[8],
 			leftWalkDown = new Image[8], rightWalkUp = new Image[8], rightWalkDown = new Image[8];
-	private static Image bg;
-	//	private static Sound storms, win, gravitation, die;
-//    private static Audio test;
+	//	private static Image bg;
+//	private static Sound storms, win, gravitation, die;
+//  private static Audio test;
 	private static boolean[][] blocked, deadly, levelEnd, storm;   //2 dimensional arrays for collision detection
 	private static char gravity;       //indicates direction of gravity
 	private static int tuxWidth, tuxHeight, levelCurrent = 0;  //tux image size and number of current level
@@ -51,7 +51,7 @@ class Play extends BasicGameState
         }*/
 
 		//lvl background
-		bg = new Image("res/GraviTux/level/BG_v4.png");
+//		bg = new Image("res/GraviTux/level/BG_v4.png");
 
 		//lvl counter
 		for (int i = 0; i < levelMax; i++)  //loads levels
@@ -113,17 +113,21 @@ class Play extends BasicGameState
 
 		buildCollisionMap();
 
-		//sets gravity, animation and tux position to default
-		tuxReset();
+		tuxReset(); //sets gravity, animation and tux position to default
 	}
 
 	////RENDER METHOD
 	@Override
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException
 	{
-		g.setBackground(new Color(126, 178, 222));
+		g.setBackground(new Color(44, 64, 82));
 
-		bg.draw(0, 20);  //draw background
+		//draws the 20px rectangle at the top
+		g.setColor(new Color(126, 178, 222));
+		g.fillRect(0, 0, 800, 20);
+
+
+//		bg.draw(0, 0);  //draw background
 
 		worldMap[levelCurrent].render(0, 20); //draw the map at 0,0
 

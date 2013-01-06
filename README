@@ -7,34 +7,11 @@ The code is written by me and my team provides graphics, sounds, Levels, etc..
 The programming language is java and I deliver binaries for Linux, MacOSX and even Windows.
 Our game is made with slick2D which is based on the "light weight java game library" (lwjgl).
 
-Try it:
-Click "Downloads" on the right side. Be aware, that the game is still in an alpha status, so bugs will be present.
-Still, if you like to report issues or make recommendations or give feedback, I will be happy.
-
-Compile it yourself:
-If you like to compile it yourself for whatever reason, you need to import the librarys found in the lib folder.
-To make it work, you need to set the Java VM local parameters to match your OS.
-
-Setting Java VM parameters in InteliJ Idea (for others please search the web):
-1. Open the 'Run/Debug Configurations' (Run > Edit Configurations)
-2. Under 'VM Parameters' add: "-Djava.library.path=lib/natives/" without the quotes
-
 
 The repository can be found at: https://github.com/thinking-aloud/GraviTux
 
-most resent builds:
-
-as .jar
-http://thinking-aloud.eu/fh/GraviTux_windows_v0.8b.exe
-
-.sh for Linux:
-http://thinking-aloud.eu/fh/GraviTux_linux_v0.8b.sh
-
-.app for MacOSX:
-http://thinking-aloud.eu/fh/GraviTux_macosx_v0.8b.zip
-
-.exe for those who still use Windows:
-http://thinking-aloud.eu/fh/GraviTux_windows_v0.8b.exe
+most resent build:
+http://thinking-aloud.eu/fh/GraviTux_v1.0.jar
 
 I hope you like the game
 

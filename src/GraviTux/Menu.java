@@ -20,13 +20,13 @@ class Menu extends BasicGameState
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException
 	{
 		//Header Font (used for the word GraviTux in menu)
-		header = new UnicodeFont("res/GraviTux/fonts/BRLNSDB.TTF", 135, false, false);
+		header = new UnicodeFont("res/GraviTux/fonts/BRLNSDB.TTF", 90, false, false);
 		header.addAsciiGlyphs();
 		header.getEffects().add(new ColorEffect());  // Create a default white color effect
 		header.loadGlyphs();
 
 		//Menu Font (used for menu points)
-		menu = new UnicodeFont("res/GraviTux/fonts/BRLNSR.TTF", 55, false, false);  //destination, bold, italic
+		menu = new UnicodeFont("res/GraviTux/fonts/BRLNSR.TTF", 40, false, false);  //destination, bold, italic
 		menu.addAsciiGlyphs();
 		menu.getEffects().add(new ColorEffect());  // Create a default white color effect
 		menu.loadGlyphs();
@@ -37,8 +37,8 @@ class Menu extends BasicGameState
 		body.getEffects().add(new ColorEffect());  // Create a default white color effect
 		body.loadGlyphs();
 
-		bg = new Image("GraviTux/menu/BG_v4.png");
-		tux = new Image("GraviTux/menu/tuxMenu_40x40.png");
+		bg = new Image("GraviTux/menu/BG_v6.png");
+		tux = new Image("GraviTux/menu/tuxMenu_30x30.png");
 	}
 
 	@Override
@@ -47,22 +47,19 @@ class Menu extends BasicGameState
 		int posX = Mouse.getX();
 		int posY = Mouse.getY();
 
-		//Color for the top 20px background.
-		g.setBackground(new Color(142, 150, 217));
+		bg.draw(0, 0);
 
-		bg.draw(0, 20);
-
-		header.drawString(130, 70, "GraviTux");
-		menu.drawString(210, 210, "new game");
-		menu.drawString(210, 270, "continue");
-		menu.drawString(210, 330, "highscore");
-		menu.drawString(210, 390, "credits");
-		menu.drawString(210, 450, "exit");
+		header.drawString(210, 70, "GraviTux");
+		menu.drawString(310, 210, "new game");
+		menu.drawString(310, 270, "continue");
+		menu.drawString(310, 330, "highscore");
+		menu.drawString(310, 390, "credits");
+		menu.drawString(310, 450, "exit");
 
 		//new game button
-		if ((posX > 209 && posX < 451) && (posY > 351 && posY < 404))
+		if ((posX > 309 && posX < 483) && (posY > 361 && posY < 403))
 		{
-			tux.draw(160, 225);
+			tux.draw(269, 215);
 
 			if (Mouse.isButtonDown(0))
 			{
@@ -71,9 +68,9 @@ class Menu extends BasicGameState
 			}
 		}
 		//continue
-		if ((posX > 209 && posX < 406) && (posY > 291 && posY < 344))
+		if ((posX > 309 && posX < 450) && (posY > 301 && posY < 338))
 		{
-			tux.draw(160, 285);
+			tux.draw(269, 275);
 
 			if (Mouse.isButtonDown(0))
 			{
@@ -81,9 +78,9 @@ class Menu extends BasicGameState
 			}
 		}
 		//highscores
-		if ((posX > 209 && posX < 419) && (posY > 231 && posY < 284))
+		if ((posX > 309 && posX < 461) && (posY > 241 && posY < 283))
 		{
-			tux.draw(160, 345);
+			tux.draw(269, 335);
 
 			if (Mouse.isButtonDown(0))
 			{
@@ -91,9 +88,9 @@ class Menu extends BasicGameState
 			}
 		}
 		//credits
-		if ((posX > 209 && posX < 355) && (posY > 171 && posY < 224))
+		if ((posX > 309 && posX < 414) && (posY > 181 && posY < 218))
 		{
-			tux.draw(160, 405);
+			tux.draw(269, 395);
 
 			if (Mouse.isButtonDown(0))
 			{
@@ -101,9 +98,9 @@ class Menu extends BasicGameState
 			}
 		}
 		//exit game
-		if ((posX > 209 && posX < 291) && (posY > 111 && posY < 164))
+		if ((posX > 309 && posX < 367) && (posY > 121 && posY < 158))
 		{
-			tux.draw(160, 465);
+			tux.draw(269, 455);
 
 			if (Mouse.isButtonDown(0))
 			{
